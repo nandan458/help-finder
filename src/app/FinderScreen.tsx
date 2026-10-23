@@ -8,6 +8,7 @@ import { FilterBar } from "../components/FilterBar";
 import { HelpLinesButton, HelpLinesList } from "../components/HelpLines";
 import { MapView } from "../components/MapView";
 import { PlaceCard } from "../components/PlaceCard";
+import { RouteView } from "../components/RouteView";
 import { PlaceList, type NearbyPlace } from "../components/PlaceList";
 import { PlaceSearch } from "../components/PlaceSearch";
 import { EmptyState, ErrorState, LoadingRows } from "../components/SearchStates";
@@ -29,6 +30,7 @@ import { useNow } from "./useNow";
 import { useOnline } from "./useOnline";
 import { useSaved } from "./useSaved";
 import { useViewport } from "./useViewport";
+import { useWalkingRoute } from "./useWalkingRoute";
 
 type Props = {
   origin: Origin;
@@ -56,7 +58,7 @@ function describe(place: Place, origin: LatLng, now: Date): NearbyPlace {
 
 export function FinderScreen(props: Props) {
   const { origin, onOrigin, search, onSearch, onRetry, hoursLoaded, initialOpenId } = props;
-  const { t } = useT();
+  const { t, lang } = useT();
   const now = useNow();
   const online = useOnline();
   const { isPhone, height: screenHeight } = useViewport();
@@ -68,10 +70,13 @@ export function FinderScreen(props: Props) {
   const [returnFocusId, setReturnFocusId] = useState<string | null>(null);
   const [sheetSize, setSheetSize] = useState<SheetSize>("half");
   const [settingsOpen, setSettingsOpen] = useState(false);
+  // Showing walking directions for the open place, instead of its card.
+  const [directionsOpen, setDirectionsOpen] = useState(false);
 
   // Any new search closes the card and starts the list fresh.
   function startOver() {
     setOpenId(null);
+    setDirectionsOpen(false);
     setReturnFocusId(null);
     window.history.replaceState(null, "", pageWithoutPlace(window.location.href));
   }
@@ -101,6 +106,7 @@ export function FinderScreen(props: Props) {
     id ? (search.places.find((p) => p.id === id) ?? saved.find((p) => p.id === id)) : undefined;
   const openPlace = findPlace(openId);
   const openItem = openPlace ? describe(openPlace, origin, now) : undefined;
+  const walking = useWalkingRoute(origin, directionsOpen && openPlace ? openPlace : null, lang);
 
   // The page address follows the open card (…?place=node/123&at=…), so the
   // address can be shared or bookmarked, and reloading keeps the card open.
@@ -115,6 +121,7 @@ export function FinderScreen(props: Props) {
   function closeCard() {
     setReturnFocusId(openId);
     setOpenId(null);
+    setDirectionsOpen(false);
     window.history.replaceState(null, "", pageWithoutPlace(window.location.href));
   }
 
@@ -183,7 +190,16 @@ export function FinderScreen(props: Props) {
             {t("offline.banner")}
           </p>
         )}
-        {openItem ? (
+        {openItem && directionsOpen ? (
+          <RouteView
+            place={openItem.place}
+            origin={origin}
+            miles={miles}
+            route={walking.state}
+            onRetry={walking.retry}
+            onBack={() => setDirectionsOpen(false)}
+          />
+        ) : openItem ? (
           <PlaceCard
             place={openItem.place}
             meters={openItem.meters}
@@ -192,6 +208,7 @@ export function FinderScreen(props: Props) {
             now={now}
             saved={isSaved(openItem.place.id)}
             onToggleSave={() => toggleSaved(openItem.place)}
+            onDirections={() => setDirectionsOpen(true)}
             onClose={closeCard}
           />
         ) : (
@@ -262,7 +279,13 @@ export function FinderScreen(props: Props) {
               </section>
             )}
 
-            <p className="muted credit">{t("data.credit")}</p>
+            <p className="muted credit">
+              {t("data.credit")}{" "}
+              {/* The map servers' rules ask apps to link here, so anyone can fix wrong data. */}
+              <a href="https://www.openstreetmap.org/fixthemap" target="_blank" rel="noreferrer">
+                {t("map.reportError")}
+              </a>
+            </p>
           </>
         )}
       </Sheet>
@@ -287,6 +310,7 @@ export function FinderScreen(props: Props) {
           onSettings={() => setSettingsOpen(true)}
           onLocate={() => void locate()}
           locating={locating}
+          route={walking.state.status === "done" ? walking.state.route.line : undefined}
         />
       </div>
 

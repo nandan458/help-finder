@@ -17,6 +17,7 @@ import {
   CircleMarker,
   MapContainer,
   Marker,
+  Polyline,
   TileLayer,
   useMap,
   useMapEvents,
@@ -50,6 +51,7 @@ type Props = {
   onSettings: () => void;
   onLocate: () => void;
   locating: boolean;
+  route?: LatLng[]; // a walking route to draw, if one is showing
 };
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -101,7 +103,7 @@ function clusterIcon(cluster: L.MarkerCluster, t: ReturnType<typeof useT>["t"]):
 export function MapView(props: Props) {
   const { origin, places, searchCenter, radiusM, loading, selectedId, onSelect, onSearchArea } =
     props;
-  const { coverLeft, coverBottom, isPhone, onSettings, onLocate, locating } = props;
+  const { coverLeft, coverBottom, isPhone, onSettings, onLocate, locating, route } = props;
   const { t } = useT();
   const [map, setMap] = useState<L.Map | null>(null);
   // Where the person last moved the map, and which search was showing then.
@@ -159,6 +161,15 @@ export function MapView(props: Props) {
             interactive={false}
             className="search-circle"
           />
+        )}
+
+        {route && (
+          <>
+            {/* Drawn under the pins, with a white edge so it shows on any map color. */}
+            <Polyline positions={route} className="route-line-edge" interactive={false} />
+            <Polyline positions={route} className="route-line" interactive={false} />
+            <FitRoute route={route} coverLeft={coverLeft} coverBottom={coverBottom} />
+          </>
         )}
 
         <Pins places={places} selectedId={selectedId} onSelect={onSelect} />
@@ -298,6 +309,20 @@ function FollowSearch({
     }
   }, [map, origin, searchCenter, radiusM, coverLeft, coverBottom]);
 
+  return null;
+}
+
+/** When a walking route appears, zoom the map so the whole walk is visible. */
+function FitRoute({
+  route,
+  coverLeft,
+  coverBottom,
+}: { route: LatLng[] } & Pick<Props, "coverLeft" | "coverBottom">) {
+  const map = useMap();
+  useEffect(() => {
+    const bounds = L.latLngBounds(route.map((p) => [p.lat, p.lng] as [number, number]));
+    map.fitBounds(bounds, fitPadding(coverLeft, coverBottom));
+  }, [map, route, coverLeft, coverBottom]);
   return null;
 }
 

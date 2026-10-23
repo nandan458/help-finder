@@ -4,7 +4,6 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { APP_NAME } from "../config";
 import { useT } from "../i18n/useT";
-import { directionsUrl, isApplePhone } from "../lib/directions";
 import { placeLink } from "../lib/share";
 import { formatDistance, walkMinutes } from "../lib/geo";
 import { speechSupported, useSpeech } from "../app/useSpeech";
@@ -22,13 +21,12 @@ type Props = {
   now: Date;
   saved: boolean;
   onToggleSave: () => void;
+  onDirections: () => void;
   onClose: () => void;
 };
 
-const apple = isApplePhone(navigator.userAgent, navigator.maxTouchPoints);
-
 export function PlaceCard(props: Props) {
-  const { place, meters, miles, status, now, saved, onToggleSave, onClose } = props;
+  const { place, meters, miles, status, now, saved, onToggleSave, onDirections, onClose } = props;
   const { t, locale } = useT();
   const title = useRef<HTMLHeadingElement>(null);
   const name = place.name ?? t(`unnamed.${place.category}`);
@@ -112,15 +110,10 @@ export function PlaceCard(props: Props) {
       </header>
 
       <div className="card-actions">
-        <a
-          className="action action-primary"
-          href={directionsUrl(place, apple)}
-          target="_blank"
-          rel="noreferrer"
-        >
+        <button type="button" className="action action-primary" onClick={onDirections}>
           <UiIcon name="directions" />
           <span>{minutes <= 90 ? t("card.walkMinutes", { minutes }) : t("card.directions")}</span>
-        </a>
+        </button>
         <button type="button" className="action" aria-pressed={saved} onClick={onToggleSave}>
           <UiIcon name={saved ? "saved" : "save"} />
           <span>{saved ? t("card.saved") : t("card.save")}</span>
