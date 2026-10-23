@@ -68,7 +68,7 @@ export function originalId(
  */
 export function featureToPlace(line: string): PackPlace | null {
   // osmium starts each line with an invisible "record separator" character.
-  const text = line.replace(/\u001e/g, "").trim();
+  const text = line.replaceAll("\u001e", "").trim();
   if (!text) return null;
   const feature = JSON.parse(text) as {
     id?: string;
