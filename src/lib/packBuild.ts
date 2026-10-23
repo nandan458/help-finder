@@ -49,6 +49,20 @@ export function centerOf(geometry: Geometry): { lat: number; lon: number } | nul
 }
 
 /**
+ * Buildings and other shapes come out of osmium as "areas" (prefix a), numbered
+ * from the object they were made from: a way's area is twice its id, and a
+ * relation's area is twice its id plus one. This turns that back into the
+ * original way or relation, so the link to openstreetmap.org works.
+ */
+export function originalId(
+  prefix: string,
+  number: number,
+): { type: PackPlace["type"]; id: number } {
+  if (prefix !== "a") return { type: prefix as PackPlace["type"], id: number };
+  return number % 2 === 0 ? { type: "w", id: number / 2 } : { type: "r", id: (number - 1) / 2 };
+}
+
+/**
  * One line of `osmium export -f geojsonseq --add-unique-id=type_id` output.
  * Returns the place, or null if it isn't something the app shows (or the line is empty).
  */
@@ -61,7 +75,7 @@ export function featureToPlace(line: string): PackPlace | null {
     geometry?: Geometry;
     properties?: Record<string, string>;
   };
-  const match = /^([nwr])(\d+)$/.exec(feature.id ?? "");
+  const match = /^([nwra])(\d+)$/.exec(feature.id ?? "");
   const tags = feature.properties ?? {};
   if (!match || !feature.geometry || categorize(tags) === null) return null;
   const center = centerOf(feature.geometry);
@@ -70,9 +84,10 @@ export function featureToPlace(line: string): PackPlace | null {
   // Keep only the tags the app reads; positions to about 1 meter (smaller files).
   const kept: Record<string, string> = {};
   for (const key of PACK_TAG_KEYS) if (tags[key] !== undefined) kept[key] = tags[key];
+  const { type, id } = originalId(match[1], Number(match[2]));
   return {
-    type: match[1] as PackPlace["type"],
-    id: Number(match[2]),
+    type,
+    id,
     lat: Math.round(center.lat * 1e5) / 1e5,
     lon: Math.round(center.lon * 1e5) / 1e5,
     tags: kept,

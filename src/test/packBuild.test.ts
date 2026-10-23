@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { centerOf, featureToPlace } from "../lib/packBuild";
+import { centerOf, featureToPlace, originalId } from "../lib/packBuild";
 
 const line = (feature: object) => `\u001e${JSON.stringify(feature)}`;
 
@@ -118,5 +118,34 @@ describe("featureToPlace", () => {
       category({ social_facility: "shelter", "social_facility:for": "homeless;women" }),
     ).toBeDefined();
     expect(category({ amenity: "drinking_water" })).toEqual({ amenity: "drinking_water" });
+  });
+});
+
+describe("buildings come out of osmium as areas", () => {
+  it("turns an area id back into the way or relation it came from", () => {
+    expect(originalId("a", 96081758)).toEqual({ type: "w", id: 48040879 }); // even: a way
+    expect(originalId("a", 96081759)).toEqual({ type: "r", id: 48040879 }); // odd: a relation
+    expect(originalId("n", 5)).toEqual({ type: "n", id: 5 });
+  });
+
+  it("keeps a library building mapped as an area", () => {
+    const place = featureToPlace(
+      line({
+        id: "a96083002",
+        geometry: {
+          type: "Polygon",
+          coordinates: [
+            [
+              [-77.0, 38.9],
+              [-76.99, 38.9],
+              [-76.99, 38.91],
+              [-77.0, 38.9],
+            ],
+          ],
+        },
+        properties: { amenity: "library", name: "Main Library" },
+      }),
+    );
+    expect(place).toMatchObject({ type: "w", id: 48041501, tags: { name: "Main Library" } });
   });
 });
