@@ -1,4 +1,4 @@
-# Demo video script: Help Finder (2 to 3 minutes)
+# Demo video script: NearAid (2 to 3 minutes)
 
 > Say it in your own words; don't read it word for word. Lines marked ✏️ are yours to fill in.
 
@@ -18,7 +18,7 @@
 
 **Say:** ✏️ A short, true story. For example:
 
-> "Last winter, someone at my school needed a free meal on a Saturday. We searched online and found a food pantry, took the bus there, and it was closed. Its hours had changed and the website was wrong. That wasted trip is what Help Finder is built to prevent."
+> "Last winter, someone at my school needed a free meal on a Saturday. We searched online and found a food pantry, took the bus there, and it was closed. Its hours had changed and the website was wrong. That wasted trip is what NearAid is built to prevent."
 
 ## 0:20 to 0:40 · Who it's for, and why it works anywhere
 
@@ -26,7 +26,7 @@
 
 **Say:**
 
-> "Help Finder is for anyone who needs free help: people new to an area, people without a home, families on a tight budget, and Spanish speakers. It uses OpenStreetMap, a free world map made by volunteers, so it works anywhere, not just one city. No account, no ads, no tracking."
+> "NearAid is for anyone who needs free help: people new to an area, people without a home, families on a tight budget, and Spanish speakers. It uses OpenStreetMap, a free world map made by volunteers, so it works anywhere, not just one city. No account, no ads, no tracking."
 
 ## 0:40 to 1:50 · Live demo on the phone
 
@@ -62,7 +62,7 @@ Zoom in so the text is readable.
 
 **Say:**
 
-> "Help Finder is free, works in English and Spanish, and works offline on an old phone. ✏️ In my district, it shows [number] free places, including [one you know]. Next, I want to make searches instant everywhere and add more languages. And anyone can make it better: if a place is missing, you can add it to OpenStreetMap, and it shows up in the app. Thanks for watching."
+> "NearAid is free, works in English and Spanish, and works offline on an old phone. ✏️ In my district, it shows [number] free places, including [one you know]. Next, I want to make searches instant everywhere and add more languages. And anyone can make it better: if a place is missing, you can add it to OpenStreetMap, and it shows up in the app. Thanks for watching."
 
 **End card (3 seconds):** the app name, the link https://nandan458.github.io/help-finder/, and your name.
 

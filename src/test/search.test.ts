@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import type { Place } from "../lib/overpass";
-import { movedFarEnough, searchNearby } from "../lib/search";
+import { movedFarEnough, reachFor, searchNearby } from "../lib/search";
 
 // n fake places, all `km` kilometers north of `here`.
 const here = { lat: 38.9, lng: -77.03 };
@@ -17,13 +17,13 @@ const fakePlaces = (n: number, km: number, prefix = "a"): Place[] =>
 const radii = [2000, 5000, 15000];
 
 describe("searchNearby", () => {
-  it("asks for 5 km once and shows the 2 km places when there are enough", async () => {
+  it("asks for 5 km once, shows 2 km by default, and keeps the rest for filters", async () => {
     const near = fakePlaces(6, 1); // 1 km away
     const far = fakePlaces(10, 4, "b"); // 4 km away
     const fetcher = vi.fn().mockResolvedValue([...near, ...far]);
     const result = await searchNearby(here, undefined, radii, fetcher);
     expect(fetcher.mock.calls.map((call) => call[1])).toEqual([5000]);
-    expect(result).toEqual({ places: near, radiusM: 2000, fetchedM: 5000 });
+    expect(result).toEqual({ places: [...near, ...far], radiusM: 2000, fetchedM: 5000 });
   });
 
   it("shows 5 km with no extra request when 2 km has too few", async () => {
@@ -82,5 +82,28 @@ describe("movedFarEnough", () => {
   it("notices a move of more than half the radius", () => {
     const moved = { lat: 38.912, lng: -77.03 }; // about 1.3 km north
     expect(movedFarEnough(start, moved, 2000)).toBe(true);
+  });
+});
+
+describe("reachFor (how far to look for a picked category)", () => {
+  const water = fakePlaces(8, 1); // plenty of water within 2 km
+  const food = fakePlaces(1, 4, "f").map((p) => ({ ...p, category: "food" as const })); // one food place, 4 km away
+
+  it("uses the search's own radius when no category is picked", () => {
+    expect(reachFor([...water, ...food], here, [], 2000, 5000)).toBe(2000);
+  });
+
+  it("stays close when the picked category is common nearby", () => {
+    expect(reachFor(water, here, ["water"], 2000, 5000)).toBe(2000);
+  });
+
+  it("looks farther when the picked category is rare nearby", () => {
+    // Only one food place, and it's 4 km away: widen to everything we hold.
+    expect(reachFor([...water, ...food], here, ["food"], 2000, 5000)).toBe(5000);
+  });
+
+  it("stops at the first radius that has a few matches", () => {
+    const threeFood = fakePlaces(3, 3, "g").map((p) => ({ ...p, category: "food" as const }));
+    expect(reachFor([...water, ...threeFood], here, ["food"], 2000, 15000)).toBe(5000);
   });
 });

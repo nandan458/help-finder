@@ -1,8 +1,8 @@
-# Help Finder
+# NearAid
 
 **Free help near you, in English and Spanish, anywhere.**
 
-Help Finder is a free map app that shows free food, health care, shelter, internet, drinking water, restrooms, and showers near you, tells you what's **open right now**, and shows you **how to walk there**. It works on any phone with a web browser, installs to the home screen, and keeps working with no signal.
+NearAid is a free map app that shows free food, health care, shelter, internet, drinking water, restrooms, and showers near you, tells you what's **open right now**, and shows you **how to walk there**. It works on any phone with a web browser, installs to the home screen, and keeps working with no signal.
 
 **Try it:** https://nandan458.github.io/help-finder/
 

@@ -5,20 +5,26 @@
 import { useCallback, useRef, useState } from "react";
 import { SEARCH_RADII_M } from "../config";
 import { needsRefresh, readCache, writeCache } from "../lib/cache";
-import { distanceMeters, type LatLng } from "../lib/geo";
+import type { LatLng } from "../lib/geo";
 import { fetchPlaces, OverpassError, type FetchErrorKind, type Place } from "../lib/overpass";
 import { searchNearby } from "../lib/search";
 
 export type SearchState = {
   status: "idle" | "loading" | "done" | "error";
   center?: LatLng; // where the last search was centered
-  radiusM: number; // how far it reached
+  radiusM: number; // how far to show places by default
+  fetchedM: number; // how far the places we hold reach (more than radiusM)
   places: Place[]; // the last results (kept while a new search loads)
   errorKind?: FetchErrorKind;
 };
 
 export function useNearbySearch() {
-  const [state, setState] = useState<SearchState>({ status: "idle", radiusM: 0, places: [] });
+  const [state, setState] = useState<SearchState>({
+    status: "idle",
+    radiusM: 0,
+    fetchedM: 0,
+    places: [],
+  });
   // Each search gets a number. If an older, slower search finishes after a newer
   // one started, we ignore it, so old results never replace new ones.
   const latest = useRef(0);
@@ -52,8 +58,8 @@ export function useNearbySearch() {
       return;
     }
     if (!isLatest()) return;
-    const { places: shown, radiusM, fetchedM } = result;
-    setState({ status: "done", center, places: shown, radiusM });
+    const { places: held, radiusM, fetchedM } = result;
+    setState({ status: "done", center, places: held, radiusM, fetchedM });
 
     // If those results came from a cache entry over an hour old, fetch fresh
     // ones now and swap them in quietly. The person already sees results, so
@@ -63,9 +69,7 @@ export function useNearbySearch() {
     try {
       const fresh = await fetchPlaces(center, fetchedM);
       await writeCache(center, fetchedM, fresh);
-      // Keep showing the same radius as before.
-      const places = fresh.filter((p) => distanceMeters(center, p) <= radiusM);
-      if (isLatest()) setState((prev) => ({ ...prev, places }));
+      if (isLatest()) setState((prev) => ({ ...prev, places: fresh }));
     } catch {
       // keep the cached results
     }

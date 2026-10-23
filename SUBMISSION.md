@@ -1,4 +1,4 @@
-# Submission draft: Help Finder
+# Submission draft: NearAid
 
 > **These are drafts.** Rewrite every answer in your own words before you submit. Judges want to hear _you_, and you need to be able to say all of it out loud. Lines marked ✏️ need something only you know.
 
@@ -10,7 +10,7 @@
 
 ## App name
 
-Help Finder
+NearAid
 
 ## Target audience
 
@@ -22,7 +22,7 @@ Anyone who needs free help, wherever they are: people new to an area, people exp
 
 When people need free food, a clinic, a shelter, Wi-Fi, a restroom, or clean water, the information is scattered across websites that are often out of date, cover only one city, or need an account. And if you show up somewhere that turns out to be closed, you've lost a trip that might have cost bus fare or a missed shift.
 
-Help Finder puts it all on one map. It finds free resources near you, tells you what's open right now and when it closes, and shows the walking route right in the app. It works anywhere in the world, in English and Spanish, with no account. It installs to your home screen and still works with no signal, using your last results. If there isn't much nearby, it shows help lines like 211 and 988 so no one leaves empty-handed.
+NearAid puts it all on one map. It finds free resources near you, tells you what's open right now and when it closes, and shows the walking route right in the app. It works anywhere in the world, in English and Spanish, with no account. It installs to your home screen and still works with no signal, using your last results. If there isn't much nearby, it shows help lines like 211 and 988 so no one leaves empty-handed.
 
 ## How the app works
 

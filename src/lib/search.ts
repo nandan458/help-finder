@@ -12,8 +12,9 @@ import { distanceMeters, type LatLng } from "./geo";
 import { fetchPlacesFast } from "./packs";
 import type { fetchPlaces, Place } from "./overpass";
 
-// radiusM: how far the places shown reach. fetchedM: how far the server answer
-// reached (what the cache is filed under).
+// places: everything the server answer held (it can reach past radiusM).
+// radiusM: how far to show places by default. fetchedM: how far the answer reached
+// (what the cache is filed under).
 export type SearchResult = { places: Place[]; radiusM: number; fetchedM: number };
 
 /**
@@ -43,7 +44,7 @@ export async function searchNearby(
     while (checked < radii.length && radii[checked] <= fetchRadius) {
       const radiusM = radii[checked++];
       const within = places.filter((p) => distanceMeters(center, p) <= radiusM);
-      if (within.length >= ENOUGH_PLACES) return { places: within, radiusM, fetchedM: fetchRadius };
+      if (within.length >= ENOUGH_PLACES) return { places, radiusM, fetchedM: fetchRadius };
     }
   }
   // Even the biggest radius found few places: show what there is.
@@ -58,4 +59,35 @@ export async function searchNearby(
  */
 export function movedFarEnough(searchCenter: LatLng, mapCenter: LatLng, radiusM: number): boolean {
   return distanceMeters(searchCenter, mapCenter) > radiusM / 2;
+}
+
+/** How many matching places must be found before we stop looking farther. */
+const ENOUGH_MATCHES = 3;
+
+/**
+ * How far to show places, for the filter the person picked.
+ * With no category chosen it's just the search's own radius. With categories
+ * chosen (say, only free food), the first 2 km may hold plenty of water
+ * fountains and no food banks, so we look farther, up to everything we fetched,
+ * until there are at least a few places of that kind.
+ */
+export function reachFor(
+  places: Place[],
+  center: LatLng,
+  categories: string[],
+  radiusM: number,
+  fetchedM: number,
+  radii: number[] = SEARCH_RADII_M,
+): number {
+  if (categories.length === 0) return radiusM;
+  const steps = [...radii.filter((r) => r > radiusM && r < fetchedM), fetchedM];
+  let reach = radiusM;
+  for (const step of [radiusM, ...steps]) {
+    reach = step;
+    const matches = places.filter(
+      (p) => categories.includes(p.category) && distanceMeters(center, p) <= step,
+    );
+    if (matches.length >= ENOUGH_MATCHES) break;
+  }
+  return reach;
 }

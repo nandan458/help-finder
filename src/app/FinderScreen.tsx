@@ -19,6 +19,7 @@ import { useT } from "../i18n/useT";
 import { clearCache } from "../lib/cache";
 import { clearPacks } from "../lib/packs";
 import type { Category } from "../lib/categories";
+import { reachFor } from "../lib/search";
 import { hasFilters, matchesFilters, NO_FILTERS, type Filters } from "../lib/filters";
 import { forgetGeocodes } from "../lib/geocode";
 import { distanceMeters, formatDistance, usesMiles, type LatLng } from "../lib/geo";
@@ -103,7 +104,21 @@ export function FinderScreen(props: Props) {
   // Until the hours library arrives we can't say what's open, so there's
   // nothing to list yet (the screen shows loading rows instead).
   // useMemo skips this work when nothing it depends on has changed.
-  const source = !hoursLoaded ? NOTHING : showSaved ? saved : search.places;
+  // How far to show places. If you picked a category (say, only free food), we look
+  // farther until there are a few of that kind, instead of stopping at the first 2 km.
+  const searchCenter = search.center ?? origin;
+  const reachM = reachFor(
+    search.places,
+    searchCenter,
+    filters.categories,
+    search.radiusM,
+    search.fetchedM,
+  );
+  const inReach = useMemo(
+    () => search.places.filter((p) => distanceMeters(searchCenter, p) <= reachM),
+    [search.places, searchCenter, reachM],
+  );
+  const source = !hoursLoaded ? NOTHING : showSaved ? saved : inReach;
   const all = useMemo(
     () => source.map((place) => describe(place, origin, now)).sort((a, b) => a.meters - b.meters),
     [source, origin, now],
@@ -150,8 +165,8 @@ export function FinderScreen(props: Props) {
     setShowSaved(false);
   }
 
-  const radius = formatDistance(search.radiusM, miles);
   const loading = search.status === "loading";
+  const radius = formatDistance(loading ? search.radiusM : reachM, miles);
   const widening = loading && search.radiusM > SEARCH_RADII_M[0];
   const done = search.status === "done";
 
@@ -271,10 +286,29 @@ export function FinderScreen(props: Props) {
 
             {all.length > 0 && shown.length === 0 && (
               <div className="state-card">
-                <p>{t("filters.none")}</p>
+                {/* Picked a kind of place and found none: say how far we looked, and offer to look
+                    farther and the help lines, instead of an empty screen. */}
+                <p>
+                  {filters.categories.length > 0
+                    ? t("results.none", { radius })
+                    : t("filters.none")}
+                </p>
+                {filters.categories.length > 0 && reachM < FARTHER_RADIUS_M && search.center && (
+                  <button
+                    type="button"
+                    className="button"
+                    onClick={() => {
+                      startOver();
+                      if (search.center) onSearch(search.center, [FARTHER_RADIUS_M]);
+                    }}
+                  >
+                    {t("empty.farther", { radius: formatDistance(FARTHER_RADIUS_M, miles) })}
+                  </button>
+                )}
                 <button type="button" className="button" onClick={() => setFilters(NO_FILTERS)}>
                   {t("filters.clear")}
                 </button>
+                {filters.categories.length > 0 && <HelpLinesList />}
               </div>
             )}
             {hoursLoaded && (showSaved || !loading) && shown.length > 0 && (
