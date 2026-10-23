@@ -4,6 +4,7 @@
 import { useEffect, useRef } from "react";
 import type { WalkingRouteState } from "../app/useWalkingRoute";
 import { useT } from "../i18n/useT";
+import { ROUTE_LANGUAGES } from "../lib/route";
 import { directionsUrl, isApplePhone } from "../lib/directions";
 import { formatDistance } from "../lib/geo";
 import type { Origin } from "../lib/location";
@@ -22,7 +23,7 @@ type Props = {
 const apple = isApplePhone(navigator.userAgent, navigator.maxTouchPoints);
 
 export function RouteView({ place, origin, miles, route, onRetry, onBack }: Props) {
-  const { t } = useT();
+  const { t, lang } = useT();
   const title = useRef<HTMLHeadingElement>(null);
   const name = place.name ?? t(`unnamed.${place.category}`);
 
@@ -106,6 +107,7 @@ export function RouteView({ place, origin, miles, route, onRetry, onBack }: Prop
 
       {route.status === "done" && (
         <>
+          {!ROUTE_LANGUAGES.includes(lang) && <p className="muted">{t("route.languageNote")}</p>}
           <ol className="route-steps">
             {route.route.steps.map((step, i) => (
               <li key={i}>

@@ -1,12 +1,16 @@
-// The top of the app. Until we know where to search, it shows the welcome
-// screen; after that, the map and list.
+// The top of the app. On the very first visit it asks for a language. Until we
+// know where to search it shows the welcome screens (what do you need, where
+// are you); after that, the map and list.
 
 import { useCallback, useEffect, useState } from "react";
+import { LanguageScreen } from "../components/LanguageScreen";
 import { PermissionScreen } from "../components/PermissionScreen";
+import type { Category } from "../lib/categories";
 import { pruneCache, saveLastSearch } from "../lib/cache";
 import { loadHours } from "../lib/hours";
 import type { Origin } from "../lib/location";
 import { readSharedPlace } from "../lib/share";
+import { loadSetting } from "../lib/storage";
 import { FinderScreen } from "./FinderScreen";
 import { useNearbySearch } from "./useNearbySearch";
 import "./App.css";
@@ -21,6 +25,10 @@ export function App() {
     shared ? { lat: shared.lat, lng: shared.lng, source: "shared" } : null,
   );
   const { state, search, retry } = useNearbySearch();
+  // Has the person picked a language yet? Only the first visit asks.
+  const [languageChosen, setLanguageChosen] = useState(() => loadSetting("lang") !== null);
+  // What they said they need ("food", "shelter"...): the filters to start with.
+  const [startCategories, setStartCategories] = useState<Category[]>([]);
   const [hoursLoaded, setHoursLoaded] = useState(false);
 
   useEffect(() => {
@@ -50,7 +58,10 @@ export function App() {
     if (shared) void search(shared);
   }, [shared, search]);
 
-  if (!origin) return <PermissionScreen onLocation={goTo} />;
+  if (!origin && !languageChosen && !shared) {
+    return <LanguageScreen onChosen={() => setLanguageChosen(true)} />;
+  }
+  if (!origin) return <PermissionScreen onLocation={goTo} onNeed={setStartCategories} />;
 
   return (
     <FinderScreen
@@ -61,6 +72,7 @@ export function App() {
       onRetry={retry}
       hoursLoaded={hoursLoaded}
       initialOpenId={shared?.id ?? null}
+      initialCategories={startCategories}
     />
   );
 }

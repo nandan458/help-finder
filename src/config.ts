@@ -2,7 +2,7 @@
 // To rename the app, change APP_NAME. The page title uses it too
 // (vite.config.ts copies it into index.html when the app is built).
 
-export const APP_NAME = "Help Finder";
+export const APP_NAME = "NearAid";
 
 // Search radii in meters, tried in order. We start small (fast, and the
 // closest help matters most) and only look farther when we find too few places.

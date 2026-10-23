@@ -3,6 +3,8 @@
 // so every read and write is wrapped. If saving fails, the app keeps working;
 // it just won't remember the setting next time.
 
+// Kept from the app's first name on purpose: changing it would make the app forget
+// everyone's saved places and settings.
 const PREFIX = "help-finder:";
 
 export function loadSetting(key: string): string | null {

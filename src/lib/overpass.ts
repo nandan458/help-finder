@@ -19,6 +19,7 @@ import {
   type Tags,
 } from "./categories";
 import { distanceMeters, roundCoord, type LatLng } from "./geo";
+import { OSM_FILTERS } from "./osmFilters";
 
 export type Place = {
   id: string; // OSM type + id, e.g. "node/123456"
@@ -62,22 +63,15 @@ const TIMEOUT_MS = 60_000;
 
 /**
  * Build the Overpass query: "find these kinds of places within radiusM meters of lat/lng".
- * `nwr` means nodes, ways, and relations (points, buildings, and bigger areas).
+ * The kinds of places come from osmFilters.ts, shared with the offline-pack builder.
  * `out center` gives buildings a single center point we can put a pin on.
- * Every line here must match a rule in categorize() in categories.ts.
  */
 export function buildQuery(lat: number, lng: number, radiusM: number): string {
   const around = `(around:${radiusM},${lat},${lng})`;
   return [
     "[out:json][timeout:25];",
     "(",
-    `  nwr["social_facility"~"^(food_bank|soup_kitchen|shelter)$"]${around};`,
-    `  nwr["social_facility:for"~"homeless"]${around};`,
-    `  nwr["amenity"~"^(food_bank|food_sharing|shower|drinking_water|toilets|clinic|pharmacy|library|community_centre)$"]${around};`,
-    `  nwr["healthcare"~"^(clinic|pharmacy)$"]${around};`,
-    `  nwr["healthcare"]["fee"="no"]${around};`,
-    `  nwr["amenity"~"^(doctors|dentist)$"]["fee"="no"]${around};`,
-    `  nwr["internet_access"]["internet_access:fee"="no"]${around};`,
+    ...OSM_FILTERS.map((filter) => `  ${filter}${around};`),
     ");",
     "out center;",
   ].join("\n");

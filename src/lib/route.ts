@@ -14,6 +14,14 @@ import { roundCoord, type LatLng } from "./geo";
 const VALHALLA_URL = "https://valhalla1.openstreetmap.de/route";
 const MIN_GAP_MS = 1000;
 
+// Languages the routing server can write steps in (checked 2026-10-23). For any
+// other app language (Chinese, Tagalog, Haitian Creole...) the steps come in English.
+export const ROUTE_LANGUAGES = ["en", "es", "fr", "ko", "ru", "vi"];
+
+export function routeLanguage(appLanguage: string): string {
+  return ROUTE_LANGUAGES.includes(appLanguage) ? appLanguage : "en";
+}
+
 export type RouteStep = {
   instruction: string; // "Turn left onto 9th Street Northwest."
   meters: number; // how far until the next step

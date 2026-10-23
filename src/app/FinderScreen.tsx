@@ -17,12 +17,14 @@ import { Sheet } from "../components/Sheet";
 import { sheetHeight, type SheetSize } from "../components/sheetSize";
 import { useT } from "../i18n/useT";
 import { clearCache } from "../lib/cache";
+import type { Category } from "../lib/categories";
 import { hasFilters, matchesFilters, NO_FILTERS, type Filters } from "../lib/filters";
 import { forgetGeocodes } from "../lib/geocode";
 import { distanceMeters, formatDistance, usesMiles, type LatLng } from "../lib/geo";
 import { hoursStatus, isOpenNow } from "../lib/hours";
 import type { Origin } from "../lib/location";
 import type { Place } from "../lib/overpass";
+import { routeLanguage } from "../lib/route";
 import { pageWithoutPlace, placeLink } from "../lib/share";
 import { useLocate } from "./useLocate";
 import type { SearchState } from "./useNearbySearch";
@@ -40,6 +42,7 @@ type Props = {
   onRetry: () => void;
   hoursLoaded: boolean; // false until the opening-hours library has arrived
   initialOpenId: string | null; // a place to open right away (from a shared link)
+  initialCategories: Category[]; // categories to show first (from "What do you need?")
 };
 
 const miles = usesMiles(navigator.language);
@@ -57,13 +60,22 @@ function describe(place: Place, origin: LatLng, now: Date): NearbyPlace {
 }
 
 export function FinderScreen(props: Props) {
-  const { origin, onOrigin, search, onSearch, onRetry, hoursLoaded, initialOpenId } = props;
+  const {
+    origin,
+    onOrigin,
+    search,
+    onSearch,
+    onRetry,
+    hoursLoaded,
+    initialOpenId,
+    initialCategories,
+  } = props;
   const { t, lang } = useT();
   const now = useNow();
   const online = useOnline();
   const { isPhone, height: screenHeight } = useViewport();
   const { saved, toggle: toggleSaved, isSaved, clear: clearSaved } = useSaved();
-  const [filters, setFilters] = useState<Filters>(NO_FILTERS);
+  const [filters, setFilters] = useState<Filters>({ ...NO_FILTERS, categories: initialCategories });
   const [showSaved, setShowSaved] = useState(false);
   // The place whose card is open. Its card shows as soon as the place is in the results.
   const [openId, setOpenId] = useState<string | null>(initialOpenId);
@@ -106,7 +118,11 @@ export function FinderScreen(props: Props) {
     id ? (search.places.find((p) => p.id === id) ?? saved.find((p) => p.id === id)) : undefined;
   const openPlace = findPlace(openId);
   const openItem = openPlace ? describe(openPlace, origin, now) : undefined;
-  const walking = useWalkingRoute(origin, directionsOpen && openPlace ? openPlace : null, lang);
+  const walking = useWalkingRoute(
+    origin,
+    directionsOpen && openPlace ? openPlace : null,
+    routeLanguage(lang),
+  );
 
   // The page address follows the open card (…?place=node/123&at=…), so the
   // address can be shared or bookmarked, and reloading keeps the card open.
