@@ -9,7 +9,7 @@
 
 import { ENOUGH_PLACES, FIRST_FETCH_M, SEARCH_RADII_M } from "../config";
 import { distanceMeters, type LatLng } from "./geo";
-import { fetchPlacesCached } from "./cache";
+import { fetchPlacesFast } from "./packs";
 import type { fetchPlaces, Place } from "./overpass";
 
 // radiusM: how far the places shown reach. fetchedM: how far the server answer
@@ -26,7 +26,7 @@ export async function searchNearby(
   center: LatLng,
   onWiden?: (radiusM: number) => void,
   radii: number[] = SEARCH_RADII_M,
-  fetcher: typeof fetchPlaces = fetchPlacesCached,
+  fetcher: typeof fetchPlaces = fetchPlacesFast,
 ): Promise<SearchResult> {
   // Which radii to actually ask the server for: the first one that's at least
   // FIRST_FETCH_M, and every bigger one. Smaller radii are checked on the phone.

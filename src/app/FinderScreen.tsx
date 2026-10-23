@@ -17,6 +17,7 @@ import { Sheet } from "../components/Sheet";
 import { sheetHeight, type SheetSize } from "../components/sheetSize";
 import { useT } from "../i18n/useT";
 import { clearCache } from "../lib/cache";
+import { clearPacks } from "../lib/packs";
 import type { Category } from "../lib/categories";
 import { hasFilters, matchesFilters, NO_FILTERS, type Filters } from "../lib/filters";
 import { forgetGeocodes } from "../lib/geocode";
@@ -143,6 +144,7 @@ export function FinderScreen(props: Props) {
 
   async function clearDeviceData() {
     await clearCache();
+    await clearPacks();
     forgetGeocodes();
     clearSaved();
     setShowSaved(false);
@@ -332,6 +334,7 @@ export function FinderScreen(props: Props) {
 
       <SettingsDialog
         open={settingsOpen}
+        where={origin}
         onClose={() => setSettingsOpen(false)}
         onClearData={clearDeviceData}
       />

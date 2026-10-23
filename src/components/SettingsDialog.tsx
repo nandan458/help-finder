@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import { useT } from "../i18n/useT";
+import type { LatLng } from "../lib/geo";
 import {
   loadTextSize,
   loadTheme,
@@ -13,14 +14,16 @@ import {
 } from "../lib/settings";
 import { Dialog } from "./Dialog";
 import { LanguagePicker } from "./LanguagePicker";
+import { OfflineSection } from "./OfflineSection";
 
 type Props = {
   open: boolean;
+  where: LatLng; // where the person is searching, to offer that state for offline use
   onClose: () => void;
   onClearData: () => Promise<void>;
 };
 
-export function SettingsDialog({ open, onClose, onClearData }: Props) {
+export function SettingsDialog({ open, where, onClose, onClearData }: Props) {
   const { t } = useT();
   const [theme, setThemeState] = useState<Theme>(loadTheme);
   const [textSize, setTextSizeState] = useState<TextSize>(loadTextSize);
@@ -74,6 +77,8 @@ export function SettingsDialog({ open, onClose, onClearData }: Props) {
             setTextSize(next);
           }}
         />
+
+        {open && <OfflineSection where={where} />}
 
         <section className="settings-section" aria-labelledby="privacy-title">
           <h3 id="privacy-title">{t("privacy.title")}</h3>
