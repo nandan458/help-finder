@@ -2,7 +2,7 @@
 
 NearAid shows places from **OpenStreetMap (OSM)**, the free world map that volunteers write, like Wikipedia for maps. If a food pantry, clinic, or water fountain near you is missing or wrong, **you can fix it yourself**, and it will show up in NearAid after the next weekly update (or right away, for people whose phones ask the live server).
 
-This guide is for improving the data in **your district** before the deadline, and it's also a good thing to mention in your video: *anyone can make the app better.*
+This guide is for improving the data in **your district** before the deadline, and it's also a good thing to mention in your video: _anyone can make the app better._
 
 ---
 
@@ -22,21 +22,21 @@ This guide is for improving the data in **your district** before the deadline, a
 
 OSM describes places with **tags**, like `amenity=library`. NearAid only shows places with the tags below, so use exactly these.
 
-| NearAid category | Tags to use | Notes |
-| --- | --- | --- |
-| **Food** | `social_facility=food_bank` or `social_facility=soup_kitchen` | A pantry or a place serving free meals. |
-| | `amenity=food_sharing` | A community fridge or free shelf. |
-| **Health** | `amenity=clinic` or `healthcare=clinic` | Add `fee=no` if it's free. |
-| | `amenity=pharmacy` | Shown as "may cost money". |
-| | `healthcare=*` or `amenity=doctors` / `amenity=dentist` **plus `fee=no`** | Only shown if marked free. |
-| **Shelter** | `social_facility=shelter` | Add `social_facility:for=homeless` (or `homeless;women`, `homeless;youth`...) for who it's for. |
-| | `social_facility:for=homeless` | Other services for people without a home. |
-| **Internet** | `amenity=library` | Libraries are included automatically. |
-| | `amenity=community_centre` | Community centers, too. |
-| | `internet_access=wlan` **plus** `internet_access:fee=no` | Any place with free Wi-Fi for everyone. |
-| **Water** | `amenity=drinking_water` | A fountain or bottle filler. |
-| **Restrooms** | `amenity=toilets` | Add `fee=no` and `wheelchair=yes` if true. |
-| **Showers** | `amenity=shower` | Public showers. |
+| NearAid category | Tags to use                                                               | Notes                                                                                           |
+| ---------------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| **Food**         | `social_facility=food_bank` or `social_facility=soup_kitchen`             | A pantry or a place serving free meals.                                                         |
+|                  | `amenity=food_sharing`                                                    | A community fridge or free shelf.                                                               |
+| **Health**       | `amenity=clinic` or `healthcare=clinic`                                   | Add `fee=no` if it's free.                                                                      |
+|                  | `amenity=pharmacy`                                                        | Shown as "may cost money".                                                                      |
+|                  | `healthcare=*` or `amenity=doctors` / `amenity=dentist` **plus `fee=no`** | Only shown if marked free.                                                                      |
+| **Shelter**      | `social_facility=shelter`                                                 | Add `social_facility:for=homeless` (or `homeless;women`, `homeless;youth`...) for who it's for. |
+|                  | `social_facility:for=homeless`                                            | Other services for people without a home.                                                       |
+| **Internet**     | `amenity=library`                                                         | Libraries are included automatically.                                                           |
+|                  | `amenity=community_centre`                                                | Community centers, too.                                                                         |
+|                  | `internet_access=wlan` **plus** `internet_access:fee=no`                  | Any place with free Wi-Fi for everyone.                                                         |
+| **Water**        | `amenity=drinking_water`                                                  | A fountain or bottle filler.                                                                    |
+| **Restrooms**    | `amenity=toilets`                                                         | Add `fee=no` and `wheelchair=yes` if true.                                                      |
+| **Showers**      | `amenity=shower`                                                          | Public showers.                                                                                 |
 
 > **Don't use `amenity=shelter`.** In OSM that means a bus-stop roof or picnic shelter, not a place to sleep. NearAid ignores it on purpose.
 
@@ -44,16 +44,16 @@ OSM describes places with **tags**, like `amenity=library`. NearAid only shows p
 
 Add these tags whenever you know them. NearAid shows every one:
 
-| Tag | Example | What NearAid does with it |
-| --- | --- | --- |
-| `name` | `Bread for the City` | The place's name. |
-| `opening_hours` | `Mo-Th 09:00-17:00; Fr 09:00-12:00` | **"Open now" and "Closes 5:00 PM"**, plus the week's hours. |
-| `phone` | `+1 202 555 0100` | The **Call** button. |
-| `website` | `https://example.org` | A link on the place card. |
-| `fee` | `no` | Marks it **Free** (use `fee=yes` if it costs money). |
-| `wheelchair` | `yes`, `limited`, `no` | Wheelchair info and the Wheelchair filter. |
-| `addr:housenumber`, `addr:street`, `addr:city`, `addr:state`, `addr:postcode` | `1525`, `7th Street NW`... | The address. |
-| `description` | `Free groceries, bring ID` | An "About" line. |
+| Tag                                                                           | Example                             | What NearAid does with it                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------- | ----------------------------------------------------------- |
+| `name`                                                                        | `Bread for the City`                | The place's name.                                           |
+| `opening_hours`                                                               | `Mo-Th 09:00-17:00; Fr 09:00-12:00` | **"Open now" and "Closes 5:00 PM"**, plus the week's hours. |
+| `phone`                                                                       | `+1 202 555 0100`                   | The **Call** button.                                        |
+| `website`                                                                     | `https://example.org`               | A link on the place card.                                   |
+| `fee`                                                                         | `no`                                | Marks it **Free** (use `fee=yes` if it costs money).        |
+| `wheelchair`                                                                  | `yes`, `limited`, `no`              | Wheelchair info and the Wheelchair filter.                  |
+| `addr:housenumber`, `addr:street`, `addr:city`, `addr:state`, `addr:postcode` | `1525`, `7th Street NW`...          | The address.                                                |
+| `description`                                                                 | `Free groceries, bring ID`          | An "About" line.                                            |
 
 ### Writing `opening_hours` correctly
 
