@@ -5,7 +5,7 @@
 import { useCallback, useRef, useState } from "react";
 import { SEARCH_RADII_M } from "../config";
 import { needsRefresh, readCache, writeCache } from "../lib/cache";
-import type { LatLng } from "../lib/geo";
+import { distanceMeters, type LatLng } from "../lib/geo";
 import { fetchPlaces, OverpassError, type FetchErrorKind, type Place } from "../lib/overpass";
 import { searchNearby } from "../lib/search";
 
@@ -52,16 +52,19 @@ export function useNearbySearch() {
       return;
     }
     if (!isLatest()) return;
-    setState({ status: "done", center, ...result });
+    const { places: shown, radiusM, fetchedM } = result;
+    setState({ status: "done", center, places: shown, radiusM });
 
     // If those results came from a cache entry over an hour old, fetch fresh
     // ones now and swap them in quietly. The person already sees results, so
     // if this fails we just keep what's on screen.
-    const entry = await readCache(center, result.radiusM);
+    const entry = await readCache(center, fetchedM);
     if (!entry || !needsRefresh(entry)) return;
     try {
-      const places = await fetchPlaces(center, result.radiusM);
-      await writeCache(center, result.radiusM, places);
+      const fresh = await fetchPlaces(center, fetchedM);
+      await writeCache(center, fetchedM, fresh);
+      // Keep showing the same radius as before.
+      const places = fresh.filter((p) => distanceMeters(center, p) <= radiusM);
       if (isLatest()) setState((prev) => ({ ...prev, places }));
     } catch {
       // keep the cached results

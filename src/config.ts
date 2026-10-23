@@ -8,6 +8,10 @@ export const APP_NAME = "Help Finder";
 // closest help matters most) and only look farther when we find too few places.
 export const SEARCH_RADII_M = [2000, 5000, 15000];
 
+// The first request to the map server covers this much (5 km). Smaller radii
+// are picked out of it on the phone, which saves a whole extra wait.
+export const FIRST_FETCH_M = 5000;
+
 // Fewer places than this means "look farther".
 export const ENOUGH_PLACES = 5;
 
