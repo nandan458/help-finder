@@ -1,0 +1,4232 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-17T22:07:20Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 358959871,
+  "lat": 38.9027752,
+  "lon": -77.0313202,
+  "tags": {
+    "addr:housenumber": "1315",
+    "addr:street": "K Street Northwest",
+    "amenity": "community_centre",
+    "check_date": "2024-01-13",
+    "community_centre": "social_centre",
+    "ele": "22",
+    "gnis:feature_id": "531779",
+    "name": "Almas Temple",
+    "tourism": "attraction",
+    "website": "https://en.wikipedia.org/wiki/Almas_Temple",
+    "wikidata": "Q4733709"
+  }
+},
+{
+  "type": "node",
+  "id": 358961192,
+  "lat": 38.8959000,
+  "lon": -77.0133000,
+  "tags": {
+    "amenity": "clinic",
+    "ele": "12",
+    "gnis:feature_id": "2458478",
+    "healthcare": "clinic",
+    "name": "Federal City Shelter Clinic"
+  }
+},
+{
+  "type": "node",
+  "id": 367141203,
+  "lat": 38.9103000,
+  "lon": -77.0217000,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1525",
+    "addr:postcode": "20001",
+    "addr:state": "DC",
+    "addr:street": "7th Street Northwest",
+    "amenity": "social_facility",
+    "ele": "25",
+    "name": "Bread for the City",
+    "opening_hours": "Mo-Th 09:00-17:00; Fr 09:00-12:00",
+    "phone": "+1-202-265-2400",
+    "social_facility": "food_bank",
+    "website": "https://breadforthecity.org/"
+  }
+},
+{
+  "type": "node",
+  "id": 367144261,
+  "lat": 38.9117349,
+  "lon": -77.0242502,
+  "tags": {
+    "addr:state": "DC",
+    "amenity": "social_facility",
+    "gnis:feature_id": "530172",
+    "name": "Phyllis Wheatley YWCA",
+    "social_facility": "shelter",
+    "social_facility:for": "homeless;women",
+    "website": "https://pwywca.org/"
+  }
+},
+{
+  "type": "node",
+  "id": 486527130,
+  "lat": 38.8980715,
+  "lon": -77.0226469,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:floor": "1",
+    "addr:housenumber": "701",
+    "addr:postcode": "20001-3516",
+    "addr:state": "DC",
+    "addr:street": "8th Street Northwest",
+    "air_conditioning": "yes",
+    "amenity": "cafe",
+    "check_date": "2023-09-17",
+    "indoor": "yes",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "internet_access:ssid": "si-visitor",
+    "level": "0",
+    "name": "Courtyard Cafe",
+    "opening_hours": "11:30-17:30",
+    "outdoor_seating": "yes",
+    "payment:american_express": "yes",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "phone": "+1 202-329-2423",
+    "website": "https://npg.si.edu/visit/courtyard-cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 577435479,
+  "lat": 38.9003420,
+  "lon": -77.0464291,
+  "tags": {
+    "amenity": "pharmacy",
+    "brand": "CVS Pharmacy",
+    "brand:website": "https://www.cvs.com/",
+    "brand:wikidata": "Q2078880",
+    "check_date": "2026-03-21",
+    "healthcare": "pharmacy",
+    "name": "CVS Pharmacy",
+    "opening_hours": "24/7",
+    "short_name": "CVS",
+    "website": "https://www.cvs.com/store-locator/washington-dc-pharmacies/2000-pennsylvania-ave-nw-washington-dc-20006/storeid=2847",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 681806041,
+  "lat": 38.8956266,
+  "lon": -77.0293970,
+  "tags": {
+    "amenity": "pharmacy",
+    "brand": "CVS Pharmacy",
+    "brand:website": "https://www.cvs.com/",
+    "brand:wikidata": "Q2078880",
+    "healthcare": "pharmacy",
+    "name": "CVS Pharmacy",
+    "short_name": "CVS",
+    "website": "https://www.cvs.com/store-locator/washington-dc-pharmacies/1275-pennsylvania-avenue-nw-washington-dc-20004/storeid=1842"
+  }
+},
+{
+  "type": "node",
+  "id": 690828489,
+  "lat": 38.9022888,
+  "lon": -77.0446848,
+  "tags": {
+    "amenity": "pharmacy",
+    "brand": "CVS Pharmacy",
+    "brand:website": "https://www.cvs.com/",
+    "brand:wikidata": "Q2078880",
+    "healthcare": "pharmacy",
+    "name": "CVS Pharmacy",
+    "short_name": "CVS"
+  }
+},
+{
+  "type": "node",
+  "id": 719149447,
+  "lat": 38.9098401,
+  "lon": -77.0382365,
+  "tags": {
+    "addr:housenumber": "1637",
+    "addr:street": "P Street Northwest",
+    "amenity": "pharmacy",
+    "brand": "CVS Pharmacy",
+    "brand:website": "https://www.cvs.com/",
+    "brand:wikidata": "Q2078880",
+    "check_date": "2024-02-04",
+    "drive_through": "no",
+    "healthcare": "pharmacy",
+    "name": "CVS Pharmacy",
+    "opening_hours": "Mo-Fr 07:00-23:00; Sa-Su 08:00-23:00",
+    "payment:american_express": "yes",
+    "payment:cash": "yes",
+    "payment:discover_card": "yes",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "short_name": "CVS",
+    "website": "https://www.cvs.com/store-locator/washington-dc-pharmacies/1637-p-street-nw-washington-dc-20036/storeid=1365"
+  }
+},
+{
+  "type": "node",
+  "id": 734469773,
+  "lat": 38.9044611,
+  "lon": -77.0322853,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1199",
+    "addr:postcode": "20005",
+    "addr:state": "DC",
+    "addr:street": "Vermont Avenue Northwest",
+    "amenity": "pharmacy",
+    "brand": "CVS Pharmacy",
+    "brand:website": "https://www.cvs.com/",
+    "brand:wikidata": "Q2078880",
+    "check_date": "2025-03-17",
+    "healthcare": "pharmacy",
+    "name": "CVS Pharmacy",
+    "opening_hours": "Mo-Fr 09:00-13:30,14:00-19:00; Sa 10:00-13:30,14:00-18:00; Su 11:00-13:30,14:00-17:00",
+    "phone": "+1 202-628-0720",
+    "short_name": "CVS",
+    "website": "https://www.cvs.com/store-locator/washington-dc-pharmacies/1199-vermont-avenue-nw-washington-dc-20005/storeid=1341"
+  }
+},
+{
+  "type": "node",
+  "id": 738189326,
+  "lat": 38.9013497,
+  "lon": -77.0404456,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "900",
+    "addr:postcode": "20006",
+    "addr:state": "DC",
+    "addr:street": "18th Street Northwest",
+    "dc-gis:addr": "900 18TH STREET NW, WASHINGTON, DC",
+    "dc-gis:dataset": "MetroStnFullPt",
+    "dc-gis:gis_id": "mstn_013",
+    "dc-gis:pubdate": "2007-04-05",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "level": "-2",
+    "name": "Farragut West",
+    "network": "Washington Metro",
+    "network:wikidata": "Q171221",
+    "operator": "Washington Metropolitan Area Transit Authority",
+    "operator:short": "WMATA",
+    "operator:wikidata": "Q7972051",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "C03",
+    "station": "subway",
+    "subway": "yes",
+    "website": "https://www.wmata.com/rider-guide/stations/farragut-west.cfm",
+    "wikidata": "Q976362",
+    "wikipedia": "en:Farragut West station"
+  }
+},
+{
+  "type": "node",
+  "id": 738189329,
+  "lat": 38.8983395,
+  "lon": -77.0286189,
+  "tags": {
+    "dc-gis:addr": "607 13TH STREET NW, WASHINGTON, DC",
+    "dc-gis:dataset": "MetroStnFullPt",
+    "dc-gis:gis_id": "mstn_024",
+    "dc-gis:pubdate": "2007-04-05",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "level": "-2",
+    "name": "Metro Center",
+    "network": "Washington Metro",
+    "operator": "Washington Metropolitan Area Transit Authority",
+    "operator:wikidata": "Q7972051",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "A01",
+    "station": "subway",
+    "subway": "yes",
+    "website": "https://wmata.com/rider-guide/stations/metro-center.cfm",
+    "wheelchair": "yes",
+    "wikidata": "Q4966977",
+    "wikipedia": "en:Metro Center station"
+  }
+},
+{
+  "type": "node",
+  "id": 738189363,
+  "lat": 38.9055282,
+  "lon": -77.0219332,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "700",
+    "addr:postcode": "20001",
+    "addr:state": "DC",
+    "addr:street": "M Street Northwest",
+    "dc-gis:addr": "700 M STREET NW, WASHINGTON, DC",
+    "dc-gis:dataset": "MetroStnFullPt",
+    "dc-gis:gis_id": "mstn_026",
+    "dc-gis:pubdate": "2007-04-05",
+    "ele": "24",
+    "gnis:feature_id": "529119",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "internet_access:ssid": "Metro-Public",
+    "level": "-2",
+    "name": "Mount Vernon Square",
+    "network": "Washington Metro",
+    "old_name": "Mt Vernon Sq/7th St–Convention Center",
+    "operator": "Washington Metropolitan Area Transit Authority",
+    "operator:wikidata": "Q7972051",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "E01",
+    "source": "local knowledge;streetlevel imagery;osm notes",
+    "start_date": "1991-05-11",
+    "station": "subway",
+    "subway": "yes",
+    "website": "https://www.wmata.com/rider-guide/stations/mt-vernon-sq.cfm",
+    "wikidata": "Q9035422",
+    "wikimedia_commons": "Category:Mount Vernon Square (WMATA station)",
+    "wikipedia": "en:Mount Vernon Square station"
+  }
+},
+{
+  "type": "node",
+  "id": 738189393,
+  "lat": 38.8849108,
+  "lon": -77.0225831,
+  "tags": {
+    "dc-gis:addr": "600 MARYLAND AVENUE SW, WASHINGTON, DC",
+    "dc-gis:dataset": "MetroStnFullPt",
+    "dc-gis:gis_id": "mstn_022",
+    "dc-gis:pubdate": "2007-04-05",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "level": "-3",
+    "name": "L'Enfant Plaza",
+    "network": "Washington Metro",
+    "network:wikidata": "Q171221",
+    "operator": "Washington Metropolitan Area Transit Authority",
+    "operator:short": "WMATA",
+    "operator:wikidata": "Q7972051",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "D03",
+    "station": "subway",
+    "subway": "yes",
+    "website": "https://www.wmata.com/rider-guide/stations/lenfant-plaza.cfm",
+    "wikidata": "Q170799",
+    "wikipedia": "en:L'Enfant Plaza station"
+  }
+},
+{
+  "type": "node",
+  "id": 738189394,
+  "lat": 38.8936824,
+  "lon": -77.0219151,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "701",
+    "addr:postcode": "20004",
+    "addr:state": "DC",
+    "addr:street": "Pennsylvania Avenue Northwest",
+    "dc-gis:addr": "701 PENNSYLVANIA AVENUE NW, WASHINGTON, DC",
+    "dc-gis:dataset": "MetroStnFullPt",
+    "dc-gis:gis_id": "mstn_002",
+    "dc-gis:pubdate": "2007-04-05",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "internet_access:ssid": "Metro-Public",
+    "level": "-2",
+    "name": "Archives",
+    "network": "Washington Metro",
+    "official_name": "Archives–Navy Memorial–Penn Quarter",
+    "operator": "Washington Metropolitan Area Transit Authority",
+    "operator:wikidata": "Q7972051",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "F02",
+    "station": "subway",
+    "subway": "yes",
+    "website": "https://www.wmata.com/rider-guide/stations/archives.cfm",
+    "wheelchair": "yes",
+    "wikidata": "Q3563768",
+    "wikipedia": "en:Archives station"
+  }
+},
+{
+  "type": "node",
+  "id": 738194998,
+  "lat": 38.8996368,
+  "lon": -77.0221223,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "734",
+    "addr:postcode": "20001",
+    "addr:state": "DC",
+    "addr:street": "7th Street Northwest",
+    "amenity": "cafe",
+    "branch": "Chinatown",
+    "brand:wikidata": "Q1034654",
+    "check_date": "2025-03-10",
+    "cuisine": "tea;coffee_shop",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Capital One Cafe",
+    "opening_hours": "Mo-Fr 07:00-19:00; Sa,Su 11:00-19:00",
+    "phone": "+1 202-313-7005",
+    "website": "https://www.capitalone.com/local/washingtondc-chinatown/",
+    "wikidata": "Q139860979"
+  }
+},
+{
+  "type": "node",
+  "id": 759552681,
+  "lat": 38.9070490,
+  "lon": -77.0380497,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1615",
+    "addr:postcode": "20036",
+    "addr:state": "DC",
+    "addr:street": "Rhode Island Avenue Northwest",
+    "brand": "Tapestry Collection by Hilton",
+    "dataset": "Hotels",
+    "dcgis:gis_id": "Htl_48",
+    "email": "DCAUP_hotel@hilton.com",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "The Beacon at Embassy Row Washington DC, Tapestry by Hilton",
+    "numrooms": "200",
+    "phone": "+1 202-296-2100",
+    "source": "dcgis",
+    "tourism": "hotel",
+    "website": "https://www.hilton.com/en/hotels/dcaupup-beacon-hotel-washington-dc/"
+  }
+},
+{
+  "type": "node",
+  "id": 759570192,
+  "lat": 38.9010756,
+  "lon": -77.0391649,
+  "tags": {
+    "addr:housenumber": "839",
+    "addr:street": "17th Street Northwest",
+    "dataset": "Hotels",
+    "dcgis:gis_id": "Htl_28",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Club Quarters",
+    "numrooms": "160",
+    "payment:cards": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "payment:dkv": "no",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "phone": "+1 202-463-6400",
+    "source": "dcgis",
+    "tourism": "hotel",
+    "website": "http://www.clubquarters.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 759624392,
+  "lat": 38.9059047,
+  "lon": -77.0293494,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1201",
+    "addr:postcode": "20005",
+    "addr:state": "DC",
+    "addr:street": "13th Street Northwest",
+    "branch": "Downtown DC/Convention Center",
+    "brand": "Comfort Inn",
+    "brand:wikidata": "Q113152349",
+    "dataset": "Hotels",
+    "dcgis:gis_id": "Htl_38",
+    "fax": "+1-202-408-0830",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Comfort Inn Downtown Dc/Convention Center Washington",
+    "note": "Check-in: 3:00p Check-out: 11:00a Breakfast: 6:30a-9:30a NO SMOKING NO PETS NO PARKING",
+    "numrooms": "0",
+    "phone": "+1 202-682-5300",
+    "ref": "DC601",
+    "source": "dcgis;website",
+    "tourism": "hotel",
+    "website": "https://www.choicehotels.com/district-of-columbia/washington/comfort-inn-hotels/dc601"
+  }
+},
+{
+  "type": "node",
+  "id": 759624413,
+  "lat": 38.9082660,
+  "lon": -77.0361302,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1315",
+    "addr:postcode": "20036",
+    "addr:state": "DC",
+    "addr:street": "16th Street Northwest",
+    "air_conditioning": "yes",
+    "bar": "yes",
+    "brand": "Kimpton",
+    "brand:wikidata": "Q6410248",
+    "dataset": "Hotels",
+    "dcgis:gis_id": "Htl_73",
+    "email": "talktous@thebanneker.com",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Kimpton Banneker Hotel by IHG",
+    "numrooms": "144",
+    "phone": "+1 202 234 6399",
+    "rooms": "144",
+    "source": "dcgis",
+    "tourism": "hotel",
+    "website": "https://www.thebanneker.com/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 769079444,
+  "lat": 38.9127500,
+  "lon": -77.0123870,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1700",
+    "addr:postcode": "20001",
+    "addr:street": "1st Street Northwest",
+    "amenity": "cafe",
+    "check_date": "2024-09-15",
+    "contact:facebook": "https://www.facebook.com/10203251187221406/",
+    "contact:instagram": "https://www.instagram.com/bigbearcafe",
+    "contact:twitter": "https://twitter.com/bigbearcafe",
+    "cost:coffee": "$3",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Big Bear Cafe",
+    "opening_hours": "Mo-Tu 08:00-15:00; We-Sa 08:00-15:00,16:00-21:00; Su 08:00-20:00",
+    "outdoor_seating": "yes",
+    "payment:american_express": "yes",
+    "payment:cash": "yes",
+    "payment:discover_card": "yes",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "phone": "+1-202-643-9222",
+    "takeaway": "yes",
+    "website": "http://www.bigbearcafe-dc.com/",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 874685167,
+  "lat": 38.8975372,
+  "lon": -77.0272924,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Pret A Manger",
+    "brand:wikidata": "Q2109109",
+    "check_date": "2025-03-15",
+    "check_date:opening_hours": "2025-03-15",
+    "cuisine": "sandwich",
+    "indoor_seating": "yes",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "level": "0",
+    "name": "Pret A Manger",
+    "opening_hours": "Mo-Fr 07:00-19:30; Sa,Su 09:00-16:00",
+    "outdoor_seating": "no",
+    "short_name": "Pret",
+    "takeaway": "yes",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 921894917,
+  "lat": 38.9128070,
+  "lon": -77.0316313,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1377",
+    "addr:postcode": "20009",
+    "addr:state": "DC",
+    "addr:street": "R Street Northwest",
+    "addr:unit": "3rd Floor",
+    "amenity": "community_centre",
+    "branch": "Washington",
+    "community_centre": "cultural_centre",
+    "name": "Goethe-Institut",
+    "phone": "+1 202 847 4700",
+    "website": "https://www.goethe.de/ins/us/was/enindex.htm"
+  }
+},
+{
+  "type": "node",
+  "id": 1314521738,
+  "lat": 38.8913318,
+  "lon": -77.0185322,
+  "tags": {
+    "amenity": "drinking_water",
+    "drinking_water:seasonal": "no",
+    "indoor": "yes",
+    "note": "Inside West Building (east entrance) of National Gallery, second floor",
+    "source": "wetap",
+    "wetap:photo": "https://lh6.googleusercontent.com/_lRj66XqgIsk/Tbx4ZYOQD_I/AAAAAAAAAQ0/an535HQn-6c/---.jpg",
+    "wetap:status": "working"
+  }
+},
+{
+  "type": "node",
+  "id": 1314521843,
+  "lat": 38.8898170,
+  "lon": -77.0123410,
+  "tags": {
+    "amenity": "drinking_water",
+    "bottle": "yes",
+    "check_date": "2026-10-15",
+    "dog": "no",
+    "drinking_water:seasonal": "yes",
+    "fountain": "bubbler",
+    "note": "in front of Capital",
+    "source": "wetap",
+    "wetap:flow": "good",
+    "wetap:photo": "https://lh6.googleusercontent.com/_lRj66XqgIsk/TbyJsS8o8TI/AAAAAAAAAQ4/rZQKVl7u-JE/warm-good-fillable-good.jpg",
+    "wetap:quality": "good",
+    "wetap:status": "working",
+    "wetap:temperature": "warm",
+    "wikidata": "Q49489762"
+  }
+},
+{
+  "type": "node",
+  "id": 1416494715,
+  "lat": 38.8858849,
+  "lon": -77.0178290,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "400",
+    "addr:postcode": "20024",
+    "addr:state": "DC",
+    "addr:street": "C Street Southwest",
+    "air_conditioning": "yes",
+    "amenity": "fast_food",
+    "brand": "McDonald's",
+    "brand:website": "https://www.mcdonalds.com/",
+    "brand:wikidata": "Q38076",
+    "check_date": "2024-01-02",
+    "cuisine": "burger",
+    "delivery": "yes",
+    "drive_through": "no",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "level": "0",
+    "name": "McDonald's",
+    "opening_hours": "Mo-Th 05:00-24:00; Fr-Sa 05:00-25:00; Su 05:00-23:00",
+    "outdoor_seating": "no",
+    "phone": "+1 202-484-0803",
+    "takeaway": "yes",
+    "website": "https://www.mcdonalds.com/us/en-us/location/20860.html",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2351682006,
+  "lat": 38.8903686,
+  "lon": -77.0298850,
+  "tags": {
+    "amenity": "drinking_water",
+    "bottle": "yes",
+    "check_date": "2026-10-15",
+    "description": "opposite National Museum of American History twin fountains",
+    "dog": "no",
+    "drinking_water:seasonal": "yes",
+    "fountain": "bubbler",
+    "note": "opposite National Museum of American History twin fountains",
+    "source": "wetap.org",
+    "wetap:status": "broken"
+  }
+},
+{
+  "type": "node",
+  "id": 2351682008,
+  "lat": 38.8905062,
+  "lon": -77.0197932,
+  "tags": {
+    "amenity": "drinking_water",
+    "description": "Directly opposite entrance to national gallery of art double fountain",
+    "drinking_water:seasonal": "yes",
+    "source": "wetap.org",
+    "wetap:status": "broken"
+  }
+},
+{
+  "type": "node",
+  "id": 2351682018,
+  "lat": 38.8970600,
+  "lon": -77.0059800,
+  "tags": {
+    "amenity": "drinking_water",
+    "description": "inside Union Station main entrance",
+    "fountain": "bubbler",
+    "indoor": "yes",
+    "source": "wetap.org",
+    "wetap:status": "broken"
+  }
+},
+{
+  "type": "node",
+  "id": 2378589971,
+  "lat": 38.9099796,
+  "lon": -77.0376168,
+  "tags": {
+    "amenity": "drinking_water",
+    "check_date": "2026-06-13"
+  }
+},
+{
+  "type": "node",
+  "id": 2382676249,
+  "lat": 38.9098057,
+  "lon": -77.0282072,
+  "tags": {
+    "amenity": "drinking_water",
+    "check_date": "2026-06-13"
+  }
+},
+{
+  "type": "node",
+  "id": 2384783077,
+  "lat": 38.8887207,
+  "lon": -77.0300691,
+  "tags": {
+    "amenity": "drinking_water",
+    "bottle": "no",
+    "check_date": "2026-10-15",
+    "dog": "no",
+    "drinking_water:seasonal": "yes",
+    "fountain": "bubbler"
+  }
+},
+{
+  "type": "node",
+  "id": 2384789772,
+  "lat": 38.8904284,
+  "lon": -77.0258365,
+  "tags": {
+    "amenity": "drinking_water",
+    "drinking_water:seasonal": "yes",
+    "fountain": "bubbler"
+  }
+},
+{
+  "type": "node",
+  "id": 2384791127,
+  "lat": 38.8888666,
+  "lon": -77.0197867,
+  "tags": {
+    "amenity": "drinking_water",
+    "bottle": "yes",
+    "check_date": "2026-10-15",
+    "dog": "no",
+    "drinking_water:seasonal": "yes",
+    "fountain": "bubbler"
+  }
+},
+{
+  "type": "node",
+  "id": 2384793371,
+  "lat": 38.8889690,
+  "lon": -77.0244236,
+  "tags": {
+    "amenity": "drinking_water",
+    "bottle": "no",
+    "check_date": "2026-10-15",
+    "dog": "no",
+    "drinking_water:seasonal": "yes",
+    "fountain": "bubbler"
+  }
+},
+{
+  "type": "node",
+  "id": 2384814920,
+  "lat": 38.8919018,
+  "lon": -77.0392489,
+  "tags": {
+    "amenity": "drinking_water",
+    "bottle": "yes",
+    "check_date": "2026-07-21",
+    "dog": "no",
+    "drinking_water:seasonal": "yes",
+    "fountain": "bubbler"
+  }
+},
+{
+  "type": "node",
+  "id": 2385312373,
+  "lat": 38.9125191,
+  "lon": -77.0128089,
+  "tags": {
+    "amenity": "drinking_water"
+  }
+},
+{
+  "type": "node",
+  "id": 2388089346,
+  "lat": 38.8948408,
+  "lon": -77.0099218,
+  "tags": {
+    "amenity": "drinking_water"
+  }
+},
+{
+  "type": "node",
+  "id": 2525689701,
+  "lat": 38.8930490,
+  "lon": -77.0349900,
+  "tags": {
+    "access": "yes",
+    "amenity": "drinking_water",
+    "drinking_water:seasonal": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2966223709,
+  "lat": 38.9090968,
+  "lon": -77.0226834,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:country": "US",
+    "addr:housenumber": "1400",
+    "addr:postcode": "20001",
+    "addr:state": "DC",
+    "addr:street": "7th Street Northwest",
+    "brand": "Giant",
+    "brand:wikidata": "Q5558336",
+    "check_date": "2026-02-16",
+    "check_date:opening_hours": "2026-02-16",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "internet_access:ssid": "Giant_Food_Guest",
+    "name": "Giant",
+    "official_name": "Giant Food",
+    "opening_hours": "Mo-Su 06:00-22:00",
+    "payment:american_express": "yes",
+    "payment:cash": "yes",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "phone": "+1 202-238-0180",
+    "ref": "2376",
+    "shop": "supermarket",
+    "website": "https://stores.giantfood.com/dc/washington/1400-7th-street-nw"
+  }
+},
+{
+  "type": "node",
+  "id": 3893773465,
+  "lat": 38.8986676,
+  "lon": -77.0263848,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1001",
+    "addr:street": "G Street Northwest",
+    "amenity": "clinic",
+    "branch": "Group",
+    "healthcare": "clinic",
+    "name": "One Medical",
+    "operator": "1Life Healthcare",
+    "operator:type": "private",
+    "operator:wikidata": "Q85727717"
+  }
+},
+{
+  "type": "node",
+  "id": 3982434672,
+  "lat": 38.9023202,
+  "lon": -77.0179932,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "450",
+    "addr:postcode": "20001",
+    "addr:state": "DC",
+    "addr:street": "K Street Northwest",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "bar": "yes",
+    "brand": "Busboys and Poets",
+    "brand:wikidata": "Q5001291",
+    "check_date": "2026-08-30",
+    "cuisine": "sandwich;chicken;american;middle_eastern",
+    "diet:halal": "yes",
+    "diet:vegan": "yes",
+    "diet:vegetarian": "yes",
+    "highchair": "yes",
+    "indoor_seating": "yes",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Busboys and Poets",
+    "opening_hours": "Mo-Th 08:00-22:00; Fr 08:00-23:00; Sa 09:00-23:00; Su 09:00-22:00",
+    "outdoor_seating": "yes",
+    "phone": "+1 202-789-2227",
+    "website": "https://www.busboysandpoets.com/locations/?location=450k&venue=5th-k"
+  }
+},
+{
+  "type": "node",
+  "id": 4103638593,
+  "lat": 38.9048162,
+  "lon": -77.0431962,
+  "tags": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "Tschiffely Pharmacy",
+    "opening_hours": "Mo-Fr 08:00-18:00"
+  }
+},
+{
+  "type": "node",
+  "id": 4270754290,
+  "lat": 38.9100591,
+  "lon": -77.0221318,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1550",
+    "addr:postcode": "20001",
+    "addr:state": "DC",
+    "addr:street": "7th Street Northwest",
+    "alt_name": "Unleashed by Petco",
+    "branch": "Unleashed by Petco Shaw",
+    "brand": "Unleashed",
+    "brand:wikidata": "Q62122874",
+    "check_date": "2023-09-04",
+    "fixme": "verify location: there was a duplicate POI a couple doors north and the number does not align with the other side of the street",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "internet_access:ssid": "PetcoGuests",
+    "name": "Unleashed",
+    "opening_hours": "10:00-19:00",
+    "payment:american_express": "yes",
+    "payment:discover_card": "yes",
+    "payment:mastercard": "yes",
+    "payment:unionpay": "yes",
+    "payment:visa": "yes",
+    "phone": "+1 202-238-9010",
+    "shop": "pet",
+    "website": "https://stores.petco.com/dc/washington/pet-supplies-washington-dc-5826.html"
+  }
+},
+{
+  "type": "node",
+  "id": 4412045988,
+  "lat": 38.8877520,
+  "lon": -77.0348296,
+  "tags": {
+    "amenity": "drinking_water",
+    "check_date": "2026-10-15",
+    "drinking_water:seasonal": "yes",
+    "fountain": "bubbler",
+    "note": "One fountain not running"
+  }
+},
+{
+  "type": "node",
+  "id": 4748581037,
+  "lat": 38.9027977,
+  "lon": -77.0212666,
+  "tags": {
+    "brand": "CVS Pharmacy",
+    "brand:website": "https://www.cvs.com/",
+    "brand:wikidata": "Q2078880",
+    "check_date": "2023-09-14",
+    "healthcare": "pharmacy",
+    "name": "CVS Pharmacy",
+    "shop": "chemist",
+    "short_name": "CVS",
+    "website": "https://www.cvs.com/store-locator/washington-dc-pharmacies/675-k-street-nw-washington-dc-20001/storeid=10685"
+  }
+},
+{
+  "type": "node",
+  "id": 4788354921,
+  "lat": 38.9039139,
+  "lon": -77.0343101,
+  "tags": {
+    "amenity": "clinic",
+    "check_date": "2025-10-04",
+    "healthcare": "clinic",
+    "name": "GW Primary Care",
+    "name:en": "Metro Immediate & Primary Care",
+    "opening_hours": "Mo-Fr 07:00-19:00; Sa 08:00-16:00; Su off"
+  }
+},
+{
+  "type": "node",
+  "id": 4867390342,
+  "lat": 38.9092300,
+  "lon": -77.0328487,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1418",
+    "addr:state": "DC",
+    "addr:street": "P Street Northwest",
+    "amenity": "pharmacy",
+    "brand": "CVS Pharmacy",
+    "brand:website": "https://www.cvs.com/",
+    "brand:wikidata": "Q2078880",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "name": "CVS Pharmacy",
+    "opening_hours": "24/7",
+    "phone": "+1 202-939-5735",
+    "short_name": "CVS",
+    "website": "https://www.cvs.com/store-locator/washington-dc-pharmacies/1418-p-street-nw-washington-dc-20005/storeid=2817"
+  }
+},
+{
+  "type": "node",
+  "id": 4867674825,
+  "lat": 38.9073719,
+  "lon": -77.0314507,
+  "tags": {
+    "amenity": "refuge",
+    "name": "Bethany Women’s Center",
+    "social_facility": "shelter",
+    "social_facility:for": "woman",
+    "website": "https://www.downtowndc.org/go/bethany-womens-center"
+  }
+},
+{
+  "type": "node",
+  "id": 5192606096,
+  "lat": 38.8993329,
+  "lon": -77.0040053,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "700",
+    "addr:postcode": "20002",
+    "addr:state": "DC",
+    "addr:street": "2nd Street Northeast",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Kaiser Permanente Capitol Hill Medical Center",
+    "operator": "Kaiser Permanente",
+    "operator:short": "KP",
+    "operator:type": "private",
+    "operator:website": "https://healthy.kaiserpermanente.org/",
+    "operator:wikidata": "Q1721601",
+    "operator:wikipedia": "en:Kaiser Permanente"
+  }
+},
+{
+  "type": "node",
+  "id": 5355015601,
+  "lat": 38.8918754,
+  "lon": -77.0358725,
+  "tags": {
+    "amenity": "drinking_water",
+    "fountain": "bubbler"
+  }
+},
+{
+  "type": "node",
+  "id": 5355072329,
+  "lat": 38.8927734,
+  "lon": -77.0362300,
+  "tags": {
+    "access": "yes",
+    "amenity": "drinking_water",
+    "drinking_water:seasonal": "yes",
+    "fountain": "bubbler",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5356863579,
+  "lat": 38.8899507,
+  "lon": -77.0392651,
+  "tags": {
+    "amenity": "drinking_water",
+    "bottle": "yes",
+    "check_date": "2026-07-21",
+    "dog": "no",
+    "drinking_water:seasonal": "yes",
+    "fountain": "bubbler"
+  }
+},
+{
+  "type": "node",
+  "id": 5356863580,
+  "lat": 38.8883204,
+  "lon": -77.0408256,
+  "tags": {
+    "access": "permissive",
+    "amenity": "drinking_water",
+    "check_date": "2026-06-14",
+    "drinking_water:seasonal": "yes",
+    "fountain": "bubbler"
+  }
+},
+{
+  "type": "node",
+  "id": 5356863581,
+  "lat": 38.8881032,
+  "lon": -77.0413924,
+  "tags": {
+    "amenity": "drinking_water",
+    "bottle": "no",
+    "check_date": "2026-06-14",
+    "covered": "no",
+    "drinking_water:seasonal": "yes",
+    "fee": "no",
+    "fountain": "bubbler"
+  }
+},
+{
+  "type": "node",
+  "id": 5356863582,
+  "lat": 38.8888922,
+  "lon": -77.0393000,
+  "tags": {
+    "amenity": "drinking_water",
+    "bottle": "yes",
+    "check_date": "2026-06-14",
+    "drinking_water:seasonal": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5406239828,
+  "lat": 38.9013438,
+  "lon": -77.0202236,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "600",
+    "addr:postcode": "20001",
+    "addr:state": "DC",
+    "addr:street": "Massachusetts Avenue Northwest",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "bar": "yes",
+    "check_date": "2026-03-15",
+    "contact:facebook": "FoundingFarmers",
+    "contact:instagram": "FoundingFarmers",
+    "cuisine": "american",
+    "delivery": "yes",
+    "description": "Full-service restaurant & bar with on-site distillery (Founding Spirits). Breakfast, lunch, dinner, weekday happy hour (bar area), weekend Farmers Market Buffet Brunch, catering, private dining.",
+    "diet:gluten_free": "yes",
+    "diet:vegan": "yes",
+    "diet:vegetarian": "yes",
+    "happy_hours": "Mo-Fr 15:30-18:00",
+    "highchair": "yes",
+    "indoor_seating": "yes",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "internet_access:ssid": "FarmersDistillersGuest",
+    "name": "Founding Farmers & Distillers",
+    "opening_hours": "Mo,Su 07:00-21:00; Tu-Th 07:00-22:00; Fr-Sa 07:00-23:00",
+    "opening_hours:breakfast": "Mo-Fr 07:00-11:00; Sa,Su 07:00-14:00",
+    "opening_hours:brunch": "Sa,Su 09:00-14:00",
+    "opening_hours:first_bake": "Mo-Fr 07:00-10:30",
+    "outdoor_seating": "yes",
+    "payment:american_express": "yes",
+    "payment:cash": "yes",
+    "payment:discover_card": "yes",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "phone": "+1-202-464-3001",
+    "reservation": "yes",
+    "takeaway": "yes",
+    "toilets": "yes",
+    "website": "https://www.wearefoundingfarmers.com/location/founding-farmers-distillers/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5563024464,
+  "lat": 38.8896228,
+  "lon": -77.0332242,
+  "tags": {
+    "amenity": "drinking_water",
+    "bottle": "yes",
+    "check_date": "2026-10-15",
+    "dog": "no",
+    "drinking_water:seasonal": "yes",
+    "fountain": "bubbler"
+  }
+},
+{
+  "type": "node",
+  "id": 5563024467,
+  "lat": 38.8895353,
+  "lon": -77.0334016,
+  "tags": {
+    "access": "yes",
+    "amenity": "toilets",
+    "check_date": "2023-10-29",
+    "male": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5563085189,
+  "lat": 38.8934299,
+  "lon": -77.0381590,
+  "tags": {
+    "amenity": "drinking_water",
+    "drinking_water:seasonal": "yes",
+    "fountain": "bubbler"
+  }
+},
+{
+  "type": "node",
+  "id": 5569778488,
+  "lat": 38.8947753,
+  "lon": -77.0347368,
+  "tags": {
+    "amenity": "drinking_water",
+    "drinking_water:seasonal": "yes",
+    "fountain": "bubbler"
+  }
+},
+{
+  "type": "node",
+  "id": 5569778492,
+  "lat": 38.8948259,
+  "lon": -77.0348397,
+  "tags": {
+    "amenity": "toilets"
+  }
+},
+{
+  "type": "node",
+  "id": 6082394607,
+  "lat": 38.8877557,
+  "lon": -77.0130315,
+  "tags": {
+    "amenity": "toilets",
+    "changing_table": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6124413520,
+  "lat": 38.9039919,
+  "lon": -77.0138624,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "155",
+    "addr:postcode": "20001",
+    "addr:state": "DC",
+    "addr:street": "L Street, Northwest",
+    "amenity": "library",
+    "name": "Northwest One Neighborhood Library",
+    "opening_hours": "Mo-We,Fr-Sa 10:00-18:00; Th 12:00-20:00; Su 13:00-17:00",
+    "operator": "DC Public Library",
+    "operator:type": "public",
+    "operator:wikidata": "Q5283432",
+    "phone": "+1-202-939-5946",
+    "website": "https://www.dclibrary.org/northwest",
+    "wikidata": "Q24038047"
+  }
+},
+{
+  "type": "node",
+  "id": 6268406822,
+  "lat": 38.8972032,
+  "lon": -77.0066520,
+  "tags": {
+    "amenity": "drinking_water",
+    "fountain": "bubbler"
+  }
+},
+{
+  "type": "node",
+  "id": 6338518316,
+  "lat": 38.8879541,
+  "lon": -77.0427529,
+  "tags": {
+    "amenity": "toilets",
+    "check_date": "2025-10-10",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6376387701,
+  "lat": 38.8981788,
+  "lon": -77.0406895,
+  "tags": {
+    "amenity": "pharmacy",
+    "brand": "CVS Pharmacy",
+    "brand:website": "https://www.cvs.com/",
+    "brand:wikidata": "Q2078880",
+    "check_date": "2023-05-17",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "name": "CVS Pharmacy",
+    "short_name": "CVS"
+  }
+},
+{
+  "type": "node",
+  "id": 6382047474,
+  "lat": 38.9006960,
+  "lon": -77.0418942,
+  "tags": {
+    "amenity": "pharmacy",
+    "brand": "Health Mart",
+    "brand:wikidata": "Q5690597",
+    "healthcare": "pharmacy",
+    "name": "Health Mart",
+    "operator": "Foer's"
+  }
+},
+{
+  "type": "node",
+  "id": 6751327454,
+  "lat": 38.9025715,
+  "lon": -77.0226842,
+  "tags": {
+    "addr:housenumber": "801",
+    "addr:street": "K Street Northwest",
+    "amenity": "library",
+    "check_date": "2023-08-28",
+    "email": "library@dchistory.org",
+    "name": "Kiplinger Research Library",
+    "opening_hours": "Tu,Th 10:00-12:00,13:00-15:00 \"by appointment\"; PH off",
+    "website": "https://www.dchistory.org/research/kiplinger"
+  }
+},
+{
+  "type": "node",
+  "id": 6938304702,
+  "lat": 38.8975696,
+  "lon": -77.0278418,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1155",
+    "addr:postcode": "20004",
+    "addr:state": "DC",
+    "addr:street": "F Street Northwest",
+    "amenity": "pharmacy",
+    "brand": "Walgreens",
+    "brand:wikidata": "Q1591889",
+    "healthcare": "pharmacy",
+    "name": "Walgreens",
+    "phone": "+1 202-969-8814",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7039471051,
+  "lat": 38.9104565,
+  "lon": -77.0317035,
+  "tags": {
+    "amenity": "clinic",
+    "description": "This clinic provides hormone replacement therapy as gender transition-related services to transgender clients.",
+    "healthcare": "clinic",
+    "healthcare:speciality": "‘transHRT’;wikidata=Q5903802",
+    "name": "Whitman-Walker Health"
+  }
+},
+{
+  "type": "node",
+  "id": 7788485988,
+  "lat": 38.8853708,
+  "lon": -77.0218956,
+  "tags": {
+    "dc-gis:addr": "600 MARYLAND AVENUE SW, WASHINGTON, DC",
+    "dc-gis:dataset": "MetroStnFullPt",
+    "dc-gis:gis_id": "mstn_022",
+    "dc-gis:pubdate": "2007-04-05",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "level": "-2",
+    "name": "L'Enfant Plaza",
+    "network": "Washington Metro",
+    "network:wikidata": "Q171221",
+    "operator": "Washington Metropolitan Area Transit Authority",
+    "operator:short": "WMATA",
+    "operator:wikidata": "Q7972051",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "F03",
+    "station": "subway",
+    "subway": "yes",
+    "website": "https://www.wmata.com/rider-guide/stations/lenfant-plaza.cfm",
+    "wheelchair": "yes",
+    "wikidata": "Q170799",
+    "wikipedia": "en:L'Enfant Plaza station"
+  }
+},
+{
+  "type": "node",
+  "id": 7929435501,
+  "lat": 38.8869653,
+  "lon": -77.0178903,
+  "tags": {
+    "amenity": "toilets",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7945524482,
+  "lat": 38.8937771,
+  "lon": -77.0431214,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1849",
+    "addr:postcode": "20240",
+    "addr:state": "DC",
+    "addr:street": "C Street Northwest",
+    "amenity": "library",
+    "name": "Interior Library",
+    "website": "https://www.doi.gov/library"
+  }
+},
+{
+  "type": "node",
+  "id": 9512802278,
+  "lat": 38.8942753,
+  "lon": -77.0453830,
+  "tags": {
+    "amenity": "drinking_water",
+    "drinking_water:seasonal": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9512811964,
+  "lat": 38.8880271,
+  "lon": -77.0427582,
+  "tags": {
+    "amenity": "drinking_water",
+    "check_date": "2026-06-14",
+    "covered": "no",
+    "drinking_water:seasonal": "yes",
+    "fee": "no",
+    "fountain": "bubbler",
+    "indoor": "no",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9515295458,
+  "lat": 38.8903581,
+  "lon": -77.0334345,
+  "tags": {
+    "amenity": "drinking_water",
+    "check_date": "2026-10-15",
+    "drinking_water:seasonal": "yes",
+    "fountain": "bubbler",
+    "note": "One fountain not running"
+  }
+},
+{
+  "type": "node",
+  "id": 9515295460,
+  "lat": 38.8870215,
+  "lon": -77.0179586,
+  "tags": {
+    "amenity": "drinking_water",
+    "bottle": "no",
+    "check_date": "2026-10-15",
+    "dog": "no",
+    "drinking_water:seasonal": "no",
+    "fountain": "bubbler",
+    "note": "Freeze proof!!"
+  }
+},
+{
+  "type": "node",
+  "id": 9531296938,
+  "lat": 38.9015215,
+  "lon": -77.0311224,
+  "tags": {
+    "amenity": "toilets",
+    "toilets:disposal": "flush",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 10251747187,
+  "lat": 38.8987422,
+  "lon": -77.0242964,
+  "tags": {
+    "amenity": "cafe",
+    "indoor_seating": "yes",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Marianne's",
+    "outdoor_seating": "yes",
+    "website": "https://dccentralkitchen.org/mariannes-by-dc-central-kitchen/"
+  }
+},
+{
+  "type": "node",
+  "id": 10566953217,
+  "lat": 38.9006947,
+  "lon": -77.0267721,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1090",
+    "addr:postcode": "20001",
+    "addr:state": "DC",
+    "addr:street": "I Street Northwest",
+    "air_conditioning": "yes",
+    "amenity": "cafe",
+    "branch": "City Center",
+    "brand": "Tatte Bakery & Cafe",
+    "brand:wikidata": "Q116671479",
+    "check_date": "2026-01-18",
+    "cuisine": "bakery;coffee_shop",
+    "indoor_seating": "yes",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Tatte Bakery & Cafe",
+    "opening_hours": "Mo-Sa 07:00-20:00; Su 08:00-19:00",
+    "outdoor_seating": "yes",
+    "payment:american_express": "yes",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "phone": "+1 202-984-7540",
+    "shop": "bakery",
+    "takeaway": "yes",
+    "website": "https://tattebakery.com/washington-dc/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11040517053,
+  "lat": 38.8911881,
+  "lon": -77.0235707,
+  "tags": {
+    "access": "yes",
+    "amenity": "toilets",
+    "fee": "no",
+    "male": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11040517078,
+  "lat": 38.8913842,
+  "lon": -77.0235723,
+  "tags": {
+    "access": "yes",
+    "amenity": "toilets",
+    "fee": "no",
+    "female": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11181235038,
+  "lat": 38.8976799,
+  "lon": -77.0230809,
+  "tags": {
+    "amenity": "toilets",
+    "check_date": "2023-09-17",
+    "indoor": "yes",
+    "level": "0"
+  }
+},
+{
+  "type": "node",
+  "id": 11181295137,
+  "lat": 38.8980617,
+  "lon": -77.0227942,
+  "tags": {
+    "amenity": "toilets",
+    "check_date": "2023-09-17",
+    "indoor": "yes",
+    "level": "0"
+  }
+},
+{
+  "type": "node",
+  "id": 11303550788,
+  "lat": 38.9023172,
+  "lon": -77.0166022,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "400",
+    "addr:postcode": "20001-2540",
+    "addr:state": "DC",
+    "addr:street": "K Street Northwest",
+    "amenity": "cafe",
+    "brand": "Joe & The Juice",
+    "brand:wikidata": "Q26221514",
+    "check_date": "2026-03-14",
+    "cuisine": "coffee_shop",
+    "diet:vegan": "yes",
+    "diet:vegetarian": "yes",
+    "indoor_seating": "yes",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "internet_access:ssid": "JJ-Guest",
+    "name": "Joe & The Juice",
+    "opening_hours": "Mo-Su 07:00-19:00",
+    "outdoor_seating": "yes",
+    "payment:american_express": "yes",
+    "payment:cash": "yes",
+    "payment:discover_card": "yes",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "phone": "+1 646-741-8640",
+    "takeaway": "yes",
+    "toilets": "yes",
+    "website": "https://www.joejuice.com/store/63d6d0d8-ac80-442e-a67e-a54fce552651"
+  }
+},
+{
+  "type": "node",
+  "id": 11511970365,
+  "lat": 38.9059080,
+  "lon": -77.0055465,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1201",
+    "addr:postcode": "20002",
+    "addr:state": "DC",
+    "addr:street": "First Street Northeast",
+    "amenity": "pharmacy",
+    "brand": "Harris Teeter",
+    "brand:wikidata": "Q5665067",
+    "contact:website": "https://www.harristeeter.com/stores/grocery/dc/washington/constitution-square/097/00352",
+    "drive_through": "no",
+    "healthcare": "pharmacy",
+    "name": "Harris Teeter Pharmacy",
+    "opening_hours": "Mo-Fr 09:00-19:00; Sa 09:00-17:00; Su 11:00-17:00",
+    "operator": "Harris Teeter"
+  }
+},
+{
+  "type": "node",
+  "id": 11711370616,
+  "lat": 38.8999767,
+  "lon": -77.0217001,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:country": "US",
+    "addr:housenumber": "801",
+    "addr:postcode": "20001",
+    "addr:state": "DC",
+    "addr:street": "7th Street Northwest",
+    "brand": "Walgreens",
+    "brand:wikidata": "Q1591889",
+    "check_date": "2025-03-09",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "name": "Walgreens",
+    "opening_hours": "Mo-Su 07:00-24:00",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "phone": "+1-202-789-5345",
+    "post_office": "post_partner",
+    "post_office:brand": "FedEx OnSite",
+    "post_office:website": "https://local.fedex.com/en-us/dc/washington/bpydv",
+    "ref": "15360",
+    "shop": "chemist",
+    "website": "https://www.walgreens.com/locator/walgreens-801+7th+st+nw-washington-dc-20001/id=15360",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11923737935,
+  "lat": 38.8894103,
+  "lon": -77.0334007,
+  "tags": {
+    "access": "yes",
+    "amenity": "toilets",
+    "check_date": "2023-10-29",
+    "female": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11958790039,
+  "lat": 38.8938825,
+  "lon": -77.0216873,
+  "tags": {
+    "access": "yes",
+    "amenity": "toilets",
+    "brand": "Throne",
+    "brand:wikidata": "Q125101731",
+    "capacity": "1",
+    "fee": "no",
+    "unisex": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12150536033,
+  "lat": 38.8887167,
+  "lon": -77.0403035,
+  "tags": {
+    "amenity": "drinking_water",
+    "check_date": "2026-06-14"
+  }
+},
+{
+  "type": "node",
+  "id": 12547680091,
+  "lat": 38.8941967,
+  "lon": -77.0348124,
+  "tags": {
+    "access": "yes",
+    "amenity": "drinking_water",
+    "fee": "no",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12563240165,
+  "lat": 38.9050189,
+  "lon": -77.0429346,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1145",
+    "addr:postcode": "20036",
+    "addr:state": "DC",
+    "addr:street": "19th Street Northwest",
+    "addr:unit": "702",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "healthcare:speciality": "travel_clinic;vaccination",
+    "name": "Passport Health Washington DC Travel Clinic",
+    "operator": "Passport Health",
+    "operator:type": "private",
+    "operator:wikidata": "Q30270336"
+  }
+},
+{
+  "type": "node",
+  "id": 12688884453,
+  "lat": 38.9101470,
+  "lon": -77.0093125,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1516",
+    "addr:postcode": "20002",
+    "addr:state": "DC",
+    "addr:street": "North Capitol Street Northwest",
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "North Capitol Pharmacy"
+  }
+},
+{
+  "type": "node",
+  "id": 12839639988,
+  "lat": 38.8902965,
+  "lon": -77.0103883,
+  "tags": {
+    "access": "yes",
+    "amenity": "drinking_water",
+    "bottle": "no",
+    "check_date": "2026-10-15",
+    "dog": "no",
+    "fee": "no",
+    "fountain": "bubbler"
+  }
+},
+{
+  "type": "node",
+  "id": 12851870943,
+  "lat": 38.9030333,
+  "lon": -77.0337928,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1010",
+    "addr:postcode": "20005",
+    "addr:state": "DC",
+    "addr:street": "Vermont Avenue Northwest",
+    "brand": "Mint House",
+    "email": "dc@minthouse.com",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Mint House Washington, D.C. – Downtown",
+    "phone": "+1-855-972-9090",
+    "tourism": "hotel",
+    "website": "https://minthouse.com/washingtondc/downtown/"
+  }
+},
+{
+  "type": "node",
+  "id": 12901960300,
+  "lat": 38.8882522,
+  "lon": -77.0348509,
+  "tags": {
+    "access": "yes",
+    "amenity": "drinking_water",
+    "covered": "no",
+    "fee": "no",
+    "indoor": "no",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12902486457,
+  "lat": 38.8900960,
+  "lon": -77.0403425,
+  "tags": {
+    "access": "yes",
+    "amenity": "drinking_water",
+    "check_date": "2026-06-30",
+    "covered": "no",
+    "fee": "no",
+    "fountain": "bubbler",
+    "indoor": "no",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12980622403,
+  "lat": 38.8952206,
+  "lon": -77.0328689,
+  "tags": {
+    "amenity": "drinking_water",
+    "drinking_water:refill": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13084301247,
+  "lat": 38.8879586,
+  "lon": -77.0228682,
+  "tags": {
+    "access": "yes",
+    "amenity": "toilets",
+    "changing_table": "yes",
+    "female": "yes",
+    "male": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13409052087,
+  "lat": 38.8860020,
+  "lon": -77.0210474,
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "changing_table": "no",
+    "fee": "no",
+    "note": "It is located inside the restaurant and customer only.",
+    "unisex": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13409056886,
+  "lat": 38.8859845,
+  "lon": -77.0210485,
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "changing_table": "no",
+    "fee": "no",
+    "note": "It is located inside the restaurant and customer only.",
+    "unisex": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13409126071,
+  "lat": 38.8881829,
+  "lon": -77.0272714,
+  "tags": {
+    "access": "yes",
+    "amenity": "toilets",
+    "changing_table": "yes",
+    "fee": "no",
+    "female": "yes",
+    "male": "yes",
+    "unisex": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13409176133,
+  "lat": 38.8881829,
+  "lon": -77.0272640,
+  "tags": {
+    "access": "yes",
+    "amenity": "toilets",
+    "changing_table": "yes",
+    "fee": "no",
+    "female": "yes",
+    "male": "yes",
+    "unisex": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13620825097,
+  "lat": 38.8975299,
+  "lon": -77.0432420,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1889",
+    "addr:postcode": "20006",
+    "addr:state": "DC",
+    "addr:street": "F Street Northwest",
+    "amenity": "cafe",
+    "cuisine": "latin_american;coffee_shop;coffee",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Aroma Express",
+    "outdoor_seating": "yes",
+    "phone": "+12025078273",
+    "website": "https://aroma-holdings.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 13699193970,
+  "lat": 38.9088899,
+  "lon": -77.0113773,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "71",
+    "addr:state": "DC",
+    "addr:street": "O Street Northwest",
+    "amenity": "social_facility",
+    "name": "So Others Might Eat Meal Service",
+    "opening_hours": "Mo-Su 07:30-08:30,11:30-12:30",
+    "social_facility": "soup_kitchen",
+    "website": "https://some.org/emergency-services-daily-meal-service/"
+  }
+},
+{
+  "type": "node",
+  "id": 13767408206,
+  "lat": 38.8981548,
+  "lon": -77.0065627,
+  "tags": {
+    "access": "yes",
+    "amenity": "drinking_water",
+    "bottle": "yes",
+    "fee": "no",
+    "seasonal": "no",
+    "source": "survey",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13831998501,
+  "lat": 38.8991160,
+  "lon": -77.0475603,
+  "tags": {
+    "amenity": "drinking_water",
+    "check_date": "2026-05-15",
+    "name": "Water bottle filler station"
+  }
+},
+{
+  "type": "node",
+  "id": 14288267901,
+  "lat": 38.8885902,
+  "lon": -77.0325843,
+  "tags": {
+    "amenity": "drinking_water",
+    "bottle": "yes",
+    "check_date": "2026-10-15",
+    "dog": "no",
+    "fountain": "bubbler"
+  }
+},
+{
+  "type": "way",
+  "id": 48040879,
+  "center": {
+    "lat": 38.8969235,
+    "lon": -77.0108206
+  },
+  "nodes": [
+    754896042,
+    610808842,
+    610808843,
+    610808849,
+    610808856,
+    610808859,
+    610807553,
+    610807552,
+    610807542,
+    610807541,
+    610808878,
+    13194781271,
+    13194781275,
+    610808890,
+    754896042
+  ],
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "525",
+    "addr:postcode": "20001",
+    "addr:state": "DC",
+    "addr:street": "New Jersey Avenue Northwest",
+    "brand": "Hilton",
+    "brand:wikidata": "Q598884",
+    "building": "yes",
+    "building:levels": "14",
+    "dataset": "Hotels",
+    "dcgis:captureyear": "19990331",
+    "dcgis:dataset": "buildings",
+    "dcgis:featurecode": "2000",
+    "dcgis:gis_id": "Htl_86",
+    "height": "50.75",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Hilton Washington DC Capitol Hill",
+    "numrooms": "267",
+    "phone": "+1-202-628-2100",
+    "smoking": "no",
+    "source": "dcgis",
+    "tourism": "hotel",
+    "website": "https://www.hilton.com/en/hotels/dcadchh-hilton-washington-dc-capitol-hill/"
+  }
+},
+{
+  "type": "way",
+  "id": 48040887,
+  "center": {
+    "lat": 38.8987305,
+    "lon": -77.0130516
+  },
+  "nodes": [
+    610809209,
+    610809213,
+    610809222,
+    610809227,
+    610809229,
+    610809238,
+    610809253,
+    610809255,
+    610809257,
+    610809260,
+    14178987556,
+    610809262,
+    610809263,
+    610809265,
+    610809266,
+    610809270,
+    610809276,
+    610809283,
+    610809287,
+    610809290,
+    610809296,
+    610809307,
+    610809313,
+    610809209
+  ],
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "111",
+    "addr:postcode": "20001",
+    "addr:state": "DC",
+    "addr:street": "G Street Northwest",
+    "amenity": "library",
+    "building": "university",
+    "building:levels": "4",
+    "dataset": "buildings",
+    "dcgis:captureyear": "19990331",
+    "dcgis:dataset": "buildings",
+    "dcgis:featurecode": "2000",
+    "dcgis:lot": "0020",
+    "dcgis:square": "0565",
+    "name": "Edward Bennett Williams Law Library",
+    "operator": "Georgetown University Law Center",
+    "operator:type": "university",
+    "source": "dcgis"
+  }
+},
+{
+  "type": "way",
+  "id": 48041275,
+  "center": {
+    "lat": 38.8978372,
+    "lon": -77.0229636
+  },
+  "nodes": [
+    610812890,
+    11179678901,
+    610812887,
+    11179678966,
+    11179678962,
+    610812899,
+    610812900,
+    11179678499,
+    11216270544,
+    11179678498,
+    610812902,
+    610812903,
+    610812904,
+    9828371646,
+    610812905,
+    610812906,
+    11179678495,
+    11179678493,
+    610812907,
+    610812908,
+    610812909,
+    610812910,
+    610812913,
+    11179678950,
+    11180323437,
+    610812914,
+    610812918,
+    11180305548,
+    11179679537,
+    11180305546,
+    11179679347,
+    11180320637,
+    11179679644,
+    11179678521,
+    11179678870,
+    610812921,
+    11219211059,
+    610812924,
+    610812926,
+    11179781641,
+    610812928,
+    610812930,
+    610812931,
+    610812932,
+    610812933,
+    11216270541,
+    610812934,
+    610812935,
+    11179679640,
+    11179678534,
+    11179678533,
+    610812940,
+    610812941,
+    610812946,
+    610812950,
+    11179716637,
+    11179716638,
+    11179716737,
+    11179716837,
+    610812952,
+    610812951,
+    610812891,
+    610812901,
+    610812898,
+    11179678519,
+    610812892,
+    11219211060,
+    11179678899,
+    610812890
+  ],
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "750",
+    "addr:postcode": "20004",
+    "addr:state": "DC",
+    "addr:street": "9th Street Northwest",
+    "alt_name": "Old Patent Office Building",
+    "amenity": "arts_centre",
+    "building": "civic",
+    "building:levels": "3",
+    "check_date": "2023-09-09",
+    "dcgis:captureyear": "20080530",
+    "dcgis:dataset": "buildings",
+    "dcgis:featurecode": "2000",
+    "dcgis:gis_id": "90633",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "internet_access:ssid": "si-visitor",
+    "name": "Smithsonian Institute Donald W. Reynolds Center for American Art and Portraiture",
+    "name:etymology:wikidata": "Q5295265",
+    "opening_hours": "We-Su,PH 11:30-19:00",
+    "operator": "Smithsonian",
+    "source": "dcgis",
+    "website": "https://npg.si.edu/",
+    "wikidata": "Q2018451"
+  }
+},
+{
+  "type": "way",
+  "id": 48041501,
+  "center": {
+    "lat": 38.8986914,
+    "lon": -77.0247662
+  },
+  "nodes": [
+    610816730,
+    610816726,
+    610816727,
+    610816728,
+    610816729,
+    610816730
+  ],
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "901",
+    "addr:postcode": "20001",
+    "addr:state": "DC",
+    "addr:street": "G Street Northwest",
+    "amenity": "library",
+    "building": "yes",
+    "building:levels": "5",
+    "dcgis:captureyear": "19990331",
+    "dcgis:dataset": "buildings",
+    "dcgis:featurecode": "2000",
+    "mappingdc:gid": "10208",
+    "name": "Martin Luther King Jr. Memorial Library",
+    "name:etymology:wikidata": "Q8027",
+    "opening_hours": "Mo-Th 09:30-21:00; Fr-Sa 09:30-17:30; Su 13:00-17:00",
+    "operator": "DC Public Library",
+    "operator:type": "public",
+    "operator:wikidata": "Q5283432",
+    "phone": "+1 202-727-0321",
+    "source": "dcgis",
+    "website": "https://www.dclibrary.org/mlk/",
+    "wikidata": "Q2211847"
+  }
+},
+{
+  "type": "way",
+  "id": 66409257,
+  "center": {
+    "lat": 38.8988633,
+    "lon": -77.0452471
+  },
+  "nodes": [
+    804598673,
+    367142111,
+    804599348,
+    804598425,
+    3401275286,
+    3401275285,
+    6412474216,
+    804599279,
+    804598237,
+    804597486,
+    804598311,
+    804599117,
+    804598673
+  ],
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "716",
+    "addr:state": "DC",
+    "addr:street": "20th Street Northwest",
+    "air_conditioning": "yes",
+    "amenity": "library",
+    "books": "law",
+    "building": "yes",
+    "building:levels": "7",
+    "ele": "20",
+    "gnis:feature_id": "2102078",
+    "internet_access": "wlan",
+    "name": "Jacob Burns Law Library",
+    "name:etymology:wikidata": "Q6118440",
+    "opening_hours": "Mo-Su 07:00-18:30",
+    "operator": "The George Washington University",
+    "operator:type": "university",
+    "source": "dcgis;USGS Geonames",
+    "website": "https://www.law.gwu.edu/library",
+    "wikidata": "Q19880948"
+  }
+},
+{
+  "type": "way",
+  "id": 66409261,
+  "center": {
+    "lat": 38.8992180,
+    "lon": -77.0483775
+  },
+  "nodes": [
+    804597891,
+    804597586,
+    804599008,
+    804597996,
+    804597797,
+    804597113,
+    804598406,
+    804598771,
+    804597658,
+    804597014,
+    804597966,
+    12091629910,
+    12091629911,
+    804597891
+  ],
+  "tags": {
+    "access": "private",
+    "addr:city": "Washington",
+    "addr:housenumber": "2130",
+    "addr:state": "DC",
+    "addr:street": "H Street Northwest",
+    "air_conditioning": "yes",
+    "amenity": "library",
+    "building": "civic",
+    "name": "Gelman Library",
+    "opening_hours": "24/7",
+    "operator": "The George Washington University",
+    "operator:short": "GW",
+    "operator:type": "ngo",
+    "operator:wikidata": "Q432637",
+    "smoking": "no",
+    "source": "dcgis",
+    "website": "https://library.gwu.edu/",
+    "wheelchair": "yes",
+    "wikidata": "Q5530482"
+  }
+},
+{
+  "type": "way",
+  "id": 66418840,
+  "center": {
+    "lat": 38.8940964,
+    "lon": -77.0275812
+  },
+  "nodes": [
+    804641809,
+    804642274,
+    804642978,
+    804639076,
+    804638816,
+    804638078,
+    804640510,
+    804642911,
+    804642463,
+    804642687,
+    804642062,
+    804641474,
+    804638096,
+    804640926,
+    804641908,
+    804638772,
+    804642815,
+    804640636,
+    804637969,
+    804639747,
+    804640397,
+    11508981472,
+    804642311,
+    804640421,
+    804640034,
+    804641028,
+    804642441,
+    804640415,
+    804637869,
+    804640767,
+    804641288,
+    804643044,
+    804638965,
+    804643057,
+    804638473,
+    804638665,
+    804638098,
+    804638359,
+    804638932,
+    804638221,
+    804640481,
+    804638109,
+    804642427,
+    804643081,
+    804642724,
+    804640332,
+    804640993,
+    804642795,
+    804642329,
+    804638145,
+    804640771,
+    804641001,
+    804638661,
+    804639357,
+    804637989,
+    4497104238,
+    4497104234,
+    4497104237,
+    4497104239,
+    804642369,
+    804639625,
+    804638975,
+    804640376,
+    804640576,
+    804638841,
+    804638925,
+    804641805,
+    804642218,
+    804642821,
+    804641809
+  ],
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1100",
+    "addr:postcode": "20004",
+    "addr:state": "DC",
+    "addr:street": "Pennsylvania Avenue Northwest",
+    "air_conditioning": "yes",
+    "alt_name": "Old Post Office and Clock Tower",
+    "bar": "yes",
+    "brand": "Waldorf Astoria",
+    "brand:wikidata": "Q3239392",
+    "building": "hotel",
+    "building:levels": "9",
+    "check_date": "2024-01-02",
+    "email": "DCAWA_GM@hilton.com",
+    "fax": "+1-202-868-5191",
+    "historic": "building",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Waldorf Astoria Washington DC",
+    "old_name": "Trump International Hotel Washington, D.C.;Nancy Hanks Center",
+    "phone": "+1-202-695-1100",
+    "roof:levels": "1",
+    "roof:shape": "flat",
+    "rooms": "263",
+    "smoking": "no",
+    "tourism": "hotel",
+    "website": "https://www.hilton.com/en/hotels/dcawawa-waldorf-astoria-washington-dc/",
+    "wheelchair": "yes",
+    "wikidata": "Q1141542",
+    "wikipedia": "en:Old Post Office (Washington, D.C.)"
+  }
+},
+{
+  "type": "way",
+  "id": 66418909,
+  "center": {
+    "lat": 38.8880034,
+    "lon": -77.0414429
+  },
+  "nodes": [
+    804641455,
+    9560539164,
+    804642143,
+    8385873533,
+    804639057,
+    10016852533,
+    804643068,
+    8385864737,
+    804641455
+  ],
+  "tags": {
+    "access": "yes",
+    "amenity": "toilets",
+    "building": "yes",
+    "dataset": "buildings",
+    "dcgis:captureyear": "20050405",
+    "portable": "no",
+    "source": "dcgis",
+    "toilets:handwashing": "yes",
+    "unisex": "yes",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 66419047,
+  "center": {
+    "lat": 38.8879782,
+    "lon": -77.0427595
+  },
+  "nodes": [
+    804642931,
+    804640230,
+    804639178,
+    804642241,
+    804643001,
+    804642353,
+    804638484,
+    804638066,
+    804638573,
+    804640155,
+    9560535547,
+    804641484,
+    804642213,
+    804641565,
+    804640562,
+    804641013,
+    804640428,
+    804639730,
+    804638655,
+    804641615,
+    804638855,
+    9560535548,
+    804642931
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building": "yes",
+    "dataset": "buildings",
+    "dcgis:captureyear": "19990331",
+    "source": "dcgis",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 66816884,
+  "center": {
+    "lat": 38.9063676,
+    "lon": -77.0273297
+  },
+  "nodes": [
+    807592640,
+    807592508,
+    807595523,
+    807592137,
+    807595964,
+    807590226,
+    807591505,
+    807592640
+  ],
+  "tags": {
+    "addr:housenumber": "1222",
+    "addr:street": "11th Street Northwest",
+    "amenity": "social_facility",
+    "building": "yes",
+    "contact:phone": "+1 202-682-1005",
+    "contact:website": "www.rachaels.org",
+    "dataset": "buildings",
+    "dcgis:captureyear": "19990331",
+    "dcgis:lot": "0036",
+    "dcgis:square": "0314",
+    "name": "Rachael's Women's Center",
+    "social_facility": "shelter",
+    "social_facility:for": "homeless_woman",
+    "source": "dcgis"
+  }
+},
+{
+  "type": "way",
+  "id": 67087151,
+  "center": {
+    "lat": 38.9108786,
+    "lon": -77.0359510
+  },
+  "nodes": [
+    810466700,
+    810468808,
+    810451890,
+    810438551,
+    810474844,
+    810450949,
+    810446527,
+    810440935,
+    810443234,
+    810437584,
+    810439865,
+    810476270,
+    810452516,
+    810472192,
+    810448163,
+    810439108,
+    810451435,
+    810465197,
+    810474353,
+    810466700
+  ],
+  "tags": {
+    "addr:housenumber": "1529",
+    "addr:state": "DC",
+    "addr:street": "16th Street Northwest",
+    "alt_name": "Theater J",
+    "amenity": "community_centre",
+    "building": "yes",
+    "building:levels": "4",
+    "dataset": "buildings",
+    "dcgis:captureyear": "19990331",
+    "dcgis:lot": "0113",
+    "dcgis:square": "0194",
+    "gnis:feature_id": "530262",
+    "name": "Edlavitch Jewish Community Center of Washington, D.C.",
+    "source": "USGS Geonames",
+    "wikidata": "Q7971592"
+  }
+},
+{
+  "type": "way",
+  "id": 67093742,
+  "center": {
+    "lat": 38.8986845,
+    "lon": -77.0110630
+  },
+  "nodes": [
+    810535144,
+    810537832,
+    810531029,
+    810534313,
+    810525415,
+    810530011,
+    9796025863,
+    810523934,
+    810536742,
+    810533082,
+    810535717,
+    810522640,
+    810526397,
+    810535144
+  ],
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "65",
+    "addr:postcode": "20001",
+    "addr:state": "DC",
+    "addr:street": "Massachusetts Avenue Northwest",
+    "amenity": "social_facility",
+    "building": "yes",
+    "building:levels": "3",
+    "building:name": "Gales School",
+    "check_date": "2024-04-12",
+    "dataset": "buildings",
+    "dcgis:captureyear": "19990331",
+    "dcgis:lot": "0806",
+    "dcgis:square": "0625",
+    "name": "Central Union Mission",
+    "social_facility": "shelter",
+    "source": "dcgis",
+    "website": "https://www.missiondc.org/"
+  }
+},
+{
+  "type": "way",
+  "id": 67232513,
+  "center": {
+    "lat": 38.9089894,
+    "lon": -77.0215438
+  },
+  "nodes": [
+    811835751,
+    811835753,
+    811835759,
+    811835777,
+    811835755,
+    811835757,
+    4270742289,
+    811835780,
+    811835701,
+    811835690,
+    811835707,
+    811835704,
+    811835715,
+    811835711,
+    811835721,
+    811835718,
+    811835726,
+    811835724,
+    811835729,
+    811835734,
+    811835751
+  ],
+  "tags": {
+    "addr:housenumber": "1401",
+    "addr:street": "7th Street Northwest",
+    "amenity": "community_centre",
+    "building": "yes",
+    "dataset": "buildings",
+    "dcgis:captureyear": "20050405",
+    "dcgis:lot": "0802",
+    "dcgis:square": "0446",
+    "name": "Kennedy Recreation Center",
+    "source": "dcgis"
+  }
+},
+{
+  "type": "way",
+  "id": 67247157,
+  "center": {
+    "lat": 38.9101460,
+    "lon": -77.0093555
+  },
+  "nodes": [
+    812052673,
+    812052710,
+    812052707,
+    812052713,
+    812052381,
+    812052375,
+    812052717,
+    812052735,
+    812052673
+  ],
+  "tags": {
+    "addr:housenumber": "1516",
+    "addr:street": "North Capitol Street Northwest",
+    "amenity": "pharmacy",
+    "building": "house",
+    "dataset": "buildings",
+    "dcgis:captureyear": "19990331",
+    "dcgis:lot": "0833",
+    "dcgis:square": "0615",
+    "healthcare": "pharmacy",
+    "name": "North Capitol Pharmacy",
+    "source": "dcgis"
+  }
+},
+{
+  "type": "way",
+  "id": 74041174,
+  "center": {
+    "lat": 38.9147241,
+    "lon": -77.0176895
+  },
+  "nodes": [
+    876101334,
+    876106020,
+    876089549,
+    876098805,
+    876103362,
+    876108005,
+    876105428,
+    876096706,
+    876093980,
+    876106006,
+    876101333,
+    876092172,
+    876101334
+  ],
+  "tags": {
+    "addr:housenumber": "455",
+    "addr:street": "Florida Avenue Northwest",
+    "amenity": "social_facility",
+    "building": "yes",
+    "contact:phone": "+1 202-588-1375",
+    "contact:website": "http://www.dccfh.org/programs/housing/mickey-leland-house",
+    "dataset": "buildings",
+    "dcgis:captureyear": "20050404",
+    "dcgis:lot": "0080",
+    "dcgis:square": "3094",
+    "name": "Mickey Leland House",
+    "opening_hours": "24/7",
+    "social_facility": "shelter",
+    "social_facility:for": "homeless;men",
+    "source": "dcgis"
+  }
+},
+{
+  "type": "way",
+  "id": 170684255,
+  "center": {
+    "lat": 38.9123699,
+    "lon": -77.0224790
+  },
+  "nodes": [
+    1818424779,
+    1818424778,
+    1818424777,
+    1818424776,
+    1818424773,
+    1818424774,
+    1818424775,
+    1818424779
+  ],
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1630",
+    "addr:postcode": "20001",
+    "addr:state": "DC",
+    "addr:street": "7th Street Northwest",
+    "amenity": "library",
+    "building": "civic",
+    "ele": "25",
+    "gnis:feature_id": "529186",
+    "internet_access": "yes",
+    "name": "Watha T. Daniel-Shaw Neighborhood Library",
+    "opening_hours": "Mo-We 09:00-20:00; Th 12:00-20:00; Fr-Sa 10:00-18:00; Su 13:00-17:00",
+    "operator": "DC Public Library",
+    "operator:type": "public",
+    "operator:wikidata": "Q5283432",
+    "phone": "+1-202-727-1288",
+    "website": "https://www.dclibrary.org/watha",
+    "wikidata": "Q21161123"
+  }
+},
+{
+  "type": "way",
+  "id": 257776960,
+  "center": {
+    "lat": 38.8880635,
+    "lon": -77.0342200
+  },
+  "nodes": [
+    2632479251,
+    2632479248,
+    13093094303,
+    13093078098,
+    2632479268,
+    13093094304,
+    2632479246,
+    2632479274,
+    13093078094,
+    13093078096,
+    13093094306,
+    13093094305,
+    13093094323,
+    13093094310,
+    13093094312,
+    2632479273,
+    2632479251
+  ],
+  "tags": {
+    "access": "yes",
+    "addr:housenumber": "1515",
+    "addr:street": "Independence Avenue Southwest",
+    "amenity": "toilets",
+    "building": "yes",
+    "name": "Sylvan Theatre Comfort Station",
+    "operator": "National Park Service",
+    "operator:short": "NPS",
+    "operator:wikidata": "Q308439",
+    "toilets:disposal": "flush",
+    "website": "https://www.nps.gov/places/000/restroom-sylvan-theater.htm",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 449101168,
+  "center": {
+    "lat": 38.8977757,
+    "lon": -77.0362820
+  },
+  "nodes": [
+    4460667783,
+    8226202221,
+    4460667784,
+    8226224317,
+    4460667899,
+    528551605,
+    4460667783
+  ],
+  "tags": {
+    "access": "private",
+    "amenity": "toilets",
+    "building:part": "yes",
+    "indoor": "room",
+    "level": "0",
+    "male": "yes",
+    "room": "toilets"
+  }
+},
+{
+  "type": "way",
+  "id": 449101206,
+  "center": {
+    "lat": 38.8975776,
+    "lon": -77.0362811
+  },
+  "nodes": [
+    4460667661,
+    8254155980,
+    13252633798,
+    8254155979,
+    8226202322,
+    8226202234,
+    4460667661
+  ],
+  "tags": {
+    "access": "private",
+    "amenity": "toilets",
+    "building:part": "yes",
+    "female": "yes",
+    "indoor": "room",
+    "level": "0",
+    "room": "toilets"
+  }
+},
+{
+  "type": "way",
+  "id": 478727310,
+  "center": {
+    "lat": 38.8982193,
+    "lon": -77.0065957
+  },
+  "nodes": [
+    4719426673,
+    4719426672,
+    4719427062,
+    4719427060,
+    4719426671,
+    4719427058,
+    4719426670,
+    4719426669,
+    4719426668,
+    4719426667,
+    4719426666,
+    4719426993,
+    4719426665,
+    4719426664,
+    4719426663,
+    4719426992,
+    4719426662,
+    4719426991,
+    4719426661,
+    4719426660,
+    4719426658,
+    4719426659,
+    4719426673
+  ],
+  "tags": {
+    "access": "yes",
+    "amenity": "toilets",
+    "check_date": "2023-12-29",
+    "fee": "no",
+    "indoor": "room",
+    "level": "0",
+    "male": "yes",
+    "note": "Men's",
+    "portable": "no",
+    "room": "toilets",
+    "toilets:disposal": "flush",
+    "toilets:handwashing": "yes",
+    "toilets:position": "urinal;seated",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 478727348,
+  "center": {
+    "lat": 38.8979854,
+    "lon": -77.0055248
+  },
+  "nodes": [
+    4719427607,
+    4719427441,
+    4719427279,
+    4719427278,
+    4719427611,
+    4719427606,
+    4719427605,
+    4719427604,
+    4719427603,
+    4719427602,
+    4719427601,
+    4719427600,
+    4719427444,
+    4719427607
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "check_date": "2024-11-08",
+    "female": "yes",
+    "indoor": "room",
+    "level": "0",
+    "room": "toilets"
+  }
+},
+{
+  "type": "way",
+  "id": 727583181,
+  "center": {
+    "lat": 38.9018165,
+    "lon": -77.0195715
+  },
+  "nodes": [
+    6473635205,
+    6818311423,
+    6818311424,
+    6818311425,
+    6818311426,
+    6818311427,
+    6818311428,
+    6818311429,
+    6818311430,
+    810524118,
+    6818311431,
+    6818311432,
+    6818311433,
+    6818311434,
+    6818311435,
+    6818311436,
+    6818311437,
+    6818311438,
+    6818311439,
+    6818311440,
+    6818311441,
+    6818311442,
+    6818311443,
+    6818311444,
+    6473635206,
+    6473635205
+  ],
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "901",
+    "addr:postcode": "20001",
+    "addr:state": "DC",
+    "addr:street": "6th Street Northwest",
+    "alt_name": "Hampton Inn",
+    "branch": "Washington-Downtown-Convention Center",
+    "brand": "Hampton",
+    "brand:wikidata": "Q5646230",
+    "building": "hotel",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Hampton",
+    "official_name": "Hampton by Hilton",
+    "phone": "+1 202-842-2500",
+    "ref": "WASHHHX",
+    "tourism": "hotel",
+    "website": "https://www.hilton.com/en/hotels/washhhx-hampton-washington-downtown-convention-center/"
+  }
+},
+{
+  "type": "way",
+  "id": 884569672,
+  "center": {
+    "lat": 38.8975091,
+    "lon": -77.0365144
+  },
+  "nodes": [
+    4460667629,
+    8226202421,
+    4460667632,
+    528551590,
+    13252633766,
+    528551591,
+    7276063720,
+    4460667629
+  ],
+  "tags": {
+    "access": "private",
+    "amenity": "toilets",
+    "building:part": "yes",
+    "female": "yes",
+    "height": "0",
+    "indoor": "room",
+    "level": "0",
+    "room": "toilets"
+  }
+},
+{
+  "type": "way",
+  "id": 884569673,
+  "center": {
+    "lat": 38.8975270,
+    "lon": -77.0364993
+  },
+  "nodes": [
+    4460667632,
+    528551590,
+    7276063710,
+    4460667655,
+    4460667642,
+    4460667632
+  ],
+  "tags": {
+    "access": "private",
+    "amenity": "toilets",
+    "building:part": "yes",
+    "height": "0",
+    "indoor": "room",
+    "level": "0",
+    "male": "yes",
+    "room": "toilets"
+  }
+},
+{
+  "type": "way",
+  "id": 884569674,
+  "center": {
+    "lat": 38.8975382,
+    "lon": -77.0364721
+  },
+  "nodes": [
+    4460667655,
+    7276063710,
+    6540207714,
+    528551596,
+    528551594,
+    8226202422,
+    2633633833,
+    4460667657,
+    4460667655
+  ],
+  "tags": {
+    "access": "private",
+    "amenity": "toilets",
+    "building:part": "yes",
+    "height": "0",
+    "indoor": "room",
+    "level": "0",
+    "male": "yes",
+    "room": "toilets"
+  }
+},
+{
+  "type": "way",
+  "id": 884569677,
+  "center": {
+    "lat": 38.8975390,
+    "lon": -77.0366298
+  },
+  "nodes": [
+    4460667647,
+    4460667656,
+    8226202230,
+    8226202428,
+    528551587,
+    8048545695,
+    13102835824,
+    11331626802,
+    4460667647
+  ],
+  "tags": {
+    "access": "private",
+    "amenity": "toilets",
+    "building:part": "yes",
+    "female": "yes",
+    "height": "0",
+    "indoor": "room",
+    "level": "0",
+    "room": "toilets"
+  }
+},
+{
+  "type": "way",
+  "id": 884571790,
+  "center": {
+    "lat": 38.8977669,
+    "lon": -77.0362820
+  },
+  "nodes": [
+    4460667780,
+    4460667781,
+    4460667783,
+    528551605,
+    4460667899,
+    8226224317,
+    4460667784,
+    8226202320,
+    4460667780
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building:part": "yes",
+    "female": "yes",
+    "indoor": "room",
+    "level": "-1",
+    "room": "toilets",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 884571793,
+  "center": {
+    "lat": 38.8975891,
+    "lon": -77.0362860
+  },
+  "nodes": [
+    8226157719,
+    8226224318,
+    8226202234,
+    8226224627,
+    8226224628,
+    8226224727,
+    4460667661,
+    8254155980,
+    13252633798,
+    8254155979,
+    13696672171,
+    8226002820,
+    8226157719
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building:part": "yes",
+    "indoor": "room",
+    "level": "-1",
+    "male": "yes",
+    "room": "toilets",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 1020448074,
+  "center": {
+    "lat": 38.8966843,
+    "lon": -77.0475147
+  },
+  "nodes": [
+    804597975,
+    804598322,
+    804597729,
+    804598517,
+    9411770949,
+    804598421,
+    9411770947,
+    9411770927,
+    9411770926,
+    9411770939,
+    804599118,
+    9411770940,
+    9411770941,
+    804597282,
+    804598840,
+    804597601,
+    804599273,
+    804598345,
+    3368394813,
+    3368394814,
+    804597981,
+    611392279,
+    611392285,
+    611392287,
+    611392283,
+    804598178,
+    804598955,
+    804597975
+  ],
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "2117",
+    "addr:postcode": "20037",
+    "addr:state": "DC",
+    "addr:street": "E Street Northwest",
+    "air_conditioning": "yes",
+    "building": "yes",
+    "dcgis:gis_id": "Htl_83",
+    "dcgis:lot": "0096;0097",
+    "dcgis:square": "0081",
+    "fax": "+1-202-587-1354",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "State Plaza Hotel",
+    "phone": "+1-202-961-8200",
+    "rooms": "241",
+    "tourism": "hotel",
+    "website": "https://www.stateplaza.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491135,
+  "center": {
+    "lat": 38.9036181,
+    "lon": -77.0221127
+  },
+  "nodes": [
+    11525174545,
+    11525190484,
+    11525191043,
+    11525190699,
+    694858284,
+    694857883,
+    11525191211,
+    11525191210,
+    11525191044,
+    11525190483,
+    11525174544,
+    11525174545
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "-2"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491136,
+  "center": {
+    "lat": 38.9037409,
+    "lon": -77.0221124
+  },
+  "nodes": [
+    11525191077,
+    11525191046,
+    11525190486,
+    11525174545,
+    11525174544,
+    11525190485,
+    11525191045,
+    11525190609,
+    11525191077
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "-2",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491137,
+  "center": {
+    "lat": 38.9047350,
+    "lon": -77.0221341
+  },
+  "nodes": [
+    11525174548,
+    11525190917,
+    11525174550,
+    11525174549,
+    11525190918,
+    11525174547,
+    11525174548
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "-2"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491138,
+  "center": {
+    "lat": 38.9048593,
+    "lon": -77.0221346
+  },
+  "nodes": [
+    11525174548,
+    11525174547,
+    11525174546,
+    11525174551,
+    11525174552,
+    11525190919,
+    11525174548
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "-2",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491143,
+  "center": {
+    "lat": 38.9070729,
+    "lon": -77.0225966
+  },
+  "nodes": [
+    11525174560,
+    11525174558,
+    11525174557,
+    11525174559,
+    11525174560
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "-2",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491144,
+  "center": {
+    "lat": 38.9070734,
+    "lon": -77.0224994
+  },
+  "nodes": [
+    11525174565,
+    11525174561,
+    11525174560,
+    11525174559,
+    11525174565
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "-2"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491150,
+  "center": {
+    "lat": 38.9035996,
+    "lon": -77.0235410
+  },
+  "nodes": [
+    11525190287,
+    11525190372,
+    11525190577,
+    11525190517,
+    11525190295,
+    11525190285,
+    11525190286,
+    11525190287
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "-2",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491151,
+  "center": {
+    "lat": 38.9036892,
+    "lon": -77.0235414
+  },
+  "nodes": [
+    11525190296,
+    11525190367,
+    11525190473,
+    11525190289,
+    11525190288,
+    11525190474,
+    11525190287,
+    11525190286,
+    11525190285,
+    11525190296
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "-2"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491161,
+  "center": {
+    "lat": 38.9057438,
+    "lon": -77.0237638
+  },
+  "nodes": [
+    11525190350,
+    11525190349,
+    11525190348,
+    11525190337,
+    11525190350
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "-1"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491162,
+  "center": {
+    "lat": 38.9055770,
+    "lon": -77.0237669
+  },
+  "nodes": [
+    11525190353,
+    694860576,
+    11525190351,
+    11525190352,
+    11525190353
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "-1",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491163,
+  "center": {
+    "lat": 38.9042616,
+    "lon": -77.0237466
+  },
+  "nodes": [
+    11525190364,
+    11525190339,
+    11525190338,
+    10091013841,
+    694860443,
+    11525190365,
+    11525190364
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "-1"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491164,
+  "center": {
+    "lat": 38.9040918,
+    "lon": -77.0237399
+  },
+  "nodes": [
+    11525190363,
+    11525190340,
+    11525190431,
+    11525190362,
+    11525190363
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "-1",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491178,
+  "center": {
+    "lat": 38.9036165,
+    "lon": -77.0235533
+  },
+  "nodes": [
+    11525190474,
+    11525190287,
+    11525190372,
+    11525190577,
+    11525190517,
+    11525190286,
+    11525190367,
+    11525190473,
+    11525190474
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "3",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491179,
+  "center": {
+    "lat": 38.9037584,
+    "lon": -77.0235536
+  },
+  "nodes": [
+    11525190476,
+    11525190475,
+    11525191113,
+    11525190288,
+    11525190474,
+    11525190473,
+    11525190289,
+    11525191104,
+    11525190476
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "3"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491186,
+  "center": {
+    "lat": 38.9037628,
+    "lon": -77.0222893
+  },
+  "nodes": [
+    11525190491,
+    11525190490,
+    11525190488,
+    11525190615,
+    11525190487,
+    11525190491
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "3"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491187,
+  "center": {
+    "lat": 38.9036179,
+    "lon": -77.0222893
+  },
+  "nodes": [
+    11525190491,
+    11525190490,
+    11525190489,
+    11525190610,
+    11525190496,
+    11525190491
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "3",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491192,
+  "center": {
+    "lat": 38.9044940,
+    "lon": -77.0231981
+  },
+  "nodes": [
+    11525190523,
+    11525190521,
+    11525190520,
+    11525190524,
+    11525190523
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "2",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491193,
+  "center": {
+    "lat": 38.9044892,
+    "lon": -77.0230928
+  },
+  "nodes": [
+    11525190523,
+    11525190860,
+    11525190522,
+    11525190734,
+    11525190949,
+    11525190965,
+    11525190524,
+    11525190523
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "2"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491199,
+  "center": {
+    "lat": 38.9044197,
+    "lon": -77.0222145
+  },
+  "nodes": [
+    11525190534,
+    11525190716,
+    11525190717,
+    11525190535,
+    11525190534
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "2",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491200,
+  "center": {
+    "lat": 38.9044549,
+    "lon": -77.0222146
+  },
+  "nodes": [
+    11525190535,
+    11525190534,
+    11525190533,
+    11525190532,
+    11525190975,
+    11525190535
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "2"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491221,
+  "center": {
+    "lat": 38.9039179,
+    "lon": -77.0231333
+  },
+  "nodes": [
+    11525190574,
+    11525190572,
+    11525190571,
+    11525191170,
+    11525191171,
+    11525190573,
+    11525190574
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "2"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491222,
+  "center": {
+    "lat": 38.9039688,
+    "lon": -77.0231326
+  },
+  "nodes": [
+    11525190590,
+    11525190589,
+    11525190574,
+    11525190573,
+    11525191087,
+    11525190670,
+    11525190590
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "2",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491232,
+  "center": {
+    "lat": 38.9035977,
+    "lon": -77.0231542
+  },
+  "nodes": [
+    11525190598,
+    11525190596,
+    11525190595,
+    11525190597,
+    11525190598
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "2"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491233,
+  "center": {
+    "lat": 38.9035973,
+    "lon": -77.0231126
+  },
+  "nodes": [
+    11525190598,
+    11525191165,
+    11525191162,
+    11525190597,
+    11525190598
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "2",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491237,
+  "center": {
+    "lat": 38.9035990,
+    "lon": -77.0226883
+  },
+  "nodes": [
+    11525190602,
+    11525190603,
+    11525190601,
+    11525190600,
+    11525190602
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "2"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491238,
+  "center": {
+    "lat": 38.9035991,
+    "lon": -77.0227316
+  },
+  "nodes": [
+    11525191180,
+    11525191183,
+    11525190603,
+    11525190602,
+    11525191180
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "2",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491249,
+  "center": {
+    "lat": 38.9039699,
+    "lon": -77.0227050
+  },
+  "nodes": [
+    11525190703,
+    11525190623,
+    11525190622,
+    11525190621,
+    11525191173,
+    11525190703
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "2",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491265,
+  "center": {
+    "lat": 38.9053721,
+    "lon": -77.0234719
+  },
+  "nodes": [
+    11525190902,
+    11525190645,
+    11525190791,
+    11525190790,
+    11525190899,
+    11525190898,
+    11525190897,
+    11525190792,
+    11525190794,
+    11525190793,
+    11525190646,
+    11525190902
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "0",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491266,
+  "center": {
+    "lat": 38.9053615,
+    "lon": -77.0234010
+  },
+  "nodes": [
+    11525190794,
+    11525190792,
+    11525190896,
+    11525190895,
+    11525190894,
+    11525190843,
+    11525190842,
+    11525190795,
+    11525190794
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491291,
+  "center": {
+    "lat": 38.9050615,
+    "lon": -77.0223929
+  },
+  "nodes": [
+    11525190937,
+    11525190932,
+    11525190989,
+    11525190931,
+    11525190934,
+    11525190935,
+    11525190936,
+    11525190937
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "0",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491292,
+  "center": {
+    "lat": 38.9051000,
+    "lon": -77.0223925
+  },
+  "nodes": [
+    11525190938,
+    11525190937,
+    11525190936,
+    11525190935,
+    11525190934,
+    11525190933,
+    11525190938
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491301,
+  "center": {
+    "lat": 38.9045189,
+    "lon": -77.0230331
+  },
+  "nodes": [
+    11525190966,
+    11525190949,
+    11525190965,
+    11525190964,
+    11525190734,
+    11525190963,
+    11525190966
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491302,
+  "center": {
+    "lat": 38.9045189,
+    "lon": -77.0228145
+  },
+  "nodes": [
+    11525190969,
+    11525190731,
+    11525190968,
+    11525190967,
+    11525190995,
+    11525190970,
+    11525190465,
+    11525190969
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "0",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491314,
+  "center": {
+    "lat": 38.9032625,
+    "lon": -77.0223639
+  },
+  "nodes": [
+    11525191017,
+    11525191012,
+    11525191011,
+    11525191010,
+    11525191009,
+    11525191016,
+    11525191017
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "0",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491315,
+  "center": {
+    "lat": 38.9032967,
+    "lon": -77.0223643
+  },
+  "nodes": [
+    11525191018,
+    11525191017,
+    11525191016,
+    11525191015,
+    11525191014,
+    11525191013,
+    11525190694,
+    11525191018
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491316,
+  "center": {
+    "lat": 38.9032642,
+    "lon": -77.0234773
+  },
+  "nodes": [
+    11525191026,
+    11525191024,
+    11525191023,
+    11525191022,
+    11525191064,
+    11525191025,
+    11525191026
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "0",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491317,
+  "center": {
+    "lat": 38.9032988,
+    "lon": -77.0234782
+  },
+  "nodes": [
+    11525191029,
+    11525191028,
+    11525191027,
+    11525191026,
+    11525191025,
+    11525191065,
+    11525190387,
+    11525191029
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491320,
+  "center": {
+    "lat": 38.9039464,
+    "lon": -77.0235214
+  },
+  "nodes": [
+    11525191048,
+    11525191047,
+    11525191105,
+    11525191099,
+    11525191100,
+    11525191101,
+    11525191102,
+    11525191086,
+    11525191082,
+    11525191048
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "0",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491342,
+  "center": {
+    "lat": 38.9039466,
+    "lon": -77.0234607
+  },
+  "nodes": [
+    11525191102,
+    11525191101,
+    11525191100,
+    11525191099,
+    11525191106,
+    11525191108,
+    11525191102
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491352,
+  "center": {
+    "lat": 38.9039339,
+    "lon": -77.0227309
+  },
+  "nodes": [
+    11525191128,
+    11525191126,
+    11525190501,
+    11525191173,
+    11525190621,
+    11525191129,
+    11525191128
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "female": "yes",
+    "indoor": "room",
+    "level": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 1240491353,
+  "center": {
+    "lat": 38.9038592,
+    "lon": -77.0227303
+  },
+  "nodes": [
+    11525191129,
+    11525191128,
+    11525191127,
+    11525191174,
+    11525191129
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "indoor": "room",
+    "level": "0",
+    "male": "yes"
+  }
+}
+
+  ]
+}

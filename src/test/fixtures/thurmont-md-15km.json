@@ -1,0 +1,1133 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-17T22:06:21Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 1684720498,
+  "lat": 39.7016355,
+  "lon": -77.3288780,
+  "tags": {
+    "amenity": "library",
+    "name": "Emmitsburg Library"
+  }
+},
+{
+  "type": "node",
+  "id": 1684782534,
+  "lat": 39.7039261,
+  "lon": -77.3182189,
+  "tags": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy"
+  }
+},
+{
+  "type": "node",
+  "id": 2889081408,
+  "lat": 39.6949273,
+  "lon": -77.3268642,
+  "tags": {
+    "amenity": "library"
+  }
+},
+{
+  "type": "node",
+  "id": 3159272462,
+  "lat": 39.6219857,
+  "lon": -77.4112170,
+  "tags": {
+    "amenity": "pharmacy",
+    "name": "MedOne"
+  }
+},
+{
+  "type": "node",
+  "id": 3159835099,
+  "lat": 39.6166316,
+  "lon": -77.3979371,
+  "tags": {
+    "amenity": "community_centre",
+    "name": "Thurmont Senior Center"
+  }
+},
+{
+  "type": "node",
+  "id": 4631186177,
+  "lat": 39.6805317,
+  "lon": -77.3549119,
+  "tags": {
+    "amenity": "drinking_water",
+    "name": "Outdoor Water Fountain"
+  }
+},
+{
+  "type": "node",
+  "id": 4812433043,
+  "lat": 39.6797671,
+  "lon": -77.3557294,
+  "tags": {
+    "amenity": "library",
+    "name": "Potter-Gormley Library",
+    "operator": "Mount St. Mary's Seminary"
+  }
+},
+{
+  "type": "node",
+  "id": 5203447639,
+  "lat": 39.6245094,
+  "lon": -77.4612622,
+  "tags": {
+    "amenity": "toilets",
+    "toilets:disposal": "chemical"
+  }
+},
+{
+  "type": "node",
+  "id": 5207427788,
+  "lat": 39.5865717,
+  "lon": -77.4353032,
+  "tags": {
+    "amenity": "drinking_water"
+  }
+},
+{
+  "type": "node",
+  "id": 7963584039,
+  "lat": 39.5919102,
+  "lon": -77.4350882,
+  "tags": {
+    "amenity": "drinking_water",
+    "indoor": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7963611501,
+  "lat": 39.5910969,
+  "lon": -77.4364266,
+  "tags": {
+    "amenity": "drinking_water",
+    "indoor": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7963611503,
+  "lat": 39.5923959,
+  "lon": -77.4368732,
+  "tags": {
+    "amenity": "drinking_water",
+    "indoor": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7966290772,
+  "lat": 39.6257568,
+  "lon": -77.4736571,
+  "tags": {
+    "amenity": "drinking_water",
+    "indoor": "no",
+    "man_made": "water_tap"
+  }
+},
+{
+  "type": "node",
+  "id": 7966290773,
+  "lat": 39.6253647,
+  "lon": -77.4740824,
+  "tags": {
+    "amenity": "drinking_water",
+    "indoor": "no",
+    "man_made": "water_tap"
+  }
+},
+{
+  "type": "node",
+  "id": 7966290775,
+  "lat": 39.6261966,
+  "lon": -77.4744324,
+  "tags": {
+    "amenity": "drinking_water",
+    "indoor": "no",
+    "man_made": "water_tap"
+  }
+},
+{
+  "type": "node",
+  "id": 7966290776,
+  "lat": 39.6258252,
+  "lon": -77.4750219,
+  "tags": {
+    "amenity": "drinking_water",
+    "indoor": "no",
+    "man_made": "water_tap"
+  }
+},
+{
+  "type": "node",
+  "id": 7969116291,
+  "lat": 39.6277899,
+  "lon": -77.4638495,
+  "tags": {
+    "amenity": "toilets"
+  }
+},
+{
+  "type": "node",
+  "id": 9820213994,
+  "lat": 39.6914489,
+  "lon": -77.3283027,
+  "tags": {
+    "amenity": "toilets",
+    "portable": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9820216330,
+  "lat": 39.6914930,
+  "lon": -77.3282715,
+  "tags": {
+    "amenity": "toilets",
+    "portable": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12103196097,
+  "lat": 39.6272976,
+  "lon": -77.4627409,
+  "tags": {
+    "access": "yes",
+    "amenity": "drinking_water",
+    "bottle": "no",
+    "covered": "no",
+    "fee": "no",
+    "fountain": "bubbler"
+  }
+},
+{
+  "type": "node",
+  "id": 12323565465,
+  "lat": 39.6272926,
+  "lon": -77.4627392,
+  "tags": {
+    "amenity": "drinking_water"
+  }
+},
+{
+  "type": "way",
+  "id": 157338890,
+  "center": {
+    "lat": 39.6816489,
+    "lon": -77.3518966
+  },
+  "nodes": [
+    367797824,
+    1695497196,
+    1695497199,
+    1695497182,
+    1695497168,
+    1695497184,
+    1695497181,
+    1695497200,
+    4746091824,
+    367797824
+  ],
+  "tags": {
+    "addr:state": "MD",
+    "amenity": "library",
+    "building": "yes",
+    "ele": "184",
+    "gnis:feature_id": "2042824",
+    "name": "Phillips Library",
+    "source": "USGS Geonames"
+  }
+},
+{
+  "type": "way",
+  "id": 239147642,
+  "center": {
+    "lat": 39.6258503,
+    "lon": -77.4744558
+  },
+  "nodes": [
+    2469575742,
+    2469575747,
+    2469575744,
+    2469575737,
+    2469575742
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "building": "yes",
+    "building:levels": "1",
+    "building:material": "wood",
+    "changing_table": "no",
+    "check_date": "2023-10-21",
+    "fee": "no",
+    "portable": "no",
+    "roof:levels": "1",
+    "roof:shape": "gabled",
+    "shower": "yes",
+    "toilets:disposal": "flush",
+    "toilets:handwashing": "yes",
+    "toilets:position": "seated;urinal",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 239147645,
+  "center": {
+    "lat": 39.6267797,
+    "lon": -77.4788420
+  },
+  "nodes": [
+    2469575841,
+    2469575848,
+    2469575853,
+    2469575849,
+    2469575841
+  ],
+  "tags": {
+    "access": "customers",
+    "addr:floor": "G",
+    "amenity": "toilets",
+    "building": "commercial",
+    "building:levels": "1",
+    "building:material": "wood",
+    "changing_table": "no",
+    "fee": "no",
+    "level": "0",
+    "opening_hours": "24/7",
+    "portable": "no",
+    "roof:levels": "1",
+    "shower": "hot",
+    "source": "survey",
+    "toilets:disposal": "flush",
+    "toilets:handwashing": "yes",
+    "toilets:menstrual_products": "no",
+    "toilets:position": "seated;urinal",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 239147646,
+  "center": {
+    "lat": 39.6265660,
+    "lon": -77.4726418
+  },
+  "nodes": [
+    2469575822,
+    2469575831,
+    2469575835,
+    2469575827,
+    2469575822
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building": "yes",
+    "shower": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 239147647,
+  "center": {
+    "lat": 39.6268865,
+    "lon": -77.4804234
+  },
+  "nodes": [
+    2469575867,
+    2469575868,
+    2469575855,
+    2469575854,
+    2469575867
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building": "yes",
+    "shower": "hot"
+  }
+},
+{
+  "type": "way",
+  "id": 239462952,
+  "center": {
+    "lat": 39.6265118,
+    "lon": -77.4614859
+  },
+  "nodes": [
+    2472377391,
+    2472377390,
+    2472377392,
+    2472377393,
+    2472377391
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 239462954,
+  "center": {
+    "lat": 39.6237743,
+    "lon": -77.4744108
+  },
+  "nodes": [
+    2472377301,
+    2472377299,
+    2472377303,
+    2472377304,
+    2472377301
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building": "yes",
+    "shower": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 284731617,
+  "center": {
+    "lat": 39.5317761,
+    "lon": -77.3050678
+  },
+  "nodes": [
+    2884436338,
+    2884436382,
+    2884436377,
+    2884436370,
+    2884436369,
+    2884436343,
+    2884436348,
+    2884436341,
+    2884436334,
+    393680154,
+    2884436314,
+    2884436324,
+    2884436338
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "ele": "134",
+    "gnis:feature_id": "1711479",
+    "leisure": "park",
+    "name": "Woodsboro Regional Park"
+  }
+},
+{
+  "type": "way",
+  "id": 286076361,
+  "center": {
+    "lat": 39.6784409,
+    "lon": -77.3404021
+  },
+  "nodes": [
+    2897149247,
+    2897149245,
+    2897149238,
+    2897149244,
+    2897149247
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 310506886,
+  "center": {
+    "lat": 39.6129541,
+    "lon": -77.4121121
+  },
+  "nodes": [
+    3159272465,
+    3159272466,
+    3159272467,
+    3159272468,
+    3159272469,
+    3159272470,
+    3159272471,
+    3159272472,
+    3159272473,
+    9682212740,
+    9682022039,
+    9682022038,
+    3159272474,
+    3159272475,
+    3159272476,
+    3159272477,
+    3159272465
+  ],
+  "tags": {
+    "addr:city": "Thurmont",
+    "addr:housenumber": "76",
+    "addr:postcode": "21788",
+    "addr:state": "MD",
+    "addr:street": "East Moser Road",
+    "amenity": "library",
+    "building": "yes",
+    "name": "Thurmont Regional Library",
+    "operator": "Frederick County Public Libraries",
+    "phone": "+1-301-600-7200",
+    "website": "https://www.fcpl.org/branches-hours/thurmont-regional-library"
+  }
+},
+{
+  "type": "way",
+  "id": 420401999,
+  "center": {
+    "lat": 39.5916341,
+    "lon": -77.4366519
+  },
+  "nodes": [
+    4203338325,
+    5207382723,
+    4203338322,
+    4203338321,
+    4203338325
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "building": "toilets",
+    "building:levels": "1",
+    "drinking_water": "yes",
+    "fee": "no",
+    "female": "yes",
+    "male": "yes",
+    "shower": "yes",
+    "toilets:disposal": "flush",
+    "toilets:position": "seated;urinal",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 440965912,
+  "center": {
+    "lat": 39.6467139,
+    "lon": -77.4541665
+  },
+  "nodes": [
+    4387326017,
+    4387326016,
+    4387326014,
+    4387326015,
+    4387326017
+  ],
+  "tags": {
+    "access": "yes",
+    "amenity": "toilets",
+    "building": "yes",
+    "changing_table": "no",
+    "panoramax": "914f6dee-ec03-4dda-8b57-946e561c3af4",
+    "portable": "no",
+    "toilets:disposal": "pitlatrine",
+    "toilets:handwashing": "no",
+    "toilets:menstrual_products": "no",
+    "toilets:position": "seated",
+    "unisex": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 451652762,
+  "center": {
+    "lat": 39.6283191,
+    "lon": -77.4103319
+  },
+  "nodes": [
+    4484792222,
+    4484792223,
+    4484792219,
+    4484792218,
+    4484792222
+  ],
+  "tags": {
+    "amenity": "pharmacy",
+    "brand": "CVS Pharmacy",
+    "brand:website": "https://www.cvs.com/",
+    "brand:wikidata": "Q2078880",
+    "building": "yes",
+    "healthcare": "pharmacy",
+    "name": "CVS Pharmacy",
+    "short_name": "CVS",
+    "website": "https://www.cvs.com/store-locator/thurmont-md-pharmacies/228-church-st-thurmont-md-21788/storeid=6041"
+  }
+},
+{
+  "type": "way",
+  "id": 469810118,
+  "center": {
+    "lat": 39.6817044,
+    "lon": -77.3564026
+  },
+  "nodes": [
+    4631342620,
+    10572708863,
+    4641069678,
+    4641069679,
+    4641069675,
+    4631342620
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 481480722,
+  "center": {
+    "lat": 39.5861299,
+    "lon": -77.4354855
+  },
+  "nodes": [
+    4744152747,
+    4744152746,
+    4744152745,
+    4744152744,
+    4744152747
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 533285995,
+  "center": {
+    "lat": 39.6290104,
+    "lon": -77.4610033
+  },
+  "nodes": [
+    5173957760,
+    5173957757,
+    5173957758,
+    5173957759,
+    5173957760
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building": "yes",
+    "fee": "no",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 533285999,
+  "center": {
+    "lat": 39.6274735,
+    "lon": -77.4627797
+  },
+  "nodes": [
+    5173957774,
+    5173957773,
+    5173957772,
+    12103292786,
+    5173957771,
+    5173957774
+  ],
+  "tags": {
+    "access": "yes",
+    "amenity": "toilets",
+    "building": "yes",
+    "male": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 533286000,
+  "center": {
+    "lat": 39.6273215,
+    "lon": -77.4626751
+  },
+  "nodes": [
+    5173957778,
+    12103292785,
+    5173957777,
+    5173957776,
+    5173957775,
+    5173957778
+  ],
+  "tags": {
+    "access": "yes",
+    "amenity": "toilets",
+    "building": "yes",
+    "female": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 537301804,
+  "center": {
+    "lat": 39.5882067,
+    "lon": -77.4351242
+  },
+  "nodes": [
+    5203393605,
+    5203393602,
+    5207431814,
+    5203393604,
+    5203393605
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 552272636,
+  "center": {
+    "lat": 39.6165994,
+    "lon": -77.3980390
+  },
+  "nodes": [
+    5332446740,
+    5332446741,
+    5332446742,
+    5332446743,
+    5332446744,
+    5332446745,
+    5332446746,
+    5332446747,
+    5332446740
+  ],
+  "tags": {
+    "amenity": "community_centre",
+    "building": "yes",
+    "name": "Thurmont Senior Center"
+  }
+},
+{
+  "type": "way",
+  "id": 552274904,
+  "center": {
+    "lat": 39.6210900,
+    "lon": -77.4122767
+  },
+  "nodes": [
+    5332462928,
+    5332462929,
+    5332462930,
+    5332462931,
+    5332462932,
+    5332462933,
+    367798328,
+    5332462935,
+    5332462928
+  ],
+  "tags": {
+    "addr:state": "MD",
+    "amenity": "social_facility",
+    "building": "yes",
+    "ele": "153",
+    "gnis:feature_id": "1711469",
+    "name": "Thurmont Food Bank",
+    "social_facility": "food_bank",
+    "source": "USGS Geonames"
+  }
+},
+{
+  "type": "way",
+  "id": 552301004,
+  "center": {
+    "lat": 39.6212272,
+    "lon": -77.4136989
+  },
+  "nodes": [
+    5332621425,
+    5332621426,
+    5332621427,
+    5332621428,
+    5332621425
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building": "yes",
+    "toilets:disposal": "flush"
+  }
+},
+{
+  "type": "way",
+  "id": 651837519,
+  "center": {
+    "lat": 39.7173301,
+    "lon": -77.5080386
+  },
+  "nodes": [
+    6112034997,
+    6112034996,
+    6112034995,
+    6112034994,
+    6112034997
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building": "yes",
+    "toilets:disposal": "flush"
+  }
+},
+{
+  "type": "way",
+  "id": 653278482,
+  "center": {
+    "lat": 39.7014975,
+    "lon": -77.3291469
+  },
+  "nodes": [
+    6122488938,
+    6122488939,
+    6122488940,
+    6122488941,
+    6122488942,
+    6122488943,
+    6122488944,
+    6122488945,
+    6122488946,
+    6122488947,
+    6122488948,
+    6122488949,
+    6122488938
+  ],
+  "tags": {
+    "amenity": "library",
+    "building": "yes",
+    "name": "Emmitsburg Branch Library",
+    "operator": "Frederick County Public Libraries",
+    "operator:type": "public"
+  }
+},
+{
+  "type": "way",
+  "id": 656319369,
+  "center": {
+    "lat": 39.6485650,
+    "lon": -77.4778982
+  },
+  "nodes": [
+    6148267547,
+    6148267544,
+    6148267545,
+    6148267546,
+    6148267547
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 660865414,
+  "center": {
+    "lat": 39.6187550,
+    "lon": -77.4680211
+  },
+  "nodes": [
+    6187274193,
+    6187274192,
+    6187274191,
+    6187274189,
+    6187274190,
+    6187274193
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "building": "service",
+    "building:levels": "1",
+    "changing_table": "no",
+    "drinking_water": "no",
+    "fee": "no",
+    "name": "Olive Green Cabin Outhouse",
+    "toilets:disposal": "pitlatrine",
+    "toilets:position": "seated",
+    "unisex": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 685337016,
+  "center": {
+    "lat": 39.6597441,
+    "lon": -77.4863612
+  },
+  "nodes": [
+    6422173376,
+    6422173375,
+    6422173374,
+    6422173373,
+    6422173376
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building": "yes",
+    "shower": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 685337017,
+  "center": {
+    "lat": 39.6593039,
+    "lon": -77.4876966
+  },
+  "nodes": [
+    6422173380,
+    6422173379,
+    6422173378,
+    6422173377,
+    6422173380
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "toilets",
+    "building": "yes",
+    "toilets:disposal": "flush",
+    "unisex": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 854641740,
+  "center": {
+    "lat": 39.6291742,
+    "lon": -77.4588282
+  },
+  "nodes": [
+    7970063529,
+    7970063528,
+    7970063527,
+    7970063526,
+    7970063529
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building": "yes",
+    "fee": "no",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 879419894,
+  "center": {
+    "lat": 39.7081944,
+    "lon": -77.4915431
+  },
+  "nodes": [
+    8180837344,
+    8180837345,
+    8180837346,
+    8180837347,
+    8180837348,
+    8180837349,
+    8180837350,
+    10127394296,
+    10127394297,
+    8180837351,
+    8479634252,
+    8479634253,
+    8479634254,
+    8479634255,
+    8479634256,
+    8479634257,
+    8180837344
+  ],
+  "tags": {
+    "addr:city": "Cascade",
+    "addr:housenumber": "14421",
+    "addr:postcode": "21719",
+    "addr:state": "MD",
+    "addr:street": "Lake Royer Drive",
+    "amenity": "community_centre",
+    "building": "yes",
+    "contact:facebook": "https://www.facebook.com/thefrcc",
+    "name": "Fort Ritchie Community Center",
+    "phone": "+1 301 241 5085",
+    "website": "https://thefrcc.org/"
+  }
+},
+{
+  "type": "way",
+  "id": 917629005,
+  "center": {
+    "lat": 39.6736460,
+    "lon": -77.5297405
+  },
+  "nodes": [
+    8522704531,
+    8522704528,
+    8522704529,
+    8522704530,
+    8522704531
+  ],
+  "tags": {
+    "access": "yes",
+    "amenity": "toilets",
+    "building": "toilets",
+    "toilets:disposal": "pitlatrine",
+    "toilets:position": "seated",
+    "unisex": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1091233329,
+  "center": {
+    "lat": 39.5124224,
+    "lon": -77.4017395
+  },
+  "nodes": [
+    9994849388,
+    9994849387,
+    9994849386,
+    9994849385,
+    9994849388
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1119712653,
+  "center": {
+    "lat": 39.6559653,
+    "lon": -77.4758722
+  },
+  "nodes": [
+    10241147652,
+    10241147651,
+    10241147650,
+    10241147649,
+    10241147652
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building": "yes",
+    "female": "yes",
+    "male": "yes",
+    "toilets:disposal": "pitlatrine",
+    "toilets:position": "seated;urinal",
+    "unisex": "no",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1301078982,
+  "center": {
+    "lat": 39.7207384,
+    "lon": -77.4712723
+  },
+  "nodes": [
+    12050897052,
+    12050897053,
+    12050897059,
+    12050897060,
+    12050897061,
+    12050897058,
+    12050897054,
+    12050897055,
+    12050897056,
+    12050897057,
+    12050897052
+  ],
+  "tags": {
+    "addr:city": "Blue Ridge Summit",
+    "addr:housenumber": "13676",
+    "addr:postcode": "17214",
+    "addr:state": "PA",
+    "addr:street": "Monterey Lane",
+    "amenity": "library",
+    "building": "yes",
+    "name": "Blue Ridge Summit Free Library",
+    "phone": "+1-717-794-2240",
+    "ref:isil": "none"
+  }
+},
+{
+  "type": "way",
+  "id": 1431871583,
+  "center": {
+    "lat": 39.5221923,
+    "lon": -77.4011088
+  },
+  "nodes": [
+    13161251470,
+    13161251471,
+    13161251472,
+    13161251473,
+    13161251470
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1431984399,
+  "center": {
+    "lat": 39.5155187,
+    "lon": -77.4026324
+  },
+  "nodes": [
+    13162171384,
+    13162171385,
+    13162171386,
+    13162171387,
+    13162171384
+  ],
+  "tags": {
+    "amenity": "toilets",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1558949482,
+  "center": {
+    "lat": 39.6315906,
+    "lon": -77.5560323
+  },
+  "nodes": [
+    14181707440,
+    14181707441,
+    14181707442,
+    14181707443,
+    14181707440
+  ],
+  "tags": {
+    "access": "yes",
+    "amenity": "toilets",
+    "building": "yes",
+    "toilets:disposal": "pitlatrine"
+  }
+}
+
+  ]
+}

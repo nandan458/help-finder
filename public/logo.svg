@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- App icon: a white map pin with a heart, on the app's blue.
+       The pin stays inside the middle 80%, so phones that crop icons
+       into circles or rounded squares never cut it off. -->
+  <rect width="512" height="512" fill="#0a66c2"/>
+  <path fill="#fff" d="M256 112c-62 0-112 50-112 112 0 84 112 180 112 180s112-96 112-180c0-62-50-112-112-112z"/>
+  <path fill="#0a66c2" d="M256 276 218 238a24 24 0 0 1 38-30 24 24 0 0 1 38 30z"/>
+</svg>

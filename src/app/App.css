@@ -1,0 +1,828 @@
+/*
+  The main screen's look. Inspired by phone map apps: a full-screen map with a
+  frosted-glass panel on top. All colors come from tokens.css, so dark mode
+  works without any changes here.
+
+  Sections: layout, panel parts, buttons, search, filters, list, status,
+  place card, loading/empty/error, help lines, pop-ups, settings.
+*/
+
+/* ---- Layout ---- */
+
+.finder {
+  position: relative;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+/* The map fills the whole screen; the panel floats on top of it. */
+.finder-map {
+  position: absolute;
+  inset: 0;
+}
+
+/* Wide screens: a frosted panel on the left. */
+.panel {
+  position: absolute;
+  z-index: 1000; /* above the map's layers */
+  top: var(--space-4);
+  bottom: var(--space-4);
+  left: var(--space-4);
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-glass);
+  backdrop-filter: blur(20px) saturate(1.6);
+  -webkit-backdrop-filter: blur(20px) saturate(1.6);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* The part under the header scrolls. */
+.panel-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain; /* scrolling the list never scrolls the page */
+  display: grid;
+  align-content: start;
+  /* Each part keeps its full height and the panel scrolls. Without this, the
+     grid squeezes the list (it has overflow: hidden) to fit the panel. */
+  grid-auto-rows: max-content;
+  gap: var(--space-3);
+  padding: 0 var(--space-4) var(--space-4);
+}
+
+/* Phones: a bottom sheet. Its height is set by Sheet.tsx. */
+@media (max-width: 767px) {
+  .panel.sheet {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    transition: height 0.25s ease;
+  }
+
+  /* While a finger drags, follow it exactly, with no delay. */
+  .panel.sheet-dragging {
+    transition: none;
+  }
+}
+
+/* The whole top of the sheet can be dragged; the browser must not scroll it. */
+.sheet-grab {
+  touch-action: none;
+}
+
+.sheet-handle {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: grab;
+}
+
+.sheet-handle span {
+  width: 40px;
+  height: 5px;
+  border-radius: var(--radius-full);
+  background: var(--color-text-muted);
+  opacity: 0.6;
+}
+
+/* ---- Panel parts ---- */
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4) var(--space-3);
+}
+
+.sheet .panel-header {
+  padding-top: 0;
+}
+
+.panel-title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--color-text-muted);
+}
+
+.summary {
+  font-weight: 600;
+}
+
+.summary:empty {
+  display: none;
+}
+
+.credit {
+  font-size: var(--text-sm);
+}
+
+/* ---- Buttons ---- */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--tap-min);
+  padding: 0 var(--space-4);
+  border: none;
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.button-big {
+  min-height: 52px;
+  font-size: var(--text-lg);
+}
+
+.button-secondary {
+  background: var(--color-fill);
+  color: var(--color-accent);
+}
+
+/* Help lines: tinted red so it's easy to spot in a hurry. */
+.button-help {
+  flex-shrink: 0;
+  padding: 0 var(--space-3);
+  background: color-mix(in srgb, var(--status-closed) 14%, transparent);
+  color: var(--status-closed);
+  font-size: var(--text-sm);
+}
+
+.button-danger {
+  background: var(--status-closed);
+  color: var(--color-surface);
+}
+
+.link-button {
+  justify-self: start;
+  min-height: var(--tap-min);
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.ui-icon {
+  flex-shrink: 0;
+}
+
+.lang-picker select {
+  min-height: var(--tap-min);
+  padding: 0 var(--space-3);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--color-fill);
+}
+
+/* ---- Search box ---- */
+
+.place-search {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-2);
+}
+
+.search-field {
+  position: relative;
+  min-width: 0;
+}
+
+.search-field .ui-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  translate: 0 -50%;
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.search-field input {
+  width: 100%;
+  min-height: var(--tap-min);
+  padding: 0 var(--space-3) 0 38px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--color-fill);
+}
+
+.search-field input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.form-error {
+  grid-column: 1 / -1;
+  color: var(--status-closed);
+  font-weight: 600;
+}
+
+/* ---- Filters ---- */
+
+.filter-bar {
+  display: grid;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+/* One row of round buttons that scrolls sideways on small phones. */
+.category-bar {
+  display: flex;
+  gap: var(--space-1);
+  margin: 0 calc(-1 * var(--space-4));
+  padding: 2px var(--space-4) var(--space-1);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.category-button {
+  flex: 0 0 auto;
+  display: grid;
+  justify-items: center;
+  gap: var(--space-1);
+  min-width: 60px;
+  padding: var(--space-1);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.category-button .cat-icon {
+  width: 44px;
+  height: 44px;
+  transition: transform 0.15s ease;
+}
+
+.category-button .cat-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* A turned-on category gets a ring and a bold, underlined label (not color alone). */
+.category-button[aria-pressed="true"] .cat-icon {
+  transform: scale(1.06);
+  box-shadow:
+    0 0 0 3px var(--color-surface),
+    0 0 0 5px var(--color-text);
+}
+
+.category-button[aria-pressed="true"] span:last-child {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.pill {
+  position: relative;
+  min-height: 36px;
+  padding: 0 var(--space-3);
+  border: none;
+  border-radius: var(--radius-full);
+  background: var(--color-fill);
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+
+/* 36 px tall, but the tap area is stretched to 44 px with an invisible edge. */
+.pill::after {
+  content: "";
+  position: absolute;
+  inset: -4px 0;
+}
+
+.pill[aria-pressed="true"] {
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+}
+
+.pill[aria-pressed="true"]::before {
+  content: "✓ ";
+}
+
+/* ---- The list ---- */
+
+/* One rounded card with thin lines between rows. */
+.place-list {
+  padding: 0;
+  list-style: none;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.place-list > li + li {
+  border-top: 1px solid var(--color-border);
+}
+
+.place-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: none;
+  background: none;
+  text-align: left;
+}
+
+.place-row:hover {
+  background: color-mix(in srgb, var(--color-accent) 6%, transparent);
+}
+
+/* Focus ring drawn inside, so the card's rounded edge doesn't cut it off. */
+.place-row:focus-visible {
+  outline-offset: -3px;
+}
+
+.cat-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  color: #fff;
+}
+
+.place-main {
+  min-width: 0; /* lets long names wrap instead of pushing the layout wider */
+  display: grid;
+  gap: 2px;
+  font-size: var(--text-sm);
+}
+
+.place-name {
+  font-size: var(--text-md);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.place-distance {
+  display: grid;
+  justify-items: end;
+  align-content: start;
+  text-align: right;
+  font-size: var(--text-sm);
+}
+
+/* ---- Open status ---- */
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.status-dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: currentColor;
+}
+
+.status-open {
+  color: var(--status-open);
+}
+
+.status-soon {
+  color: var(--status-soon);
+}
+
+.status-closed {
+  color: var(--status-closed);
+}
+
+.status-unknown {
+  color: var(--status-unknown);
+}
+
+/* ---- Place card ---- */
+
+.place-card {
+  display: grid;
+  gap: var(--space-4);
+  animation: rise 0.2s ease-out;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    translate: 0 8px;
+  }
+}
+
+.card-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3);
+  align-items: start;
+}
+
+.card-header .cat-icon {
+  width: 44px;
+  height: 44px;
+}
+
+.card-title {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.card-title:focus {
+  outline: none; /* focused by the app, not the person; a ring here would confuse */
+}
+
+/* A row of square-ish buttons: icon on top, word below. */
+.card-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+  gap: var(--space-2);
+}
+
+.action {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 2px;
+  min-height: 56px;
+  padding: var(--space-2) var(--space-1);
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--color-fill);
+  color: var(--color-accent);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+
+.action-primary {
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+}
+
+/* Three facts side by side: Hours, Distance, Phone. */
+.card-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.card-strip > div {
+  min-width: 0;
+  padding: var(--space-3);
+}
+
+.card-strip > div + div {
+  border-left: 1px solid var(--color-border);
+}
+
+.card-strip dt {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.card-strip dd {
+  margin: 0;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.card-section {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.card-section h3 {
+  font-size: var(--text-md);
+}
+
+.details {
+  margin: 0;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.detail {
+  padding: var(--space-3) var(--space-4);
+}
+
+.detail + .detail {
+  border-top: 1px solid var(--color-border);
+}
+
+.detail dt {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.detail dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.hours-table th,
+.hours-table td {
+  padding: var(--space-2) var(--space-4);
+  text-align: left;
+  vertical-align: top;
+}
+
+.hours-table th {
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.hours-table tr + tr {
+  border-top: 1px solid var(--color-border);
+}
+
+/* Today stands out by being bold and tinted. */
+.hours-table tr.today {
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  font-weight: 700;
+}
+
+.hours-table tr.today th {
+  font-weight: 700;
+}
+
+.card-note {
+  font-size: var(--text-sm);
+}
+
+/* ---- Loading, empty, error ---- */
+
+.loading {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.skeleton-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+}
+
+.skeleton-lines {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.skeleton {
+  display: block;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background: var(--color-fill);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+.skeleton-dot {
+  width: 36px;
+  height: 36px;
+}
+
+.skeleton-short {
+  width: 60%;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.state-card {
+  display: grid;
+  gap: var(--space-3);
+  justify-items: start;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.state-title {
+  font-size: var(--text-md);
+}
+
+/* ---- Help lines ---- */
+
+.help-lines ul {
+  display: grid;
+  gap: var(--space-4);
+  padding: 0;
+  list-style: none;
+}
+
+.help-line {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.help-line-name {
+  font-weight: 700;
+}
+
+.help-line-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.help-note {
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+}
+
+/* ---- Pop-ups (Help lines, Settings) ---- */
+
+.dialog {
+  width: min(460px, calc(100vw - 2 * var(--space-4)));
+  max-height: calc(100dvh - 2 * var(--space-4));
+  padding: var(--space-6);
+  border: none;
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+  color: var(--color-text);
+  box-shadow: var(--shadow);
+  overscroll-behavior: contain;
+}
+
+.dialog::backdrop {
+  background: rgb(0 0 0 / 0.5);
+}
+
+.dialog-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.dialog-top h2 {
+  font-size: var(--text-lg);
+}
+
+/* ---- Settings ---- */
+
+.settings {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.settings-label {
+  display: block;
+  margin-bottom: var(--space-2);
+  padding: 0;
+  font-weight: 700;
+}
+
+.settings-row .lang-picker select {
+  width: 100%;
+}
+
+.choice {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* Side-by-side choices with the picked one raised, like a phone's settings. */
+.segmented {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  gap: 2px;
+  padding: 3px;
+  border-radius: var(--radius-md);
+  background: var(--color-fill);
+}
+
+.segmented input {
+  position: absolute;
+  opacity: 0; /* the real radio button is hidden; the label below is what you see */
+}
+
+.segmented span {
+  display: grid;
+  place-items: center;
+  min-height: 40px;
+  padding: 0 var(--space-2);
+  border-radius: calc(var(--radius-md) - 3px);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  text-align: center;
+  cursor: pointer;
+}
+
+.segmented input:checked + span {
+  background: var(--color-surface);
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.15);
+}
+
+/* Keyboard focus on the hidden radio shows on its label instead. */
+.segmented input:focus-visible + span {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 1px;
+}
+
+.settings-section {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.settings-section h3 {
+  font-size: var(--text-md);
+}
+
+.settings-section .button {
+  justify-self: start;
+}
+
+.settings-done:empty {
+  display: none;
+}
+
+.settings-done {
+  color: var(--status-open);
+  font-weight: 600;
+}
+
+/* ---- Offline ---- */
+
+.offline-banner {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--status-soon) 16%, transparent);
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+
+/* The panel body has no top gap of its own, so give the banner some room. */
+.panel-body > .offline-banner:first-child {
+  margin-top: var(--space-1);
+}
+
+.offline-card {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--status-soon) 16%, transparent);
+  font-weight: 600;
+}
+
+.card-copied {
+  color: var(--status-open);
+  font-weight: 600;
+}
+
+.card-copied:empty {
+  display: none;
+}

@@ -1,0 +1,194 @@
+/* Map, pins, clusters, map buttons, and dark map tiles. */
+
+.map-wrap {
+  position: relative;
+  height: 100%;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+  background: var(--color-bg);
+}
+
+.leaflet-container {
+  font-family: var(--font-body);
+}
+
+/* Round pin: category color, white border, white icon. */
+.pin {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: var(--radius-full);
+  background: var(--pin-color);
+  color: #fff;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.35);
+}
+
+/* The selected pin is a balloon: a square with three round corners, turned so
+   the sharp corner points down at the place. The icon inside is turned back. */
+.pin-selected {
+  border-width: 3px;
+  border-radius: 50% 50% 50% 0;
+  rotate: -45deg;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+  animation: pop 0.2s ease-out;
+}
+
+.pin-selected > span {
+  display: grid;
+  rotate: 45deg;
+}
+
+.pin-selected svg {
+  width: 22px;
+  height: 22px;
+}
+
+@keyframes pop {
+  from {
+    scale: 0.6;
+  }
+}
+
+/* A group of pins shown as one numbered bubble. */
+.cluster {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #fff;
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.35);
+}
+
+/* Blue "you are here" dot. CSS beats Leaflet's own color settings for SVG shapes. */
+.user-dot {
+  fill: #0a84ff;
+  fill-opacity: 1;
+  stroke: #fff;
+  stroke-width: 3;
+}
+
+/* A typed place gets a ring instead, since we don't know you're actually there. */
+.typed-dot {
+  fill: #fff;
+  fill-opacity: 1;
+  stroke: #0a84ff;
+  stroke-width: 4;
+}
+
+.search-circle {
+  fill: var(--color-accent);
+  fill-opacity: 0.04;
+  stroke: var(--color-accent);
+  stroke-opacity: 0.5;
+  stroke-width: 2;
+  stroke-dasharray: 6 6;
+}
+
+/* ---- Buttons on the map ---- */
+
+.map-controls {
+  position: absolute;
+  z-index: 1000; /* above Leaflet's layers */
+  top: var(--space-4);
+  right: var(--space-4);
+  display: grid;
+  gap: var(--space-3);
+}
+
+.control-group {
+  display: grid;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-glass);
+  backdrop-filter: blur(16px) saturate(1.6);
+  -webkit-backdrop-filter: blur(16px) saturate(1.6);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.control {
+  display: grid;
+  place-items: center;
+  width: var(--tap-min);
+  height: var(--tap-min);
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-accent);
+}
+
+.control + .control {
+  border-top: 1px solid var(--color-border);
+}
+
+.control:disabled {
+  opacity: 0.5;
+}
+
+.control:focus-visible {
+  outline-offset: -3px;
+}
+
+.search-area {
+  position: absolute;
+  z-index: 1000;
+  top: var(--space-4);
+  left: 50%;
+  translate: -50% 0;
+  min-height: var(--tap-min);
+  padding: 0 var(--space-4);
+  border: none;
+  border-radius: var(--radius-full);
+  background: var(--color-surface-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: var(--color-accent);
+  font-weight: 600;
+  box-shadow: var(--shadow);
+}
+
+/* The map's credit line, in our colors. */
+.leaflet-control-attribution.leaflet-control {
+  background: var(--color-surface-glass);
+  color: var(--color-text);
+}
+
+.leaflet-control-attribution a {
+  color: var(--color-accent);
+}
+
+@media (max-width: 767px) {
+  .map-controls {
+    top: var(--space-3);
+    right: var(--space-3);
+  }
+
+  /* On phones the credit line sits at the top left, so move this button below it. */
+  .search-area {
+    top: 44px;
+  }
+}
+
+/* ---- Dark map ---- */
+
+/* OpenStreetMap only offers light map pictures. In dark mode we flip their
+   colors with a filter (light becomes dark, then the hues are turned back so
+   water stays blue). Pins are on a different layer, so they keep their colors. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .leaflet-tile-pane {
+    filter: invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9);
+  }
+}
+
+:root[data-theme="dark"] .leaflet-tile-pane {
+  filter: invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9);
+}

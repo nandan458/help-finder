@@ -1,0 +1,4 @@
+# Keep Unix line endings in the repo on every computer (Prettier and GitHub expect them).
+* text=auto eol=lf
+*.png binary
+*.ico binary

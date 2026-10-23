@@ -1,0 +1,102 @@
+/*
+  Design tokens: every color, size, and radius the app uses, in one place.
+  Components use var(--name) instead of raw colors, so switching to dark mode
+  only means changing these values, not every component.
+
+  Theme rules:
+  - No data-theme attribute ("Auto"): follow the phone's light/dark setting.
+  - data-theme="light" or "dark" on <html>: the user picked one in Settings.
+*/
+
+:root {
+  color-scheme: light;
+
+  /* Surfaces and text */
+  --color-bg: #f2f2f7;
+  --color-surface: #ffffff;
+  --color-surface-glass: rgb(255 255 255 / 0.78);
+  --color-text: #1c1c1e;
+  --color-text-muted: #5b5b61; /* 6.6:1 on white, passes WCAG AA */
+  --color-border: #d8d8de;
+  --color-fill: #e9e9ee; /* gray fill behind search fields and buttons */
+  --color-accent: #0a66c2;
+  --color-accent-text: #ffffff;
+  --color-focus: #0a66c2;
+
+  /* Category colors. Each one has at least 4.5:1 contrast with white,
+     so the white icon inside a pin stays readable. */
+  --cat-food: #c2410c; /* orange */
+  --cat-health: #c81e1e; /* red */
+  --cat-shelter: #7c3aed; /* purple */
+  --cat-internet: #0f766e; /* teal */
+  --cat-water: #1d4ed8; /* blue */
+  --cat-restroom: #475569; /* gray-blue */
+  --cat-shower: #0e7490; /* cyan */
+
+  /* Status colors (always shown with words too, never color alone) */
+  --status-open: #15803d;
+  --status-soon: #b45309;
+  --status-closed: #b91c1c;
+  --status-unknown: #5b5b61;
+
+  /* Type, spacing, shape */
+  --font-body:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.75rem;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+  --tap-min: 44px; /* smallest comfortable tap target (WCAG) */
+  --shadow: 0 4px 24px rgb(0 0 0 / 0.12);
+}
+
+/* Dark values, written once and used by both "Auto" and "Dark". */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-bg: #000000;
+    --color-surface: #1c1c1e;
+    --color-surface-glass: rgb(28 28 30 / 0.78);
+    --color-text: #f2f2f7;
+    --color-text-muted: #a1a1aa;
+    --color-border: #3a3a3c;
+    --color-fill: #2c2c2e;
+    --color-accent: #4da3ff;
+    --color-accent-text: #000000;
+    --color-focus: #4da3ff;
+    --status-open: #4ade80;
+    --status-soon: #fbbf24;
+    --status-closed: #f87171;
+    --status-unknown: #a1a1aa;
+    --shadow: 0 4px 24px rgb(0 0 0 / 0.5);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #000000;
+  --color-surface: #1c1c1e;
+  --color-surface-glass: rgb(28 28 30 / 0.78);
+  --color-text: #f2f2f7;
+  --color-text-muted: #a1a1aa;
+  --color-border: #3a3a3c;
+  --color-fill: #2c2c2e;
+  --color-accent: #4da3ff;
+  --color-accent-text: #000000;
+  --color-focus: #4da3ff;
+  --status-open: #4ade80;
+  --status-soon: #fbbf24;
+  --status-closed: #f87171;
+  --status-unknown: #a1a1aa;
+  --shadow: 0 4px 24px rgb(0 0 0 / 0.5);
+}

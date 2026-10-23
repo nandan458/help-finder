@@ -1,0 +1,77 @@
+/* Basic page styles that apply everywhere. Colors come from tokens.css. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Lets the user's text-size setting scale everything that uses rem. */
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* "Large" text in Settings: everything sized in rem grows by about 20%. */
+html[data-text="large"] {
+  font-size: 118.75%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: 1.45;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+/* A clear focus ring for keyboard users (WCAG 2.4.7). */
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* Hidden on screen but still read by screen readers. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* People who turn on "reduce motion" get no animations. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
