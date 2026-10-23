@@ -1,7 +1,7 @@
 # Builds the offline packs (every free place in the U.S., cut into small files)
 # once a week, and publishes them next to the app. See scripts/build-packs.mjs
-# for why: the free Overpass server is slow, so we ask it once a week instead of
-# once per search.
+# for how: it downloads each state from Geofabrik, so the busy Overpass server is
+# never involved.
 #
 # The packs are saved on their own "packs" branch (one fresh commit each time, so
 # the repo doesn't grow), and the deploy workflow copies them into the site.
@@ -37,6 +37,10 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 24
+
+      # osmium is the standard tool for filtering OpenStreetMap files.
+      - name: Install osmium
+        run: sudo apt-get update && sudo apt-get install -y osmium-tool
 
       - name: Build the packs
         run: node scripts/build-packs.mjs out ${{ inputs.states }}
