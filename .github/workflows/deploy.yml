@@ -44,6 +44,22 @@ jobs:
           # The folder the site lives in (for example /help-finder/). See vite.config.ts.
           BASE_PATH: ${{ steps.pages.outputs.base_path }}/
 
+      # Add the offline packs built by packs.yml, if there are any yet.
+      - uses: actions/checkout@v7
+        with:
+          ref: packs
+          path: packs-data
+        continue-on-error: true
+      - name: Add packs to the site
+        run: |
+          if [ -f packs-data/index.json ]; then
+            mkdir -p dist/packs
+            cp -r packs-data/t packs-data/index.json dist/packs/
+            echo "Added $(ls dist/packs/t | wc -l) pack files"
+          else
+            echo "No packs yet; the app will use the live server."
+          fi
+
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist

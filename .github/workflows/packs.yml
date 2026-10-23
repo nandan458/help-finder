@@ -1,0 +1,57 @@
+# Builds the offline packs (every free place in the U.S., cut into small files)
+# once a week, and publishes them next to the app. See scripts/build-packs.mjs
+# for why: the free Overpass server is slow, so we ask it once a week instead of
+# once per search.
+#
+# The packs are saved on their own "packs" branch (one fresh commit each time, so
+# the repo doesn't grow), and the deploy workflow copies them into the site.
+
+name: Build offline packs
+
+on:
+  schedule:
+    - cron: "0 6 * * 0" # every Sunday, 6:00 UTC
+  workflow_dispatch:
+    inputs:
+      states:
+        description: "State codes to build, like 'DC DE MD'. Leave empty for all 50 states + DC."
+        required: false
+        default: ""
+
+permissions:
+  contents: write # to update the packs branch
+  actions: write # to start the deploy afterwards
+
+# Never build two sets of packs at once.
+concurrency:
+  group: packs
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350 # GitHub's limit is 360
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Build the packs
+        run: node scripts/build-packs.mjs out ${{ inputs.states }}
+
+      - name: Publish the packs branch
+        working-directory: out
+        run: |
+          git init -b packs
+          git config user.name "NearAid pack builder"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Offline packs built $(date -u +%Y-%m-%d)"
+          git push --force "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" packs
+
+      - name: Deploy the site with the new packs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --repo ${{ github.repository }}
