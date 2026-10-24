@@ -67,6 +67,21 @@ describe("directions", () => {
     expect(isApplePhone(android, 5)).toBe(false);
   });
 
+  it("builds bike, drive, and bus or train links", () => {
+    const to = { lat: 38.9103, lng: -77.0217 };
+    expect(directionsUrl(to, false, "driving")).toContain("travelmode=driving");
+    expect(directionsUrl(to, false, "bicycling")).toContain("travelmode=bicycling");
+    expect(directionsUrl(to, false, "transit")).toContain("travelmode=transit");
+    expect(directionsUrl(to, true, "driving")).toBe(
+      "https://maps.apple.com/?daddr=38.9103,-77.0217&dirflg=d",
+    );
+    expect(directionsUrl(to, true, "transit")).toContain("dirflg=r");
+    // Apple's links have no cycling flag, so none is added.
+    expect(directionsUrl(to, true, "bicycling")).toBe(
+      "https://maps.apple.com/?daddr=38.9103,-77.0217",
+    );
+  });
+
   it("builds walking directions links", () => {
     const to = { lat: 38.9103, lng: -77.0217 };
     expect(directionsUrl(to, true)).toBe("https://maps.apple.com/?daddr=38.9103,-77.0217&dirflg=w");

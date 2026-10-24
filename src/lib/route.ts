@@ -22,6 +22,11 @@ export function routeLanguage(appLanguage: string): string {
   return ROUTE_LANGUAGES.includes(appLanguage) ? appLanguage : "en";
 }
 
+// How to travel. These are Valhalla's own names for what it calls "costing".
+// (Bus and train times aren't available from the free service, so transit is
+// handled by handing off to the phone's maps app instead; see directions.ts.)
+export type TravelMode = "pedestrian" | "bicycle" | "auto";
+
 export type RouteStep = {
   instruction: string; // "Turn left onto 9th Street Northwest."
   meters: number; // how far until the next step
@@ -108,13 +113,18 @@ const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 const isOffline = () => navigator.onLine === false;
 
 /**
- * A walking route from `from` to `to`, with steps in `lang` ("en", "es"...).
- * The starting point is rounded to about 100 m before it's sent, like every
- * location this app sends; the route is still right for walking.
+ * A route from `from` to `to` for walking, biking, or driving, with steps in
+ * `lang` ("en", "es"...). The starting point is rounded to about 100 m before
+ * it's sent, like every location this app sends; the route is still right.
  */
-export async function walkingRoute(from: LatLng, to: LatLng, lang: string): Promise<Route> {
+export async function travelRoute(
+  from: LatLng,
+  to: LatLng,
+  mode: TravelMode,
+  lang: string,
+): Promise<Route> {
   const start = { lat: roundCoord(from.lat, 3), lon: roundCoord(from.lng, 3) };
-  const key = `${lang}|${start.lat},${start.lon}|${to.lat},${to.lng}`;
+  const key = `${mode}|${lang}|${start.lat},${start.lon}|${to.lat},${to.lng}`;
   const remembered = routes.get(key);
   if (remembered) return remembered;
 
@@ -127,7 +137,7 @@ export async function walkingRoute(from: LatLng, to: LatLng, lang: string): Prom
 
   const request = {
     locations: [start, { lat: to.lat, lon: to.lng }],
-    costing: "pedestrian",
+    costing: mode,
     directions_options: { units: "kilometers", language: lang },
   };
 
@@ -139,7 +149,7 @@ export async function walkingRoute(from: LatLng, to: LatLng, lang: string): Prom
         signal: AbortSignal.timeout(20_000),
       },
     );
-    // 400 means "no walking route between these points" (say, across an ocean).
+    // 400 means "no route between these points" (say, across an ocean).
     if (response.status === 400) throw new RouteError("noRoute");
     if (!response.ok) throw new RouteError("server");
     answer = (await response.json()) as ValhallaAnswer;
@@ -151,4 +161,23 @@ export async function walkingRoute(from: LatLng, to: LatLng, lang: string): Prom
   const route = parseRoute(answer);
   routes.set(key, route);
   return route;
+}
+
+/** A walking route (the most common case, and what the place card's time is based on). */
+export const walkingRoute = (from: LatLng, to: LatLng, lang: string): Promise<Route> =>
+  travelRoute(from, to, "pedestrian", lang);
+
+/**
+ * The four choices on the directions screen. Walking, biking, and driving get a
+ * real route drawn in the app; "transit" (bus and train) hands off to the
+ * phone's maps app, because only it has the live schedules.
+ */
+export type RouteChoice = TravelMode | "transit";
+export const ROUTE_CHOICES: RouteChoice[] = ["pedestrian", "bicycle", "auto", "transit"];
+
+/** The matching word for a maps app's link (see directions.ts). */
+export function mapsModeFor(choice: RouteChoice): "walking" | "bicycling" | "driving" | "transit" {
+  return { pedestrian: "walking", bicycle: "bicycling", auto: "driving", transit: "transit" }[
+    choice
+  ] as "walking" | "bicycling" | "driving" | "transit";
 }

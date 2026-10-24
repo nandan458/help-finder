@@ -1,6 +1,6 @@
-// Gets a walking route to `to` (or nothing when `to` is null).
+// Gets a route (walking, biking, or driving) to `to`, or nothing when `to` is null.
 //
-// Where the walk starts:
+// Where the trip starts:
 // - if we have the phone's location, from there
 // - otherwise we ask for the phone's location now, so the route starts where
 //   the person actually is
@@ -10,11 +10,17 @@
 import { useEffect, useState } from "react";
 import type { LatLng } from "../lib/geo";
 import { getCurrentLocation, type Origin } from "../lib/location";
-import { RouteError, walkingRoute, type Route, type RouteErrorKind } from "../lib/route";
+import {
+  RouteError,
+  travelRoute,
+  type Route,
+  type RouteErrorKind,
+  type TravelMode,
+} from "../lib/route";
 
 export type RouteStart = { spot: LatLng; fromYou: boolean };
 
-export type WalkingRouteState =
+export type RouteState =
   | { status: "idle" }
   | { status: "locating" } // asking the phone where it is
   | { status: "noStart" }
@@ -22,7 +28,7 @@ export type WalkingRouteState =
   | { status: "done"; start: RouteStart; route: Route }
   | { status: "error"; start: RouteStart; errorKind: RouteErrorKind };
 
-export function useWalkingRoute(origin: Origin, to: LatLng | null, lang: string) {
+export function useRoute(origin: Origin, to: LatLng | null, mode: TravelMode, lang: string) {
   // The phone's location, looked up when the origin isn't already it.
   // Remembers which origin it was looked up for, so a new origin looks again.
   const [lookup, setLookup] = useState<{ forOrigin: Origin; spot: LatLng | null } | null>(null);
@@ -61,13 +67,13 @@ export function useWalkingRoute(origin: Origin, to: LatLng | null, lang: string)
   const startSpot = typeof start === "object" && start ? start.spot : null;
   const key =
     to && startSpot
-      ? `${lang}|${startSpot.lat},${startSpot.lng}|${to.lat},${to.lng}|${attempt}`
+      ? `${mode}|${lang}|${startSpot.lat},${startSpot.lng}|${to.lat},${to.lng}|${attempt}`
       : null;
 
   useEffect(() => {
     if (!key || !to || !startSpot) return;
     let ignore = false;
-    walkingRoute(startSpot, to, lang)
+    travelRoute(startSpot, to, mode, lang)
       .then((route) => !ignore && setAnswer({ key, route }))
       .catch((err: unknown) => {
         const errorKind = err instanceof RouteError ? err.kind : "server";
@@ -76,9 +82,9 @@ export function useWalkingRoute(origin: Origin, to: LatLng | null, lang: string)
     return () => {
       ignore = true;
     };
-  }, [key, to, startSpot, lang]);
+  }, [key, to, startSpot, mode, lang]);
 
-  let state: WalkingRouteState = { status: "idle" };
+  let state: RouteState = { status: "idle" };
   if (start === "locating") state = { status: "locating" };
   else if (start === "noStart") state = { status: "noStart" };
   else if (start) {

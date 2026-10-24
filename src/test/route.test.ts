@@ -3,7 +3,16 @@
 
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { distanceMeters } from "../lib/geo";
-import { decodePolyline, parseRoute, RouteError, walkingRoute } from "../lib/route";
+import {
+  decodePolyline,
+  mapsModeFor,
+  parseRoute,
+  RouteError,
+  travelRoute,
+  walkingRoute,
+} from "../lib/route";
+import autoJson from "./fixtures/route-dc-auto.json";
+import bicycleJson from "./fixtures/route-dc-bicycle.json";
 import englishJson from "./fixtures/route-dc-en.json";
 import spanishJson from "./fixtures/route-dc-es.json";
 
@@ -77,5 +86,50 @@ describe("walkingRoute", () => {
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue(new Response("{}", { status: 400 })));
     const error = await walkingRoute({ lat: 1, lng: 1 }, foodBank, "en").catch((e) => e);
     expect(error.kind).toBe("noRoute");
+  });
+});
+
+describe("biking and driving", () => {
+  it("reads real bike and drive routes (they follow roads, so they differ from walking)", () => {
+    const walk = parseRoute(englishJson);
+    const bike = parseRoute(bicycleJson);
+    const drive = parseRoute(autoJson);
+    expect(bike.steps[0].instruction).toBe("Bike west.");
+    expect(drive.steps[0].instruction).toBe("Drive west.");
+    expect(bike.seconds).toBeLessThan(walk.seconds); // faster than walking
+    expect(drive.seconds).toBeLessThan(walk.seconds);
+    expect(distanceMeters(drive.line.at(-1)!, foodBank)).toBeLessThan(100);
+  });
+
+  it("asks the server for the right kind of route", async () => {
+    const fetchMock = vi
+      .fn()
+      .mockImplementation(async () => new Response(JSON.stringify(bicycleJson)));
+    vi.stubGlobal("fetch", fetchMock);
+    await travelRoute({ lat: 38.97, lng: -77.01 }, foodBank, "bicycle", "en");
+    expect(decodeURIComponent(String(fetchMock.mock.calls[0][0]))).toContain('"costing":"bicycle"');
+    await travelRoute({ lat: 38.97, lng: -77.01 }, foodBank, "auto", "en");
+    expect(decodeURIComponent(String(fetchMock.mock.calls[1][0]))).toContain('"costing":"auto"');
+    vi.unstubAllGlobals();
+  });
+
+  it("keeps routes for different ways of traveling apart in its memory", async () => {
+    const fetchMock = vi
+      .fn()
+      .mockImplementation(async () => new Response(JSON.stringify(englishJson)));
+    vi.stubGlobal("fetch", fetchMock);
+    const from = { lat: 38.98, lng: -77.02 };
+    await travelRoute(from, foodBank, "pedestrian", "en");
+    await travelRoute(from, foodBank, "auto", "en");
+    await travelRoute(from, foodBank, "auto", "en"); // remembered
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+    vi.unstubAllGlobals();
+  });
+
+  it("maps each choice to the words a maps app uses", () => {
+    expect(mapsModeFor("pedestrian")).toBe("walking");
+    expect(mapsModeFor("bicycle")).toBe("bicycling");
+    expect(mapsModeFor("auto")).toBe("driving");
+    expect(mapsModeFor("transit")).toBe("transit");
   });
 });

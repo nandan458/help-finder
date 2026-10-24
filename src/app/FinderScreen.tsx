@@ -28,7 +28,7 @@ import { distanceMeters, formatDistance, usesMiles, type LatLng } from "../lib/g
 import { hoursStatus, isOpenNow } from "../lib/hours";
 import type { Origin } from "../lib/location";
 import type { Place } from "../lib/overpass";
-import { routeLanguage } from "../lib/route";
+import { routeLanguage, type RouteChoice } from "../lib/route";
 import { pageWithoutPlace, placeLink } from "../lib/share";
 import { useLocate } from "./useLocate";
 import type { SearchState } from "./useNearbySearch";
@@ -36,7 +36,7 @@ import { useNow } from "./useNow";
 import { useOnline } from "./useOnline";
 import { useSaved } from "./useSaved";
 import { useViewport } from "./useViewport";
-import { useWalkingRoute } from "./useWalkingRoute";
+import { useRoute } from "./useRoute";
 
 type Props = {
   origin: Origin;
@@ -138,9 +138,12 @@ export function FinderScreen(props: Props) {
     id ? (search.places.find((p) => p.id === id) ?? saved.find((p) => p.id === id)) : undefined;
   const openPlace = findPlace(openId);
   const openItem = openPlace ? describe(openPlace, origin, now) : undefined;
-  const walking = useWalkingRoute(
+  // How the person is traveling. Bus and train ask the maps app instead, so no route is fetched for it.
+  const [routeChoice, setRouteChoice] = useState<RouteChoice>("pedestrian");
+  const routing = useRoute(
     origin,
-    directionsOpen && openPlace ? openPlace : null,
+    directionsOpen && openPlace && routeChoice !== "transit" ? openPlace : null,
+    routeChoice === "transit" ? "pedestrian" : routeChoice,
     routeLanguage(lang),
   );
 
@@ -236,8 +239,10 @@ export function FinderScreen(props: Props) {
             place={openItem.place}
             origin={origin}
             miles={miles}
-            route={walking.state}
-            onRetry={walking.retry}
+            choice={routeChoice}
+            onChoice={setRouteChoice}
+            route={routing.state}
+            onRetry={routing.retry}
             onBack={() => setDirectionsOpen(false)}
           />
         ) : openItem ? (
@@ -383,7 +388,7 @@ export function FinderScreen(props: Props) {
           onSettings={() => setSettingsOpen(true)}
           onLocate={() => void locate()}
           locating={locating}
-          route={walking.state.status === "done" ? walking.state.route.line : undefined}
+          route={routing.state.status === "done" ? routing.state.route.line : undefined}
         />
       </div>
 
