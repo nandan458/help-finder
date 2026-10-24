@@ -37,7 +37,7 @@ Tap slowly and say what you're doing. Each step is about 7 seconds.
 2. **Allow location.** Tap **Use my location**, then Allow. _"It explains why it needs my location and that it never saves it."_ The map opens already showing food. _"Here are the free food places near me, nearest first. If the nearest one is far, it looks farther until it finds some."_ Then clear the **Food** button to see everything: _"Or everything: health, shelter, Wi-Fi, water, restrooms."_
 3. **Open now.** Tap the **Open now** pill. _"Now only places that are open right now. It even says when each one closes."_
 4. **Open a place.** Tap your chosen place. _"Its hours for the week with today highlighted, the phone number to call, and whether it's free."_
-5. **Walking directions.** Tap the blue **walk-time button**. _"The walking route is right on the map, with step-by-step directions, without leaving the app."_ Then tap **Back to place**.
+5. **Directions.** Tap the blue **walk-time button**. _"The route is right on the map, with step-by-step directions, without leaving the app."_ Tap **Bike**, then **Drive**: _"Not everyone walks. Bike and car routes too. For buses I send you to your phone's maps app, because bus times change daily and I won't guess."_ Then tap **Back to place**.
 6. **Another language.** Open **Settings** (the sliders icon), choose **Español** (or Tiếng Việt, or 한국어), close it. _"Everything switches, even the walking directions."_
 7. **Read aloud.** Tap **Escuchar** (Listen). Let it read for a few seconds. _"For people who have trouble reading small text, or are reading in their second language."_ Switch back to English.
 8. **Dark mode.** Settings, then **Dark**. _"Easier on the eyes at night, and it saves battery."_

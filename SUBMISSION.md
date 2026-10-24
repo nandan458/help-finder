@@ -22,14 +22,14 @@ Anyone who needs free help, wherever they are: people new to an area, people exp
 
 When people need free food, a clinic, a shelter, Wi-Fi, a restroom, or clean water, the information is scattered across websites that are often out of date, cover only one city, or need an account. And if you show up somewhere that turns out to be closed, you've lost a trip that might have cost bus fare or a missed shift.
 
-NearAid puts it all on one map. It finds free resources near you, tells you what's open right now and when it closes, and shows the walking route right in the app. It starts with one question, "What do you need?", with big picture buttons for food, health care, a place to stay, Wi-Fi, water, and restrooms, so people get to what matters in one tap. It speaks nine languages, picked on the first screen, and needs no account. It installs to your home screen, and if you save your state once, it works in **airplane mode**, even in places you've never been. If there isn't much nearby, it shows help lines like 211 and 988 so no one leaves empty-handed.
+NearAid puts it all on one map. It finds free resources near you, tells you what's open right now and when it closes, and shows the route right in the app for walking, biking, or driving (bus and train times open your phone's maps app, which has the live schedules). It starts with one question, "What do you need?", with big picture buttons for food, health care, a place to stay, Wi-Fi, water, and restrooms, so people get to what matters in one tap. It speaks nine languages, picked on the first screen, and needs no account. It installs to your home screen, and if you save your state once, it works in **airplane mode**, even in places you've never been. If there isn't much nearby, it shows help lines like 211 and 988 so no one leaves empty-handed.
 
 ## How the app works
 
 1. You pick a language and what you need, then allow location (or type a city or address).
 2. The app finds places from OpenStreetMap, a free map made by volunteers worldwide: food banks, clinics, shelters, libraries, drinking fountains, public restrooms, and showers. Inside the U.S., it reads small pre-made files that a weekly job builds from OpenStreetMap's state downloads, so it's instant. Anywhere else, it asks the live server.
 3. It sorts the places into seven categories, works out which are open right now from their hours, and shows them on a map and in a list sorted by walking time. If you picked "food" and the nearest food bank is far, it looks farther until it finds some.
-4. You can filter by category, by _Open now_, _Free_, or _Wheelchair accessible_, and open any place to see its hours for the week, phone, address, walking directions drawn on the map, and more.
+4. You can filter by category, by _Open now_, _Free_, or _Wheelchair accessible_, and open any place to see its hours for the week, phone, address, directions by foot, bike, or car drawn on the map, and more.
 5. Results and any state you saved are kept on the phone, so searching works offline.
 
 It's a website built with React and TypeScript, using Leaflet for the map. It has no server of its own and no accounts or tracking, and it's published for free on GitHub Pages.
@@ -71,7 +71,8 @@ The app has three offline layers: the app's own code (a service worker), the pla
 
 - **The same offline data for other countries:** the weekly job already works state by state; Canada, Mexico, and others use the same download service.
 - **Native-speaker review and more languages:** I wrote the nine languages with AI help, and I'd like native speakers to check each one. Each language is one file, and Arabic needs a right-to-left layout.
-- **Walking steps in all nine languages:** the free routing service only writes steps in six of them, so Chinese, Tagalog, and Haitian Creole currently get English steps.
+- **Directions steps in all nine languages:** the free routing service only writes steps in six of them, so Chinese, Tagalog, and Haitian Creole currently get English steps.
+- **Bus and train routes inside the app:** that needs live schedule data, which free map data doesn't include, so for now it opens the phone's maps app.
 - **"Add a missing place" inside the app:** let people suggest a food pantry or free clinic directly, sent to OpenStreetMap so everyone benefits.
 - **Local help-line numbers outside the U.S.:** pick the right emergency and help numbers from the country you're in.
 - **Partnering with local organizations:** ✏️ name one in your district (a food bank, library, or shelter) that could check and update its own information.

@@ -42,7 +42,7 @@ People who need help often don't know what's nearby or when it's open. The infor
 - **Map and list together.** Color-coded pins that group into numbered bubbles, and a list sorted by walking time.
 - **Filters:** category buttons, plus _Open now_, _Free_, _Wheelchair_, and _Saved_.
 - **Place card:** status, distance and walk time, address, tap-to-call phone, website, the week's hours with today highlighted, cost, and wheelchair access.
-- **Walking directions in the app.** The route is drawn on the map with numbered steps. The phone's own maps app is one tap away for live turn-by-turn navigation.
+- **Directions for walking, biking, and driving, in the app.** Pick how you're traveling and the route is drawn on the map, with the time, distance, and numbered steps. For **bus or train**, the app opens your phone's maps app instead, because live schedules aren't in free map data and NearAid won't guess them. The maps app is also one tap away for turn-by-turn navigation.
 - **Read aloud** in the current language, **saved places**, and **share a place** (every place has its own link).
 - **Help lines, always one tap away:** 911, the 988 Suicide & Crisis Lifeline, and 211.
 - **Installable** to the home screen like a regular app.
@@ -133,7 +133,7 @@ These services are run by volunteers, so the app follows their usage rules:
 - **Map pictures offline:** with no signal, the map picture only shows areas you've already viewed. The places and the list work everywhere in a saved state.
 - **Typing a city needs internet.** With no signal, use the location button instead.
 - **Offline data is up to a week old,** and OpenStreetMap is only as complete as its volunteers make it, so the app tells people to call ahead.
-- **Walking steps** are in English for Chinese, Tagalog, and Haitian Creole.
+- **Directions need internet** (they come from a routing server), and the steps are in English for Chinese, Tagalog, and Haitian Creole.
 - **Translations** were written with AI help and should be checked by native speakers.
 - **Help-line numbers** are U.S. numbers (911, 988, 211).
 
