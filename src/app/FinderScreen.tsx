@@ -100,7 +100,7 @@ export function FinderScreen(props: Props) {
     startOver();
     onOrigin(next);
   };
-  const { locate, locating, errorKind: locateError } = useLocate(goTo);
+  const { locate, locating, errorKind: locateError, errorDetail } = useLocate(goTo);
 
   // Every place we have (search results, or saved places), closest first.
   // Until the hours library arrives we can't say what's open, so there's
@@ -249,7 +249,7 @@ export function FinderScreen(props: Props) {
         ) : (
           <>
             <PlaceSearch onFound={goTo} />
-            {locateError && <LocationProblem kind={locateError} />}
+            {locateError && <LocationProblem kind={locateError} detail={errorDetail} />}
 
             <FilterBar
               filters={filters}

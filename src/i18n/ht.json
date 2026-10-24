@@ -198,7 +198,7 @@
   "pack.notNow": "Pa kounye a",
   "location.helpTitle": "Kijan pou limen pozisyon an",
   "location.help.inApp": "Lyen sa a louvri andedan yon lòt aplikasyon, ki bloke pozisyon an. Peze meni an (… oswa ikòn pataje a) epi chwazi “Louvri nan Safari” oswa “Louvri nan Chrome”, apre sa eseye ankò.",
-  "location.help.ios": "iPhone: louvri Settings → Privacy & Security → Location Services epi limen li. Apre sa peze Safari Websites (oswa navigatè w la) epi chwazi While Using the App. Retounen epi rechaje paj sa a.",
+  "location.help.ios": "iPhone: louvri Settings → Privacy & Security → Location Services epi limen li. Apre sa peze Safari Websites (oswa navigatè w la) epi chwazi While Using the App. Retounen epi rechaje paj sa a. Nan Safari tou: peze aA nan ba adrès la → Website Settings → Location → Allow.",
   "location.help.android": "Android: louvri Settings → Location epi limen li. Apre sa nan Chrome, peze ikòn kadna a bò adrès la, chwazi Permissions → Location → Allow, epi rechaje paj sa a.",
   "location.help.other": "Louvri paramèt navigatè w la pou sit sa a, mete Location sou Allow, epi rechaje paj sa a."
 }

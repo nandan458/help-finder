@@ -198,7 +198,7 @@
   "pack.notNow": "Mamaya na lang",
   "location.helpTitle": "Paano i-on ang lokasyon",
   "location.help.inApp": "Nabuksan ang link na ito sa loob ng ibang app, na humaharang sa lokasyon. Pindutin ang menu (ang … o ang share icon) at piliin ang “Buksan sa Safari” o “Buksan sa Chrome”, pagkatapos ay subukan muli.",
-  "location.help.ios": "iPhone: buksan ang Settings → Privacy & Security → Location Services at i-on ito. Pagkatapos ay pindutin ang Safari Websites (o ang browser mo) at piliin ang While Using the App. Bumalik at i-reload ang pahinang ito.",
+  "location.help.ios": "iPhone: buksan ang Settings → Privacy & Security → Location Services at i-on ito. Pagkatapos ay pindutin ang Safari Websites (o ang browser mo) at piliin ang While Using the App. Bumalik at i-reload ang pahinang ito. Sa Safari din: pindutin ang aA sa address bar → Website Settings → Location → Allow.",
   "location.help.android": "Android: buksan ang Settings → Location at i-on ito. Pagkatapos, sa Chrome, pindutin ang lock icon sa tabi ng address, piliin ang Permissions → Location → Allow, at i-reload ang pahinang ito.",
   "location.help.other": "Buksan ang mga setting ng browser mo para sa site na ito, itakda ang Location sa Allow, at i-reload ang pahinang ito."
 }

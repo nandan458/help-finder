@@ -940,3 +940,9 @@
 .location-help p {
   margin-top: var(--space-2);
 }
+
+.location-detail {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  overflow-wrap: anywhere;
+}

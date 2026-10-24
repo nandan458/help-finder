@@ -198,7 +198,7 @@
   "pack.notNow": "Để sau",
   "location.helpTitle": "Cách bật vị trí",
   "location.help.inApp": "Liên kết này đã mở bên trong một ứng dụng khác, ứng dụng đó chặn vị trí. Chạm vào menu (dấu … hoặc biểu tượng chia sẻ), chọn “Mở trong Safari” hoặc “Mở trong Chrome”, rồi thử lại.",
-  "location.help.ios": "iPhone: mở Cài đặt → Quyền riêng tư & Bảo mật → Dịch vụ định vị và bật lên. Sau đó chạm vào Trang web Safari (hoặc trình duyệt của bạn) và chọn Khi dùng ứng dụng. Quay lại và tải lại trang này.",
+  "location.help.ios": "iPhone: mở Cài đặt → Quyền riêng tư & Bảo mật → Dịch vụ định vị và bật lên. Sau đó chạm vào Trang web Safari (hoặc trình duyệt của bạn) và chọn Khi dùng ứng dụng. Quay lại và tải lại trang này. Trong Safari, bạn cũng chạm aA trên thanh địa chỉ → Cài đặt trang web → Vị trí → Cho phép.",
   "location.help.android": "Android: mở Cài đặt → Vị trí và bật lên. Sau đó trong Chrome, chạm vào biểu tượng ổ khóa cạnh địa chỉ, chọn Quyền → Vị trí → Cho phép, rồi tải lại trang này.",
   "location.help.other": "Mở phần cài đặt của trình duyệt cho trang web này, đặt Vị trí thành Cho phép và tải lại trang."
 }

@@ -38,7 +38,7 @@ const NEED_ICON: Record<Exclude<Need, "all">, Category> = {
 
 export function PermissionScreen({ onLocation, onNeed }: Props) {
   const { t } = useT();
-  const { locate, locating, errorKind } = useLocate(onLocation);
+  const { locate, locating, errorKind, errorDetail } = useLocate(onLocation);
   const online = useOnline();
   const [lastSearch, setLastSearch] = useState<LastSearch>();
   // Which need was picked. Null means we're still on step 1.
@@ -137,7 +137,7 @@ export function PermissionScreen({ onLocation, onNeed }: Props) {
             </button>
             <p className="welcome-privacy">{t("welcome.privacy")}</p>
 
-            {errorKind && <LocationProblem kind={errorKind} />}
+            {errorKind && <LocationProblem kind={errorKind} detail={errorDetail} />}
 
             <h3 className="welcome-or">{t("location.or")}</h3>
             {/* After a "no", the key changes, so the box is re-created and gets the focus. */}

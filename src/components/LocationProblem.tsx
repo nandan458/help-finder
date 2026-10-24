@@ -12,7 +12,7 @@ const helpKind = locationHelpKind(
   (navigator as Navigator & { standalone?: boolean }).standalone === true,
 );
 
-export function LocationProblem({ kind }: { kind: LocationErrorKind }) {
+export function LocationProblem({ kind, detail }: { kind: LocationErrorKind; detail?: string }) {
   const { t } = useT();
   return (
     <div className="location-problem" role="alert">
@@ -23,6 +23,8 @@ export function LocationProblem({ kind }: { kind: LocationErrorKind }) {
           <p>{t(`location.help.${helpKind}`)}</p>
         </details>
       )}
+      {/* The browser's own error, in small print, so a problem can be reported exactly. */}
+      {detail && <p className="location-detail">{detail}</p>}
     </div>
   );
 }

@@ -14,10 +14,14 @@ export type LocationErrorKind = "denied" | "unavailable" | "unsupported";
 
 export class LocationError extends Error {
   kind: LocationErrorKind;
-  constructor(kind: LocationErrorKind) {
+  // The browser's own words for what went wrong, shown in small print so a bug
+  // report can say exactly what the phone answered (for example "code 1, denied").
+  detail: string;
+  constructor(kind: LocationErrorKind, detail = "") {
     super(`Location failed: ${kind}`);
     this.name = "LocationError";
     this.kind = kind;
+    this.detail = detail;
   }
 }
 
@@ -33,10 +37,15 @@ export function getCurrentLocation(): Promise<LatLng> {
     }
     navigator.geolocation.getCurrentPosition(
       (position) => resolve({ lat: position.coords.latitude, lng: position.coords.longitude }),
-      (error) =>
-        reject(
-          new LocationError(error.code === error.PERMISSION_DENIED ? "denied" : "unavailable"),
-        ),
+      (error) => {
+        // Codes: 1 = not allowed, 2 = couldn't find the position, 3 = took too long.
+        const kind = error.code === error.PERMISSION_DENIED ? "denied" : "unavailable";
+        const said = `code ${error.code}${error.message ? `: ${error.message}` : ""}`;
+        // Also note what the browser says the site's permission is (allowed / blocked / ask).
+        void locationPermission().then((state) =>
+          reject(new LocationError(kind, `${said}; permission: ${state}`)),
+        );
+      },
       {
         // Rough location (Wi-Fi / cell towers) is enough to find places nearby,
         // and it is much faster and easier on the battery than GPS.
