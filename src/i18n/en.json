@@ -195,5 +195,10 @@
   "hero.badge.noAccount": "No account",
   "hero.badge.languages": "{total} languages",
   "hero.badge.offline": "Works offline",
-  "pack.notNow": "Not now"
+  "pack.notNow": "Not now",
+  "location.helpTitle": "How to turn on location",
+  "location.help.inApp": "This link opened inside another app, which blocks location. Tap the menu (the … or share icon) and choose “Open in Safari” or “Open in Chrome”, then try again.",
+  "location.help.ios": "iPhone: open Settings → Privacy & Security → Location Services and turn it On. Then tap Safari Websites (or your browser) and choose While Using the App. Come back and reload this page.",
+  "location.help.android": "Android: open Settings → Location and turn it On. Then in Chrome, tap the lock icon next to the address, choose Permissions → Location → Allow, and reload this page.",
+  "location.help.other": "Open your browser's settings for this site, set Location to Allow, and reload this page."
 }

@@ -17,6 +17,7 @@ import { CategoryIcon } from "./CategoryIcon";
 import { Hero } from "./Hero";
 import { HelpLinesButton } from "./HelpLines";
 import { LanguagePicker } from "./LanguagePicker";
+import { LocationProblem } from "./LocationProblem";
 import { PlaceSearch } from "./PlaceSearch";
 import "./PermissionScreen.css";
 
@@ -136,11 +137,7 @@ export function PermissionScreen({ onLocation, onNeed }: Props) {
             </button>
             <p className="welcome-privacy">{t("welcome.privacy")}</p>
 
-            {errorKind && (
-              <p className="form-error" role="alert">
-                {t(`location.${errorKind}`)}
-              </p>
-            )}
+            {errorKind && <LocationProblem kind={errorKind} />}
 
             <h3 className="welcome-or">{t("location.or")}</h3>
             {/* After a "no", the key changes, so the box is re-created and gets the focus. */}

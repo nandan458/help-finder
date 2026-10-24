@@ -195,5 +195,10 @@
   "hero.badge.noAccount": "Sans compte",
   "hero.badge.languages": "{total} langues",
   "hero.badge.offline": "Fonctionne hors ligne",
-  "pack.notNow": "Pas maintenant"
+  "pack.notNow": "Pas maintenant",
+  "location.helpTitle": "Comment activer la localisation",
+  "location.help.inApp": "Ce lien s'est ouvert dans une autre application, qui bloque la localisation. Touchez le menu (les … ou l'icône de partage) et choisissez « Ouvrir dans Safari » ou « Ouvrir dans Chrome », puis réessayez.",
+  "location.help.ios": "iPhone : ouvrez Réglages → Confidentialité et sécurité → Service de localisation et activez-le. Touchez ensuite Sites web de Safari (ou votre navigateur) et choisissez Lorsque l'app est active. Revenez et rechargez cette page.",
+  "location.help.android": "Android : ouvrez Paramètres → Localisation et activez-la. Dans Chrome, touchez le cadenas à côté de l'adresse, choisissez Autorisations → Localisation → Autoriser, puis rechargez cette page.",
+  "location.help.other": "Ouvrez les paramètres de votre navigateur pour ce site, réglez Localisation sur Autoriser et rechargez cette page."
 }

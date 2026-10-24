@@ -6,6 +6,7 @@ import { useMemo, useState } from "react";
 import { APP_NAME, ENOUGH_PLACES, FARTHER_RADIUS_M, SEARCH_RADII_M } from "../config";
 import { FilterBar } from "../components/FilterBar";
 import { HelpLinesButton, HelpLinesList } from "../components/HelpLines";
+import { LocationProblem } from "../components/LocationProblem";
 import { MapView } from "../components/MapView";
 import { PlaceCard } from "../components/PlaceCard";
 import { RouteView } from "../components/RouteView";
@@ -248,11 +249,7 @@ export function FinderScreen(props: Props) {
         ) : (
           <>
             <PlaceSearch onFound={goTo} />
-            {locateError && (
-              <p className="form-error" role="alert">
-                {t(`location.${locateError}`)}
-              </p>
-            )}
+            {locateError && <LocationProblem kind={locateError} />}
 
             <FilterBar
               filters={filters}

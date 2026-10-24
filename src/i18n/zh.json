@@ -195,5 +195,10 @@
   "hero.badge.noAccount": "无需账号",
   "hero.badge.languages": "{total} 种语言",
   "hero.badge.offline": "可离线使用",
-  "pack.notNow": "以后再说"
+  "pack.notNow": "以后再说",
+  "location.helpTitle": "如何开启定位",
+  "location.help.inApp": "此链接是在另一个应用内打开的，该应用会阻止定位。请点按菜单（… 或分享图标），选择“在 Safari 中打开”或“在 Chrome 中打开”，然后重试。",
+  "location.help.ios": "iPhone：打开“设置”→“隐私与安全性”→“定位服务”并开启。然后点按“Safari 网站”（或您的浏览器），选择“使用 App 期间”。返回并刷新此页面。",
+  "location.help.android": "Android：打开“设置”→“位置信息”并开启。然后在 Chrome 中点按地址旁的锁形图标，选择“权限”→“位置信息”→“允许”，再刷新此页面。",
+  "location.help.other": "打开浏览器中此网站的设置，将“位置信息”设为“允许”，然后刷新此页面。"
 }

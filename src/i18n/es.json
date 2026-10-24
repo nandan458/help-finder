@@ -195,5 +195,10 @@
   "hero.badge.noAccount": "Sin cuenta",
   "hero.badge.languages": "{total} idiomas",
   "hero.badge.offline": "Funciona sin conexión",
-  "pack.notNow": "Ahora no"
+  "pack.notNow": "Ahora no",
+  "location.helpTitle": "Cómo activar la ubicación",
+  "location.help.inApp": "Este enlace se abrió dentro de otra app, que bloquea la ubicación. Toca el menú (los puntos … o el ícono de compartir) y elige «Abrir en Safari» o «Abrir en Chrome». Luego inténtalo de nuevo.",
+  "location.help.ios": "iPhone: abre Ajustes → Privacidad y seguridad → Localización y activa la opción. Luego toca Sitios web de Safari (o tu navegador) y elige Al usar la app. Vuelve y recarga esta página.",
+  "location.help.android": "Android: abre Ajustes → Ubicación y actívala. Luego, en Chrome, toca el candado junto a la dirección, elige Permisos → Ubicación → Permitir y recarga esta página.",
+  "location.help.other": "Abre los ajustes de tu navegador para este sitio, cambia Ubicación a Permitir y recarga esta página."
 }
