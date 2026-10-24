@@ -58,6 +58,10 @@
   --radius-full: 999px;
   --tap-min: 44px; /* smallest comfortable tap target (WCAG) */
   --shadow: 0 4px 24px rgb(0 0 0 / 0.12);
+
+  /* The colorful top of the start screens. White text on both colors passes WCAG AA. */
+  --hero-from: #0a66c2;
+  --hero-to: #0f766e;
 }
 
 /* Dark values, written once and used by both "Auto" and "Dark". */
@@ -79,6 +83,8 @@
     --status-closed: #f87171;
     --status-unknown: #a1a1aa;
     --shadow: 0 4px 24px rgb(0 0 0 / 0.5);
+    --hero-from: #08437f;
+    --hero-to: #0b5a54;
   }
 }
 
@@ -99,4 +105,6 @@
   --status-closed: #f87171;
   --status-unknown: #a1a1aa;
   --shadow: 0 4px 24px rgb(0 0 0 / 0.5);
+  --hero-from: #08437f;
+  --hero-to: #0b5a54;
 }

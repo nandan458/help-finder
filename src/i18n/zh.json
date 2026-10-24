@@ -189,5 +189,11 @@
   "pack.none": "请先搜索美国境内的地点，然后就可以在这里保存该地点所在的州。",
   "pack.failed": "未能完成保存。请检查网络连接后重试。",
   "pack.mapNote": "没有信号时，地图图片只显示您已看过的区域。地点和列表在全州范围内都能使用。",
-  "pack.fromPack": "来自已保存数据的即时结果。"
+  "pack.fromPack": "来自已保存数据的即时结果。",
+  "hero.tagline": "您身边的免费帮助。",
+  "hero.badge.free": "免费",
+  "hero.badge.noAccount": "无需账号",
+  "hero.badge.languages": "{total} 种语言",
+  "hero.badge.offline": "可离线使用",
+  "pack.notNow": "以后再说"
 }

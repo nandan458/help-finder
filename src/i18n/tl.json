@@ -189,5 +189,11 @@
   "pack.none": "Maghanap muna ng lugar sa Estados Unidos. Pagkatapos ay maaari mong i-save ang estado nito rito.",
   "pack.failed": "Hindi namin natapos ang pag-save. Suriin ang koneksyon mo at subukan muli.",
   "pack.mapNote": "Kapag walang signal, ang mga lugar lang na natingnan mo na ang ipinapakita ng larawan ng mapa. Gumagana ang mga lugar at ang listahan sa buong estado.",
-  "pack.fromPack": "Mga instant na resulta mula sa naka-save na data."
+  "pack.fromPack": "Mga instant na resulta mula sa naka-save na data.",
+  "hero.tagline": "Libreng tulong, malapit sa iyo.",
+  "hero.badge.free": "Libre",
+  "hero.badge.noAccount": "Walang account",
+  "hero.badge.languages": "{total} wika",
+  "hero.badge.offline": "Gumagana offline",
+  "pack.notNow": "Mamaya na lang"
 }

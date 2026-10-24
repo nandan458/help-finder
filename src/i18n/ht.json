@@ -189,5 +189,11 @@
   "pack.none": "Chèche yon kote nan Etazini anvan. Apre sa ou ka sove eta li a isit la.",
   "pack.failed": "Nou pa t ka fini sove a. Verifye koneksyon ou epi eseye ankò.",
   "pack.mapNote": "Lè pa gen siyal, imaj kat la montre sèlman zòn ou deja gade. Kote yo ak lis la mache nan tout eta a.",
-  "pack.fromPack": "Rezilta vit vit ki soti nan done ou sove yo."
+  "pack.fromPack": "Rezilta vit vit ki soti nan done ou sove yo.",
+  "hero.tagline": "Èd gratis, toupre ou.",
+  "hero.badge.free": "Gratis",
+  "hero.badge.noAccount": "Pa bezwen kont",
+  "hero.badge.languages": "{total} lang",
+  "hero.badge.offline": "Mache san entènèt",
+  "pack.notNow": "Pa kounye a"
 }

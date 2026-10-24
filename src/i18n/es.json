@@ -189,5 +189,11 @@
   "pack.none": "Primero busca un lugar en Estados Unidos. Después podrás guardar su estado aquí.",
   "pack.failed": "No pudimos terminar de guardar. Revisa tu conexión e inténtalo de nuevo.",
   "pack.mapNote": "Sin señal, la imagen del mapa solo muestra las zonas que ya viste. Los lugares y la lista funcionan en todo el estado.",
-  "pack.fromPack": "Resultados instantáneos de los datos guardados."
+  "pack.fromPack": "Resultados instantáneos de los datos guardados.",
+  "hero.tagline": "Ayuda gratis, cerca de ti.",
+  "hero.badge.free": "Gratis",
+  "hero.badge.noAccount": "Sin cuenta",
+  "hero.badge.languages": "{total} idiomas",
+  "hero.badge.offline": "Funciona sin conexión",
+  "pack.notNow": "Ahora no"
 }

@@ -879,3 +879,40 @@
   font-size: var(--text-sm);
   white-space: nowrap;
 }
+
+/* ---- "Save for offline?" prompt ---- */
+
+.save-prompt {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3);
+  align-items: start;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 2px solid color-mix(in srgb, var(--color-accent) 40%, transparent);
+  background: color-mix(in srgb, var(--color-accent) 9%, var(--color-surface));
+  color: var(--color-text);
+  animation: rise 0.25s ease-out;
+}
+
+.save-prompt > .ui-icon {
+  margin-top: 2px;
+  color: var(--color-accent);
+}
+
+.save-prompt p + p,
+.save-prompt-actions {
+  margin-top: var(--space-2);
+}
+
+.save-prompt-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* The "Close" link after saving sits under the message, across the card. */
+.save-prompt > .link-button {
+  grid-column: 2;
+}

@@ -189,5 +189,11 @@
   "pack.none": "Recherchez d'abord un lieu aux États-Unis. Vous pourrez ensuite enregistrer son État ici.",
   "pack.failed": "Nous n'avons pas pu terminer l'enregistrement. Vérifiez votre connexion et réessayez.",
   "pack.mapNote": "Sans réseau, l'image de la carte n'affiche que les zones déjà consultées. Les lieux et la liste fonctionnent partout dans l'État.",
-  "pack.fromPack": "Résultats instantanés à partir des données enregistrées."
+  "pack.fromPack": "Résultats instantanés à partir des données enregistrées.",
+  "hero.tagline": "De l'aide gratuite, près de chez vous.",
+  "hero.badge.free": "Gratuit",
+  "hero.badge.noAccount": "Sans compte",
+  "hero.badge.languages": "{total} langues",
+  "hero.badge.offline": "Fonctionne hors ligne",
+  "pack.notNow": "Pas maintenant"
 }

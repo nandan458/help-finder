@@ -2,50 +2,15 @@
 // are instant and work in airplane mode. The files come from the weekly packs
 // (see src/lib/packs.ts). Hidden when this copy of the app has no packs.
 
-import { useEffect, useState } from "react";
+import { usePack } from "../app/usePack";
 import { useT } from "../i18n/useT";
 import type { LatLng } from "../lib/geo";
-import {
-  loadIndex,
-  savedStates,
-  saveState,
-  stateAt,
-  type PackIndex,
-  type SavedState,
-} from "../lib/packs";
-
-type Progress = { done: number; total: number };
 
 export function OfflineSection({ where }: { where: LatLng }) {
   const { t } = useT();
-  const [index, setIndex] = useState<PackIndex | null>(null);
-  const [saved, setSaved] = useState<Record<string, SavedState>>({});
-  const [progress, setProgress] = useState<Progress | null>(null);
-  const [failed, setFailed] = useState(false);
+  const { hasPacks, state, mine, upToDate, progress, failed, save } = usePack(where);
 
-  useEffect(() => {
-    void loadIndex().then(setIndex);
-    void savedStates().then(setSaved);
-  }, []);
-
-  if (!index) return null; // no packs here (for example when testing on a computer)
-
-  const state = stateAt(where, index);
-  const mine = state ? saved[state.code] : undefined;
-  const upToDate = mine?.builtAt === index.builtAt;
-
-  async function save(code: string) {
-    setFailed(false);
-    setProgress({ done: 0, total: 1 });
-    try {
-      await saveState(code, (done, total) => setProgress({ done, total }));
-      setSaved(await savedStates());
-    } catch {
-      setFailed(true);
-    } finally {
-      setProgress(null);
-    }
-  }
+  if (!hasPacks) return null; // no packs here (for example when testing on a computer)
 
   return (
     <section className="settings-section" aria-labelledby="offline-title">
@@ -64,7 +29,7 @@ export function OfflineSection({ where }: { where: LatLng }) {
             </p>
           )}
           {!upToDate && !progress && (
-            <button type="button" className="button" onClick={() => void save(state.code)}>
+            <button type="button" className="button" onClick={() => void save()}>
               {mine ? t("pack.update") : t("pack.download", { state: state.name })}
             </button>
           )}

@@ -12,6 +12,7 @@ import { RouteView } from "../components/RouteView";
 import { PlaceList, type NearbyPlace } from "../components/PlaceList";
 import { PlaceSearch } from "../components/PlaceSearch";
 import { EmptyState, ErrorState, LoadingRows } from "../components/SearchStates";
+import { SavePrompt } from "../components/SavePrompt";
 import { SettingsDialog } from "../components/SettingsDialog";
 import { Sheet } from "../components/Sheet";
 import { sheetHeight, type SheetSize } from "../components/sheetSize";
@@ -265,6 +266,9 @@ export function FinderScreen(props: Props) {
             <p className="summary" aria-live="polite">
               {summary}
             </p>
+
+            {/* Offer to save this state for airplane mode (only when it applies). */}
+            {!showSaved && done && <SavePrompt where={origin} />}
 
             {!showSaved && search.status === "error" && search.errorKind && (
               <ErrorState kind={search.errorKind} onRetry={onRetry} />

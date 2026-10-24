@@ -189,5 +189,11 @@
   "pack.none": "Hãy tìm một địa điểm ở Hoa Kỳ trước. Sau đó bạn có thể lưu tiểu bang của địa điểm đó tại đây.",
   "pack.failed": "Chúng tôi không thể lưu xong. Hãy kiểm tra kết nối và thử lại.",
   "pack.mapNote": "Khi không có sóng, hình ảnh bản đồ chỉ hiện những khu vực bạn đã xem. Các địa điểm và danh sách vẫn dùng được trên toàn tiểu bang.",
-  "pack.fromPack": "Kết quả tức thì từ dữ liệu đã lưu."
+  "pack.fromPack": "Kết quả tức thì từ dữ liệu đã lưu.",
+  "hero.tagline": "Hỗ trợ miễn phí, ngay gần bạn.",
+  "hero.badge.free": "Miễn phí",
+  "hero.badge.noAccount": "Không cần tài khoản",
+  "hero.badge.languages": "{total} ngôn ngữ",
+  "hero.badge.offline": "Dùng được khi không có mạng",
+  "pack.notNow": "Để sau"
 }

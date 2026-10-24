@@ -5,8 +5,7 @@
 //      asks, so people know what they're agreeing to. If they say no (or it
 //      doesn't work), they can type a city or address instead.
 
-import { useEffect, useState } from "react";
-import { APP_NAME } from "../config";
+import { useEffect, useState, type CSSProperties } from "react";
 import { useLocate } from "../app/useLocate";
 import { useOnline } from "../app/useOnline";
 import { loadLastSearch, type LastSearch } from "../lib/cache";
@@ -15,6 +14,7 @@ import { useT } from "../i18n/useT";
 import { locationPermission, type Origin } from "../lib/location";
 import { categoriesForNeed, NEEDS, type Need } from "../lib/needs";
 import { CategoryIcon } from "./CategoryIcon";
+import { Hero } from "./Hero";
 import { HelpLinesButton } from "./HelpLines";
 import { LanguagePicker } from "./LanguagePicker";
 import { PlaceSearch } from "./PlaceSearch";
@@ -64,9 +64,9 @@ export function PermissionScreen({ onLocation, onNeed }: Props) {
         <LanguagePicker />
       </div>
 
-      <div className="welcome-card">
-        <h1>{APP_NAME}</h1>
+      <Hero compact />
 
+      <div className="welcome-card">
         {/* No signal: offer the results saved on this phone from the last search. */}
         {!online && (
           <div className="offline-card">
@@ -97,7 +97,17 @@ export function PermissionScreen({ onLocation, onNeed }: Props) {
             <ul className="need-grid">
               {NEEDS.filter((n) => n !== "all").map((n) => (
                 <li key={n}>
-                  <button type="button" className="need-button" onClick={() => choose(n)}>
+                  <button
+                    type="button"
+                    className="need-button"
+                    // Each tile is tinted in its category color (the same one used on the map).
+                    style={
+                      {
+                        "--tint": `var(--cat-${NEED_ICON[n as Exclude<Need, "all">]})`,
+                      } as CSSProperties
+                    }
+                    onClick={() => choose(n)}
+                  >
                     <CategoryIcon category={NEED_ICON[n as Exclude<Need, "all">]} />
                     <span>{t(`need.${n}`)}</span>
                   </button>

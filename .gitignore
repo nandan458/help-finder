@@ -25,3 +25,6 @@ dist-ssr
 
 # Service worker files made by the PWA plugin in dev mode
 dev-dist
+
+# Offline packs are built by the weekly workflow, not saved in git (copy them here only to test locally)
+public/packs

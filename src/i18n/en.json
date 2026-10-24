@@ -189,5 +189,11 @@
   "pack.none": "Search for a place in the United States first. Then you can save its state here.",
   "pack.failed": "We couldn't finish saving. Check your connection and try again.",
   "pack.mapNote": "With no signal, the map picture only shows areas you've already looked at. The places and the list work everywhere in the state.",
-  "pack.fromPack": "Instant results from saved data."
+  "pack.fromPack": "Instant results from saved data.",
+  "hero.tagline": "Free help, close to you.",
+  "hero.badge.free": "Free",
+  "hero.badge.noAccount": "No account",
+  "hero.badge.languages": "{total} languages",
+  "hero.badge.offline": "Works offline",
+  "pack.notNow": "Not now"
 }

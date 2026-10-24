@@ -2,9 +2,9 @@
 // written in that language, so people can find theirs even if they can't read
 // the rest of the screen. Every language file in src/i18n shows up here on its own.
 
-import { APP_NAME } from "../config";
 import { LANGUAGES, translate } from "../i18n/translate";
 import { useT } from "../i18n/useT";
+import { Hero } from "./Hero";
 import "./LanguageScreen.css";
 
 // Most-spoken languages in the U.S. first. Any new language file is added at the end.
@@ -21,29 +21,31 @@ export function LanguageScreen({ onChosen }: Props) {
 
   return (
     <main className="language-screen">
-      <h1>{APP_NAME}</h1>
-      {/* "Choose your language" in the phone's language and in English. */}
-      <p className="language-title" lang={lang}>
-        {translate(lang, "language.title")}
-        {lang !== "en" && <span lang="en"> · {translate("en", "language.title")}</span>}
-      </p>
-      <ul className="language-list">
-        {codes.map((code) => (
-          <li key={code}>
-            <button
-              type="button"
-              className="language-button"
-              lang={code}
-              onClick={() => {
-                setLang(code);
-                onChosen();
-              }}
-            >
-              {LANGUAGES[code]._name}
-            </button>
-          </li>
-        ))}
-      </ul>
+      <Hero />
+      <section className="language-card" aria-labelledby="language-title">
+        {/* "Choose your language" in the phone's language and in English. */}
+        <h2 id="language-title" className="language-title" lang={lang}>
+          {translate(lang, "language.title")}
+          {lang !== "en" && <span lang="en"> · {translate("en", "language.title")}</span>}
+        </h2>
+        <ul className="language-list">
+          {codes.map((code) => (
+            <li key={code}>
+              <button
+                type="button"
+                className="language-button"
+                lang={code}
+                onClick={() => {
+                  setLang(code);
+                  onChosen();
+                }}
+              >
+                {LANGUAGES[code]._name}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </section>
     </main>
   );
 }

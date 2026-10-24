@@ -189,5 +189,11 @@
   "pack.none": "먼저 미국 내 장소를 검색하세요. 그러면 해당 주를 여기에 저장할 수 있습니다.",
   "pack.failed": "저장을 완료하지 못했습니다. 연결을 확인하고 다시 시도하세요.",
   "pack.mapNote": "신호가 없으면 지도 이미지는 이미 본 지역만 표시됩니다. 장소와 목록은 주 전체에서 작동합니다.",
-  "pack.fromPack": "저장된 데이터에서 즉시 가져온 결과입니다."
+  "pack.fromPack": "저장된 데이터에서 즉시 가져온 결과입니다.",
+  "hero.tagline": "내 가까이에 있는 무료 도움.",
+  "hero.badge.free": "무료",
+  "hero.badge.noAccount": "계정 필요 없음",
+  "hero.badge.languages": "{total}개 언어",
+  "hero.badge.offline": "오프라인 사용 가능",
+  "pack.notNow": "나중에"
 }

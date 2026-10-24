@@ -1,47 +1,58 @@
-/* First screen: choose a language. */
+/* First screen: choose a language. A colorful top, then a white card. */
 
 .language-screen {
   min-height: 100dvh;
   display: grid;
-  align-content: center;
+  align-content: start;
   justify-items: center;
-  gap: var(--space-4);
+  gap: var(--space-6);
   padding: var(--space-6) var(--space-4);
-  text-align: center;
+  background: linear-gradient(165deg, var(--hero-from), var(--hero-to));
 }
 
-.language-screen h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-}
-
-.language-title {
-  font-size: var(--text-lg);
-  color: var(--color-text-muted);
-}
-
-.language-list {
+.language-card {
   width: 100%;
   max-width: 440px;
   display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow);
+  animation: rise 0.35s ease-out both;
+}
+
+.language-title {
+  padding: var(--space-1) var(--space-1) 0;
+  font-size: var(--text-md);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.language-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-2);
   padding: 0;
   list-style: none;
 }
 
+/* English gets the whole top row; the other languages sit two to a row. */
+.language-list li:first-child {
+  grid-column: 1 / -1;
+}
+
 .language-button {
   width: 100%;
   min-height: 56px;
-  padding: 0 var(--space-4);
+  padding: 0 var(--space-3);
   border: none;
   border-radius: var(--radius-md);
-  background: var(--color-surface);
-  box-shadow: var(--shadow);
-  font-size: var(--text-lg);
+  background: var(--color-fill);
+  font-size: var(--text-md);
   font-weight: 600;
 }
 
 .language-button:hover {
-  background: color-mix(in srgb, var(--color-accent) 10%, var(--color-surface));
+  background: color-mix(in srgb, var(--color-accent) 14%, var(--color-fill));
 }
