@@ -130,6 +130,8 @@ export function FinderScreen(props: Props) {
     [all, filters],
   );
   const openCount = all.filter((i) => isOpenNow(i.status)).length;
+  // The chip counts only places that match the filters, so it agrees with the places count beside it.
+  const openShownCount = shown.filter((i) => isOpenNow(i.status)).length;
 
   // A place can come from the results or from Saved.
   const findPlace = (id: string | null) =>
@@ -273,8 +275,10 @@ export function FinderScreen(props: Props) {
                 <li className="stat stat-places">
                   {t("map.cluster", { count: hasFilters(filters) ? shown.length : all.length })}
                 </li>
-                {openCount > 0 && (
-                  <li className="stat stat-open">{t("results.openNow", { count: openCount })}</li>
+                {openShownCount > 0 && (
+                  <li className="stat stat-open">
+                    {t("results.openNow", { count: openShownCount })}
+                  </li>
                 )}
                 <li className="stat stat-reach">{radius}</li>
               </ul>
