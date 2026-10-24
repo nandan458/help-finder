@@ -1,7 +1,7 @@
 // Everything about one place: status, distance, how to get there, how to
 // contact it, and its hours for the week.
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { APP_NAME } from "../config";
 import { useT } from "../i18n/useT";
 import { placeLink } from "../lib/share";
@@ -93,7 +93,12 @@ export function PlaceCard(props: Props) {
   }, [onClose]);
 
   return (
-    <article className="place-card" aria-labelledby="place-title">
+    <article
+      className="place-card"
+      aria-labelledby="place-title"
+      // The header band is tinted in the category's map color.
+      style={{ "--tint": `var(--cat-${place.category})` } as CSSProperties}
+    >
       <button type="button" className="link-button" onClick={onClose}>
         ‹ {t("card.back")}
       </button>

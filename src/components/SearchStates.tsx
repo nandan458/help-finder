@@ -6,7 +6,11 @@ import { useT } from "../i18n/useT";
 import type { FetchErrorKind } from "../lib/overpass";
 import { HelpLinesList } from "./HelpLines";
 
-/** Gray placeholder rows, so the screen doesn't jump when results arrive. */
+/**
+ * Shown while a search runs: a pulsing radar (rings spreading from a pin), so it
+ * feels like the app is actively looking, instead of gray bars. The same space
+ * is kept for the list, so nothing jumps when the results arrive.
+ */
 export function LoadingRows() {
   const { t } = useT();
   // The free map server can be slow. After 8 seconds, say so, so people don't give up.
@@ -18,18 +22,14 @@ export function LoadingRows() {
 
   return (
     <div className="loading">
-      {slow && <p className="muted">{t("search.slow")}</p>}
-      <ul className="place-list" aria-hidden="true">
-        {[1, 2, 3, 4, 5].map((n) => (
-          <li key={n} className="skeleton-row">
-            <span className="skeleton skeleton-dot" />
-            <span className="skeleton-lines">
-              <span className="skeleton" />
-              <span className="skeleton skeleton-short" />
-            </span>
-          </li>
-        ))}
-      </ul>
+      {/* The radar is decoration; the live message above it tells screen readers what's happening. */}
+      <div className="radar" aria-hidden="true">
+        <span className="radar-ring" />
+        <span className="radar-ring radar-ring-2" />
+        <span className="radar-ring radar-ring-3" />
+        <span className="radar-pin" />
+      </div>
+      {slow && <p className="muted loading-slow">{t("search.slow")}</p>}
     </div>
   );
 }

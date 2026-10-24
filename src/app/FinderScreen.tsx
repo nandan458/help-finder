@@ -190,8 +190,12 @@ export function FinderScreen(props: Props) {
     summary += ` ${t("filters.shown", { count: shown.length })}`;
   }
 
+  // While a place card or directions are open, the header shrinks to leave room for them.
+  // Colorful number chips (places, open now, how far) replace the plain results line once there are results.
+  const showStats = !showSaved && done && !loading && all.length > 0;
+
   const header = (
-    <header className="panel-header">
+    <header className={openItem ? "panel-header panel-header-compact" : "panel-header"}>
       <div>
         <h1 id="panel-title" className="panel-title">
           {APP_NAME}
@@ -259,10 +263,22 @@ export function FinderScreen(props: Props) {
               onShowSaved={setShowSaved}
             />
 
-            {/* Screen readers read this sentence out loud whenever it changes. */}
-            <p className="summary" aria-live="polite">
+            {/* Screen readers read this sentence out loud whenever it changes. With results,
+                the sentence is hidden from view and the chips below show the same numbers. */}
+            <p className={showStats ? "visually-hidden" : "summary"} aria-live="polite">
               {summary}
             </p>
+            {showStats && (
+              <ul className="stat-chips" aria-hidden="true">
+                <li className="stat stat-places">
+                  {t("map.cluster", { count: hasFilters(filters) ? shown.length : all.length })}
+                </li>
+                {openCount > 0 && (
+                  <li className="stat stat-open">{t("results.openNow", { count: openCount })}</li>
+                )}
+                <li className="stat stat-reach">{radius}</li>
+              </ul>
+            )}
 
             {/* Offer to save this state for airplane mode (only when it applies). */}
             {!showSaved && done && <SavePrompt where={origin} />}

@@ -1,7 +1,7 @@
 // One place in the list: category icon, name, open status, and walk time.
 // The whole row is one button, so it's easy to tap and works with the keyboard.
 
-import type { Ref } from "react";
+import type { CSSProperties, Ref } from "react";
 import { useT } from "../i18n/useT";
 import { formatDistance, walkMinutes } from "../lib/geo";
 import type { HoursStatus } from "../lib/hours";
@@ -28,7 +28,8 @@ export function PlaceRow({ place, meters, status, now, miles, onOpen, ref }: Pro
   const walkable = minutes <= 90;
 
   return (
-    <li>
+    // A colored edge on the left, in the category's map color, gives the list a clear rhythm.
+    <li style={{ "--tint": `var(--cat-${place.category})` } as CSSProperties}>
       <button type="button" className="place-row" ref={ref} onClick={() => onOpen(place.id)}>
         <CategoryIcon category={place.category} />
         <span className="place-main">
