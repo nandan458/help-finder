@@ -13,6 +13,7 @@ import {
   type Theme,
 } from "../lib/settings";
 import { Dialog } from "./Dialog";
+import { ImproveSection } from "./ImproveSection";
 import { LanguagePicker } from "./LanguagePicker";
 import { OfflineSection } from "./OfflineSection";
 
@@ -79,6 +80,8 @@ export function SettingsDialog({ open, where, onClose, onClearData }: Props) {
         />
 
         {open && <OfflineSection where={where} />}
+
+        <ImproveSection />
 
         <section className="settings-section" aria-labelledby="privacy-title">
           <h3 id="privacy-title">{t("privacy.title")}</h3>

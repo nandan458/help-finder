@@ -208,5 +208,19 @@
   "route.mode.transit": "Bus o tren",
   "route.minutes.bicycle": "{minutes} min en bici",
   "route.minutes.auto": "{minutes} min en auto",
-  "route.transit": "Los horarios de bus y tren cambian todos los días, así que NearAid no los adivina. La app de mapas de tu teléfono tiene horarios en vivo. Toca abajo para abrirla."
+  "route.transit": "Los horarios de bus y tren cambian todos los días, así que NearAid no los adivina. La app de mapas de tu teléfono tiene horarios en vivo. Toca abajo para abrirla.",
+  "improve.title": "Mejora el mapa",
+  "improve.about": "NearAid muestra lugares de OpenStreetMap, que escriben voluntarios, como Wikipedia para mapas. Si falta un lugar o hay un error, cualquiera puede corregirlo, y el cambio aparecerá aquí después de la próxima actualización semanal.",
+  "improve.how": "Cómo agregar un lugar",
+  "improve.missing": "¿Falta un lugar? Agrégalo al mapa",
+  "card.fix": "Corregir o actualizar este lugar",
+  "helpcard.button": "Compartir una lista de ayuda",
+  "helpcard.heading": "Lista de ayuda",
+  "helpcard.print": "Imprimir",
+  "helpcard.share": "Compartir",
+  "helpcard.copy": "Copiar texto",
+  "helpcard.copied": "Copiado.",
+  "helpcard.footer": "Los horarios y detalles vienen de OpenStreetMap y pueden no estar actualizados. Llama antes si puedes.",
+  "helpcard.lines": "Ayuda local: 211 · Línea de crisis: 988 · Emergencias: 911",
+  "helpcard.empty": "Todavía no hay nada para compartir. Busca lugares primero."
 }

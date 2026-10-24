@@ -208,5 +208,19 @@
   "route.mode.transit": "公交或火车",
   "route.minutes.bicycle": "骑行 {minutes} 分钟",
   "route.minutes.auto": "驾车 {minutes} 分钟",
-  "route.transit": "公交和火车的时刻每天都会变化，所以 NearAid 不做猜测。您手机上的地图应用有实时班次。点按下方即可打开。"
+  "route.transit": "公交和火车的时刻每天都会变化，所以 NearAid 不做猜测。您手机上的地图应用有实时班次。点按下方即可打开。",
+  "improve.title": "改进地图",
+  "improve.about": "NearAid 显示的地点来自 OpenStreetMap，它由志愿者编写，就像地图版的维基百科。如果缺少某个地点或信息有误，任何人都可以修正，修正内容会在下一次每周更新后显示在这里。",
+  "improve.how": "如何添加地点",
+  "improve.missing": "缺少某个地点？把它添加到地图",
+  "card.fix": "修正或更新此地点",
+  "helpcard.button": "分享帮助清单",
+  "helpcard.heading": "帮助清单",
+  "helpcard.print": "打印",
+  "helpcard.share": "分享",
+  "helpcard.copy": "复制文字",
+  "helpcard.copied": "已复制。",
+  "helpcard.footer": "营业时间和详细信息来自 OpenStreetMap，可能已过时。请尽量先打电话确认。",
+  "helpcard.lines": "本地援助：211 · 危机热线：988 · 紧急情况：911",
+  "helpcard.empty": "还没有可分享的内容。请先搜索地点。"
 }

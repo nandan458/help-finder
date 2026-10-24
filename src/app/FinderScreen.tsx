@@ -6,6 +6,7 @@ import { useMemo, useState } from "react";
 import { APP_NAME, ENOUGH_PLACES, FARTHER_RADIUS_M, SEARCH_RADII_M } from "../config";
 import { FilterBar } from "../components/FilterBar";
 import { HelpLinesButton, HelpLinesList } from "../components/HelpLines";
+import { HelpListDialog } from "../components/HelpListDialog";
 import { LocationProblem } from "../components/LocationProblem";
 import { MapView } from "../components/MapView";
 import { PlaceCard } from "../components/PlaceCard";
@@ -86,6 +87,7 @@ export function FinderScreen(props: Props) {
   const [returnFocusId, setReturnFocusId] = useState<string | null>(null);
   const [sheetSize, setSheetSize] = useState<SheetSize>("half");
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [helpListOpen, setHelpListOpen] = useState(false);
   // Showing walking directions for the open place, instead of its card.
   const [directionsOpen, setDirectionsOpen] = useState(false);
 
@@ -289,6 +291,13 @@ export function FinderScreen(props: Props) {
               </ul>
             )}
 
+            {/* For counselors, librarians, and volunteers: a printable or shareable list of what's on screen. */}
+            {showStats && (
+              <button type="button" className="link-button" onClick={() => setHelpListOpen(true)}>
+                {t("helpcard.button")}
+              </button>
+            )}
+
             {/* Offer to save this state for airplane mode (only when it applies). */}
             {!showSaved && done && <SavePrompt where={origin} />}
 
@@ -362,6 +371,10 @@ export function FinderScreen(props: Props) {
               {/* The map servers' rules ask apps to link here, so anyone can fix wrong data. */}
               <a href="https://www.openstreetmap.org/fixthemap" target="_blank" rel="noreferrer">
                 {t("map.reportError")}
+              </a>{" "}
+              {/* A way for anyone to add a place that's missing: the data is volunteers' work. */}
+              <a href="https://learnosm.org/en/beginner/" target="_blank" rel="noreferrer">
+                {t("improve.missing")}
               </a>
             </p>
           </>
@@ -391,6 +404,21 @@ export function FinderScreen(props: Props) {
           route={routing.state.status === "done" ? routing.state.route.line : undefined}
         />
       </div>
+
+      <HelpListDialog
+        open={helpListOpen}
+        onClose={() => setHelpListOpen(false)}
+        items={shown}
+        now={now}
+        miles={miles}
+        where={
+          origin.source === "gps"
+            ? t("search.nearYou")
+            : origin.source === "shared"
+              ? t("search.nearShared")
+              : t("search.near", { place: origin.label ?? "" })
+        }
+      />
 
       <SettingsDialog
         open={settingsOpen}

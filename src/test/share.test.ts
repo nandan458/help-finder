@@ -2,7 +2,7 @@ import "fake-indexeddb/auto";
 import { clear } from "idb-keyval";
 import { beforeEach, describe, expect, it } from "vitest";
 import { clearCache, loadLastSearch, saveLastSearch } from "../lib/cache";
-import { pageWithoutPlace, placeLink, readSharedPlace } from "../lib/share";
+import { osmEditUrl, pageWithoutPlace, placeLink, readSharedPlace } from "../lib/share";
 
 const breadForTheCity = { id: "node/367141203", lat: 38.9103, lng: -77.0217 };
 const page = "https://example.github.io/help-finder/";
@@ -55,5 +55,12 @@ describe("last search (for offline)", () => {
     await saveLastSearch({ lat: 38.9, lng: -77 });
     await clearCache();
     expect(await loadLastSearch()).toBeUndefined();
+  });
+});
+
+describe("osmEditUrl", () => {
+  it("opens the place in OpenStreetMap's editor", () => {
+    expect(osmEditUrl("node/367141203")).toBe("https://www.openstreetmap.org/edit?node=367141203");
+    expect(osmEditUrl("way/66816884")).toBe("https://www.openstreetmap.org/edit?way=66816884");
   });
 });

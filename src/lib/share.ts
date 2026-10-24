@@ -40,3 +40,12 @@ export function readSharedPlace(search: string): SharedPlace | null {
   if (Math.abs(lat) > 90 || Math.abs(lng) > 180) return null;
   return { id, lat, lng };
 }
+
+/**
+ * A link that opens one place in OpenStreetMap's editor, so anyone can fix its
+ * hours, phone number, or name. ("node/123" becomes "?node=123".)
+ */
+export function osmEditUrl(id: string): string {
+  const [type, number] = id.split("/");
+  return `https://www.openstreetmap.org/edit?${type}=${number}`;
+}

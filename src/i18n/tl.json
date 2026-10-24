@@ -208,5 +208,19 @@
   "route.mode.transit": "Bus o tren",
   "route.minutes.bicycle": "{minutes} min sakay ng bisikleta",
   "route.minutes.auto": "{minutes} min na biyahe sa kotse",
-  "route.transit": "Nagbabago araw-araw ang oras ng bus at tren, kaya hindi ito hinuhulaan ng NearAid. May live na iskedyul ang maps app ng telepono mo. Pindutin sa ibaba para buksan ito."
+  "route.transit": "Nagbabago araw-araw ang oras ng bus at tren, kaya hindi ito hinuhulaan ng NearAid. May live na iskedyul ang maps app ng telepono mo. Pindutin sa ibaba para buksan ito.",
+  "improve.title": "Pagandahin ang mapa",
+  "improve.about": "Ang mga lugar sa NearAid ay galing sa OpenStreetMap, na isinusulat ng mga boluntaryo, parang Wikipedia para sa mga mapa. Kapag may kulang o mali, kahit sino ay puwedeng mag-ayos, at lalabas ang pagbabago rito pagkatapos ng susunod na lingguhang update.",
+  "improve.how": "Paano magdagdag ng lugar",
+  "improve.missing": "May kulang na lugar? Idagdag ito sa mapa",
+  "card.fix": "Ayusin o i-update ang lugar na ito",
+  "helpcard.button": "Magbahagi ng listahan ng tulong",
+  "helpcard.heading": "Listahan ng tulong",
+  "helpcard.print": "I-print",
+  "helpcard.share": "Ibahagi",
+  "helpcard.copy": "Kopyahin ang teksto",
+  "helpcard.copied": "Nakopya.",
+  "helpcard.footer": "Ang oras at mga detalye ay galing sa OpenStreetMap at maaaring luma na. Tumawag muna kung maaari.",
+  "helpcard.lines": "Lokal na tulong: 211 · Crisis line: 988 · Emergency: 911",
+  "helpcard.empty": "Wala pang maibabahagi. Maghanap muna ng mga lugar."
 }

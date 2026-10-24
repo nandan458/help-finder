@@ -4,7 +4,7 @@
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { APP_NAME } from "../config";
 import { useT } from "../i18n/useT";
-import { placeLink } from "../lib/share";
+import { osmEditUrl, placeLink } from "../lib/share";
 import { formatDistance, walkMinutes } from "../lib/geo";
 import { speechSupported, useSpeech } from "../app/useSpeech";
 import { formatTime, isAllDay, statusText, weekHours, type HoursStatus } from "../lib/hours";
@@ -227,6 +227,13 @@ export function PlaceCard(props: Props) {
         {t("card.note")}{" "}
         <a href={place.osmUrl} target="_blank" rel="noreferrer">
           {t("place.openMap")}
+        </a>
+      </p>
+      {/* Anyone can fix a wrong hours line or phone number on OpenStreetMap, and the fix
+          reaches this app with the next weekly update. */}
+      <p className="card-note">
+        <a href={osmEditUrl(place.id)} target="_blank" rel="noreferrer">
+          {t("card.fix")}
         </a>
       </p>
     </article>

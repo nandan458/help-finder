@@ -208,5 +208,19 @@
   "route.mode.transit": "Bis oswa tren",
   "route.minutes.bicycle": "{minutes} min sou bisiklèt",
   "route.minutes.auto": "{minutes} min nan machin",
-  "route.transit": "Orè bis ak tren yo chanje chak jou, kidonk NearAid pa devine yo. Aplikasyon kat telefòn ou a gen orè an dirèk. Peze anba a pou louvri li."
+  "route.transit": "Orè bis ak tren yo chanje chak jou, kidonk NearAid pa devine yo. Aplikasyon kat telefòn ou a gen orè an dirèk. Peze anba a pou louvri li.",
+  "improve.title": "Amelyore kat la",
+  "improve.about": "NearAid montre kote ki soti nan OpenStreetMap, ki volontè ekri, tankou Wikipedya pou kat. Si yon kote manke oswa si gen erè, nenpòt moun ka korije l, epi koreksyon an ap parèt isit la apre pwochen mizajou chak semèn nan.",
+  "improve.how": "Kijan pou ajoute yon kote",
+  "improve.missing": "Yon kote manke? Ajoute l sou kat la",
+  "card.fix": "Korije oswa mete kote sa a ajou",
+  "helpcard.button": "Pataje yon lis èd",
+  "helpcard.heading": "Lis èd",
+  "helpcard.print": "Enprime",
+  "helpcard.share": "Pataje",
+  "helpcard.copy": "Kopye tèks",
+  "helpcard.copied": "Kopye.",
+  "helpcard.footer": "Orè yo ak detay yo soti nan OpenStreetMap epi yo ka demode. Rele davans si ou kapab.",
+  "helpcard.lines": "Èd lokal: 211 · Liy kriz: 988 · Ijans: 911",
+  "helpcard.empty": "Poko gen anyen pou pataje. Chèche kote anvan."
 }

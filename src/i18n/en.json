@@ -208,5 +208,19 @@
   "route.mode.transit": "Bus or train",
   "route.minutes.bicycle": "{minutes} min by bike",
   "route.minutes.auto": "{minutes} min drive",
-  "route.transit": "Bus and train times change daily, so NearAid doesn't guess them. Your phone's maps app has live schedules. Tap below to open it."
+  "route.transit": "Bus and train times change daily, so NearAid doesn't guess them. Your phone's maps app has live schedules. Tap below to open it.",
+  "improve.title": "Improve the map",
+  "improve.about": "NearAid shows places from OpenStreetMap, which volunteers write, like Wikipedia for maps. If a place is missing or wrong, anyone can fix it, and the fix shows up here after the next weekly update.",
+  "improve.how": "How to add a place",
+  "improve.missing": "Missing a place? Add it to the map",
+  "card.fix": "Fix or update this place",
+  "helpcard.button": "Share a help list",
+  "helpcard.heading": "Help list",
+  "helpcard.print": "Print",
+  "helpcard.share": "Share",
+  "helpcard.copy": "Copy text",
+  "helpcard.copied": "Copied.",
+  "helpcard.footer": "Hours and details come from OpenStreetMap and may be out of date. Call ahead if you can.",
+  "helpcard.lines": "Local help: 211 · Crisis line: 988 · Emergency: 911",
+  "helpcard.empty": "There's nothing to share yet. Search for places first."
 }

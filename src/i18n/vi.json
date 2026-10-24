@@ -208,5 +208,19 @@
   "route.mode.transit": "Xe buýt hoặc tàu",
   "route.minutes.bicycle": "{minutes} phút đi xe đạp",
   "route.minutes.auto": "{minutes} phút lái xe",
-  "route.transit": "Giờ xe buýt và tàu thay đổi mỗi ngày nên NearAid không đoán. Ứng dụng bản đồ trên điện thoại có lịch chạy trực tiếp. Chạm bên dưới để mở."
+  "route.transit": "Giờ xe buýt và tàu thay đổi mỗi ngày nên NearAid không đoán. Ứng dụng bản đồ trên điện thoại có lịch chạy trực tiếp. Chạm bên dưới để mở.",
+  "improve.title": "Cải thiện bản đồ",
+  "improve.about": "NearAid hiển thị địa điểm từ OpenStreetMap do tình nguyện viên viết, giống như Wikipedia dành cho bản đồ. Nếu thiếu hoặc sai một địa điểm, ai cũng có thể sửa, và chỗ sửa sẽ hiện ở đây sau lần cập nhật hằng tuần tiếp theo.",
+  "improve.how": "Cách thêm một địa điểm",
+  "improve.missing": "Thiếu một địa điểm? Hãy thêm vào bản đồ",
+  "card.fix": "Sửa hoặc cập nhật địa điểm này",
+  "helpcard.button": "Chia sẻ danh sách trợ giúp",
+  "helpcard.heading": "Danh sách trợ giúp",
+  "helpcard.print": "In",
+  "helpcard.share": "Chia sẻ",
+  "helpcard.copy": "Sao chép văn bản",
+  "helpcard.copied": "Đã sao chép.",
+  "helpcard.footer": "Giờ mở cửa và chi tiết lấy từ OpenStreetMap và có thể đã cũ. Nếu được, hãy gọi trước.",
+  "helpcard.lines": "Trợ giúp địa phương: 211 · Đường dây khủng hoảng: 988 · Khẩn cấp: 911",
+  "helpcard.empty": "Chưa có gì để chia sẻ. Hãy tìm địa điểm trước."
 }
