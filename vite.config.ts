@@ -29,7 +29,7 @@ export default defineConfig({
     // It adds a "service worker": a small script the browser keeps that can
     // answer requests from a copy saved on the phone when there's no signal.
     VitePWA({
-      registerType: "autoUpdate", // a new version installs itself on the next visit
+      registerType: "autoUpdate", // a new version installs itself and reloads the page (see src/main.tsx)
       includeAssets: ["favicon.ico", "favicon.svg", "apple-touch-icon-180x180.png"],
       manifest: {
         name: APP_NAME,
