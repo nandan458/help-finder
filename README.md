@@ -43,6 +43,8 @@ People who need help often don't know what's nearby or when it's open. The infor
 - **Filters:** category buttons, plus _Open now_, _Free_, _Wheelchair_, and _Saved_.
 - **Place card:** status, distance and walk time, address, tap-to-call phone, website, the week's hours with today highlighted, cost, and wheelchair access.
 - **Directions for walking, biking, and driving, in the app.** Pick how you're traveling and the route is drawn on the map, with the time, distance, and numbered steps. For **bus or train**, the app opens your phone's maps app instead, because live schedules aren't in free map data and NearAid won't guess them. The maps app is also one tap away for turn-by-turn navigation.
+- **A shareable help list for people who help others.** One tap makes a clean list of the nearest places for the need you picked, with addresses, hours, and phone numbers, in your language. Print it, text it, or copy it, so a counselor or librarian can hand it to someone without a smartphone.
+- **Improve the map.** Every place links to OpenStreetMap's editor to fix or update it, and Settings explains how to add a missing place, so volunteers' fixes reach the app with the weekly update.
 - **Read aloud** in the current language, **saved places**, and **share a place** (every place has its own link).
 - **Help lines, always one tap away:** 911, the 988 Suicide & Crisis Lifeline, and 211.
 - **Installable** to the home screen like a regular app.

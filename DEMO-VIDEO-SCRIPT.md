@@ -42,7 +42,8 @@ Tap slowly and say what you're doing. Each step is about 7 seconds.
 7. **Read aloud.** Tap **Escuchar** (Listen). Let it read for a few seconds. _"For people who have trouble reading small text, or are reading in their second language."_ Switch back to English.
 8. **Dark mode.** Settings, then **Dark**. _"Easier on the eyes at night, and it saves battery."_
 9. **Airplane mode.** Open **Settings → Offline use** and show it saved your state. Turn on **airplane mode**, close the app, and open it again. Tap **Use my location** (GPS still works with no signal) and search somewhere you did _not_ search before. _"No signal at all, and it still finds places, because I saved my state on the phone. This place I've never searched. The map picture only shows areas I've viewed, but all the places and the list work."_ Turn airplane mode off.
-10. **Help lines.** Tap the red **Help lines** button. _"911, the 988 crisis line, and 211 for local help are always one tap away. If a search finds very little nearby, they show up on their own."_
+10. **For the people who help others.** Tap **Share a help list**. _"A counselor or librarian can print this, or text it to someone without a smartphone. Addresses, hours, and phone numbers, in their language."_ Tap **Close**.
+11. **Help lines.** Tap the red **Help lines** button. _"911, the 988 crisis line, and 211 for local help are always one tap away. If a search finds very little nearby, they show up on their own."_
 
 ## 1:50 to 2:20 · One technical challenge
 

@@ -75,6 +75,7 @@ The app has three offline layers: the app's own code (a service worker), the pla
 - **Bus and train routes inside the app:** that needs live schedule data, which free map data doesn't include, so for now it opens the phone's maps app.
 - **"Add a missing place" inside the app:** let people suggest a food pantry or free clinic directly, sent to OpenStreetMap so everyone benefits.
 - **Local help-line numbers outside the U.S.:** pick the right emergency and help numbers from the country you're in.
+- **Counselors and librarians already have a tool today:** the app's "Share a help list" button makes a printable or textable list of nearby help for someone without a smartphone. I'd like to test it with a real counselor or librarian.
 - **Partnering with local organizations:** ✏️ name one in your district (a food bank, library, or shelter) that could check and update its own information.
 
 ## Tools and technologies
